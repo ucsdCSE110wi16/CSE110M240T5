@@ -1,0 +1,36 @@
+﻿User Stories
+
+* Login with edu email address
+* Find classmates playing smash bros
+* Find people to go hiking with at torrey pines
+* Find nearby people to study for CSE 100
+* Show trending event categories at UCSD
+* I want to be able to browse activities
+* I want to be able to filter activities
+* I want to be able to find employer recruitment events
+* See how many people are attending an event
+* Join an event
+* Set a limit on number of people to join my event
+* See how many spots an event has open
+* Set my event to have unlimited people
+* See friends attending an event
+* I want to be able to see events near me
+* I want to be able to see events at my school
+* I want to be able to host an event for ucsd students
+* I want to see events my friends are hosting
+* I want to see events my friends are attending
+* I want to be able to contact event organizers
+* I want to list my contact info for people to RSVP
+
+
+First Steps
+
+* Open application
+* See list of events
+* Filter events with a drop down menu
+
+
+Short Term Goal
+
+* GUI to login, take user to list of events
+* Wireframing
