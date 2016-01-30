@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-4c823ba01c2d58a5a0326ac80fe99db802b1b38d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-d66e1d655f259c5bc264c4bc46cf32210ef94044.jar" />
+    </item>
+    <item
+        jar="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.parse\parseui-widget-android\0.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="76d7e619a84e1c57ad7b153ba84b1213f8ff9ef1">
+        <dex dex="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-fcf8895318c6a0038bd466dba38ee3e89fc332ee.jar" />
+    </item>
+    <item
+        jar="C:\Users\Johnathan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-71b6f50b3dcaafeb086a3fed2ead26ab957ca958.jar" />
+    </item>
+    <item
+        jar="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.parse\parseui-login-android\0.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4a2c63ab232bd2c7b750e74794015c8b09aca351">
+        <dex dex="C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-83ebcae687cfc2923fa35e5f00b18a4a591be214.jar" />
+    </item>
+
+</items>
