@@ -1,0 +1,17 @@
+UpUrVent(tentative title) is a program that allows students to see relevant e
+vents and get in contact with the people hosting the events. Students will sign
+up using their ucsd.edu email address and be shown a list of events hosted by
+other students. The user will initially see the events ordered based on the time
+they start, with the events starting the soonest near the top. They will be able
+to scroll down and see / load more events, and also be able to filter events
+based on keywords such as "Smash Bros" or "CSE110 Study". A user will be able to
+tap on an event to come to a detailed view, and see more information about it.
+An event will contain information such as a title, description, creator, RSVP
+information, capacity(if there is a limit on the number of attendees will also
+display the number of spots left), date, time, location, and attendees. 
+Upon opening the descriptive view the user will be able to "join" the event 
+which will add them to the list of attendees. Users will also be able to create
+and post their own events by filling out some basic info (date, time, title) and
+additional information should they choose. By default, people will be able to 
+RSVP to the event creators registered email, unless the event creator adds
+additional contact information.
