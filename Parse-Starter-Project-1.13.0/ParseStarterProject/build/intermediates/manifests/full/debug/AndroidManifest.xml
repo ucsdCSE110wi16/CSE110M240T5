@@ -49,6 +49,10 @@
                 android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"
                 android:value="true" />
         </activity>
+        <activity
+            android:name="com.parse.starter.ExpandDetailsActivity"
+            android:label="@string/title_activity_expand_details"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
