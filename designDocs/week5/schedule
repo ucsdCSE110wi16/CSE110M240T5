@@ -2,22 +2,35 @@
 Events page, flow from login to events screen, click on event and
 expand
 
-Events page - Alex, Ryan
-Detailed event view - Hans, Jenny
-Create an event page - Melissa
-Backend - Johnathan
++ Events page - Alex, Ryan
+(As a user, I want to see UCSD events, so that I know whats going on around
+campus)
++ Detailed event view - Hans, Jenny
+(As a user, I want to touch an event so that I can see more information about
+it)
++ Create an event page - Melissa
+(As a user I want to create an event so that other people can join my activity)
++ Backend - Johnathan
+(As a user I want to be able to create an account so that I can login) 
 
 Tentative
 --------
 
 * Mon week 7
 Browsing events, joining events
+(As  user, I want to browse events so that I can see ones that interest me)
+(As a user I want to join events so the host knows I am coming)
 
 * Mon week 8
 Creating events, RSVP to events
+(As a user I want to create an event so that other people can join)
 
 * Mon week 9
-Fine tuning of search functionality, possible gps features
+Fine tuning of search functionality, possible gps featuress 
+(As a user I want to search events so I can find events that match my search
+terms)
+(As a user I want to turn on GPS location so that I can see events around me)
 
 * Mon week 10
 Bringing it all together - focus on fixing things with client
+
