@@ -1,5 +1,6 @@
 package com.parse.starter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -28,5 +29,11 @@ public class EventScrollingActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    // TODO add GUI element that calls this function
+    public void expandEventButtonOnPress(View v) {
+        Intent intent = new Intent(this, ExpandDetailsActivity.class);
+        startActivity(intent);
     }
 }
