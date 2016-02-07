@@ -12,6 +12,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
@@ -23,6 +27,9 @@ public class MainActivity extends ActionBarActivity {
 
     private ParseUser currUser;
 
+    private static final String loggedOutMessage = "You are logged out.";
+    private static final String emptyStr = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +38,15 @@ public class MainActivity extends ActionBarActivity {
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
+        // currUser = ParseUser.getCurrentUser();
         currUser = ParseUser.getCurrentUser();
-        //if ( currUser == null ) {
-        ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
-        startActivityForResult(builder.build(), 0);
-        currUser = ParseUser.getCurrentUser();
-        //}
+        TextView loginText = (TextView)findViewById(R.id.loginTextView);
+        if (currUser == null) {
+            loginText.setText(loggedOutMessage);
+        }
+        else {
+            loginText.setText(emptyStr);
+        }
 
 
         // Database test. TODO remove later
@@ -44,6 +54,24 @@ public class MainActivity extends ActionBarActivity {
         testObject.put("foo", "bar");
         testObject.saveInBackground();
         */
+    }
+
+    public void signInOutButtonOnClick(View v) {
+        TextView loginText = (TextView)findViewById(R.id.loginTextView);
+        if (currUser == null) {
+            // Open login builder and update currUser
+            ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
+            startActivityForResult(builder.build(), 0);
+            currUser = ParseUser.getCurrentUser();
+            if (currUser != null) { // Sign in succeeded
+                loginText.setText(emptyStr);
+            }
+        }
+        else {
+            ParseUser.logOut();
+            currUser = null;
+            loginText.setText(loggedOutMessage);
+        }
     }
 
     @Override
