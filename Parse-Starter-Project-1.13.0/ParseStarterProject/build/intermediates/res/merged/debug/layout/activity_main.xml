@@ -61,4 +61,4 @@
         android:layout_alignParentEnd="true"
         android:onClick="viewEventsButtonOnClick" />
 </RelativeLayout>
-<!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/C:/Users/vectFluxGaming/Documents/androidstudio/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/activity_main.xml -->

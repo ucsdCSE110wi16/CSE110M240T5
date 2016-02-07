@@ -26,6 +26,9 @@ import com.parse.ParseObject;
 import com.parse.ui.ParseLoginBuilder;
 import com.parse.ParseUser;
 
+/**
+ * TODO
+ */
 public class MainActivity extends ActionBarActivity {
 
     private ParseUser currUser;
@@ -33,6 +36,10 @@ public class MainActivity extends ActionBarActivity {
     private static final String loggedOutMessage = "You are logged out.";
     private static final String emptyStr = "";
 
+    /**
+     * TODO
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +66,10 @@ public class MainActivity extends ActionBarActivity {
         */
     }
 
+    /**
+     * TODO
+     * @param v
+     */
     public void signInOutButtonOnClick(View v) {
         TextView loginText = (TextView)findViewById(R.id.loginTextView);
         if (currUser == null) {
@@ -77,11 +88,20 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    /**
+     * TODO
+     * @param v
+     */
     public void viewEventsButtonOnClick(View v) {
         Intent intent = new Intent(this, EventScrollingActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * TODO
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -89,6 +109,11 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
+    /**
+     * TODO
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

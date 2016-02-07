@@ -9,8 +9,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+/**
+ * TODO
+ */
 public class EventScrollingActivity extends AppCompatActivity {
 
+    /**TODO
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,10 @@ public class EventScrollingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    /**TODO
+     *
+     * @param v
+     */
     // TODO add GUI element that calls this function
     public void expandEventButtonOnPress(View v) {
         Intent intent = new Intent(this, ExpandDetailsActivity.class);
