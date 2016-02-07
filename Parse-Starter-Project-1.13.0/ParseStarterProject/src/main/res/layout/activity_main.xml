@@ -58,5 +58,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="31dp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="viewEventsButtonOnClick" />
 </RelativeLayout>

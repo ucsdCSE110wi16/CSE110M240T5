@@ -10,9 +10,12 @@ package com.parse.starter;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import android.content.Intent;
 
 import android.widget.Button;
 import android.widget.TextView;
@@ -72,6 +75,11 @@ public class MainActivity extends ActionBarActivity {
             currUser = null;
             loginText.setText(loggedOutMessage);
         }
+    }
+
+    public void viewEventsButtonOnClick(View v) {
+        Intent intent = new Intent(this, EventScrollingActivity.class);
+        startActivity(intent);
     }
 
     @Override

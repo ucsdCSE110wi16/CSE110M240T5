@@ -53,6 +53,15 @@
             android:name="com.parse.starter.ExpandDetailsActivity"
             android:label="@string/title_activity_expand_details"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.parse.starter.EventScrollingActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.parse.starter.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
