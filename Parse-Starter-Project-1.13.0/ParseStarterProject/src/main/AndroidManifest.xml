@@ -55,6 +55,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.MainActivity" />
         </activity>
+        <activity
+            android:name=".addNewActivity"
+            android:label="@string/title_activity_add_new"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
