@@ -56,9 +56,10 @@
                 android:value="com.parse.starter.MainActivity" />
         </activity>
         <activity
-            android:name=".addNewActivity"
+            android:name=".AddNewActivity"
             android:label="@string/title_activity_add_new"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

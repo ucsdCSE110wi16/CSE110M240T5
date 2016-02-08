@@ -8,4 +8,4 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
 </menu>
-<!-- From: file:/home/jlutzke/AndroidStudioProjects/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/menu/menu_event_scrolling.xml -->
+<!-- From: file:/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/menu/menu_event_scrolling.xml -->

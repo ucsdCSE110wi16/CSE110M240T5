@@ -93,7 +93,7 @@ public class MainActivity extends ActionBarActivity {
      * @param v
      */
     public void viewEventsButtonOnClick(View v) {
-        Intent intent = new Intent(this, AddNewActivity.class); // TODO change back to EventScrollingActivity
+        Intent intent = new Intent(this, EventScrollingActivity.class);
         startActivity(intent);
     }
 
