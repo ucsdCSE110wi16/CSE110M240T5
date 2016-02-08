@@ -1,5 +1,7 @@
 package com.parse.starter;
 
+import com.parse.ParseObject;
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,11 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class addNewActivity extends AppCompatActivity implements View.OnClickListener
+public class AddNewActivity extends AppCompatActivity implements View.OnClickListener
 {
     Button bSubmit;
     EditText actName, actLoc, actTime, actTags;
-    String dataInputCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,20 +37,20 @@ public class addNewActivity extends AppCompatActivity implements View.OnClickLis
     {
         boolean validInputForm = true;
         //Check activity name
-        dataInputCheck = actName.getText().toString();
-        if (dataInputCheck.matches(""))
+        String title = actName.getText().toString();
+        if (title.matches(""))
         {
             validInputForm = false;
         }
         //Check activity location
-        dataInputCheck = actLoc.getText().toString();
-        if (dataInputCheck.matches(""))
+        String loc = actLoc.getText().toString();
+        if (loc.matches(""))
         {
             validInputForm = false;
         }
         //Check activity time
-        dataInputCheck = actTime.getText().toString();
-        if (dataInputCheck.matches(""))
+        String time = actTime.getText().toString();
+        if (time.matches(""))
         {
             validInputForm = false;
         }
@@ -63,6 +64,13 @@ public class addNewActivity extends AppCompatActivity implements View.OnClickLis
         if(v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm)
         {
             //Send data to the parse Database.
+            ParseObject userEvent = new ParseObject("UserEvent");
+            userEvent.put("title", title);
+            userEvent.put("loc", loc);
+            userEvent.put("time", time);
+            userEvent.saveInBackground();
         }
+
+
     }
 }
