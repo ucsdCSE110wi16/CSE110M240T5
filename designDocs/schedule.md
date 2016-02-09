@@ -32,6 +32,8 @@ Events page, flow from login to events screen, click on event and expand
 
 
 TODO: Week 7
+What are our milestones??
+
 *** Main events page - TOP Priority by Week 7 
 -Expanded page 	
 	-Parse
