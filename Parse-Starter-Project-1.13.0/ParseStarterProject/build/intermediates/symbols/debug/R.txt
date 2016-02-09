@@ -611,7 +611,6 @@ int id left 0x7f0d0025
 int id line1 0x7f0d0096
 int id line3 0x7f0d009a
 int id listMode 0x7f0d000b
-int id listView 0x7f0d0069
 int id list_item 0x7f0d0042
 int id loginTextView 0x7f0d006c
 int id login_help_email_input 0x7f0d0077
@@ -637,6 +636,7 @@ int id pin 0x7f0d001a
 int id progress_circular 0x7f0d0006
 int id progress_horizontal 0x7f0d0007
 int id radio 0x7f0d0052
+int id recyclerView 0x7f0d0069
 int id right 0x7f0d0026
 int id screen 0x7f0d0037
 int id scroll 0x7f0d0018

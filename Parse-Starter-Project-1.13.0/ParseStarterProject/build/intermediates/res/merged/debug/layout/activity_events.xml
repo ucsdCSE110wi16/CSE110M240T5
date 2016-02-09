@@ -4,11 +4,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView" />
+        android:id="@+id/recyclerView" />
+
+
+
+
 </LinearLayout>
 
-<!-- From: file:/Users/jennywong/110/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/activity_events.xml -->
+<!-- From: file:/C:/Users/Ryan/CSE%20110/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/activity_events.xml -->

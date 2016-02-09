@@ -2132,7 +2132,6 @@ containing a value of this type.
         public static final int line1=0x7f0d0096;
         public static final int line3=0x7f0d009a;
         public static final int listMode=0x7f0d000b;
-        public static final int listView=0x7f0d0069;
         public static final int list_item=0x7f0d0042;
         public static final int loginTextView=0x7f0d006c;
         public static final int login_help_email_input=0x7f0d0077;
@@ -2158,6 +2157,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0d0006;
         public static final int progress_horizontal=0x7f0d0007;
         public static final int radio=0x7f0d0052;
+        public static final int recyclerView=0x7f0d0069;
         public static final int right=0x7f0d0026;
         public static final int screen=0x7f0d0037;
         public static final int scroll=0x7f0d0018;
