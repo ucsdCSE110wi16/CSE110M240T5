@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-h720dp/values-h720dp.xml -->
+    <!-- From: file:/Users/jennywong/110/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-h720dp/values-h720dp.xml -->
     <eat-comment/>
     <dimen name="abc_alert_dialog_button_bar_height">54dip</dimen>
 </resources>

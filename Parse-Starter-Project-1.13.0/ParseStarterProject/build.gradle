@@ -35,4 +35,5 @@ dependencies {
     compile 'com.parse:parseui-login-android:0.0.1'
     compile 'com.parse:parseui-widget-android:0.0.1'
     compile 'com.android.support:design:22.2.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
 }
