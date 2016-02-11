@@ -2,67 +2,74 @@
 <items version="2" >
 
     <item
-        jar="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-700066d985d13ee9d6e873b2488b55a7f8cf3f3b.jar" />
-    </item>
-    <item
-        jar="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="76d7e619a84e1c57ad7b153ba84b1213f8ff9ef1">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-2ae3524d15217fa63d2475f10ddd20e8d3b53cc7.jar" />
-    </item>
-    <item
-        jar="/Users/J2/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.13.0/58a7d54b6a4f28be11f0cecec93097eddf473e6f/parse-android-1.13.0.jar"
+        jar="/Users/jennywong/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.13.0/58a7d54b6a4f28be11f0cecec93097eddf473e6f/parse-android-1.13.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/parse-android-1.13.0-b3b5fa3e8815e8cdaeab97712e44b851167077c6.jar" />
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/parse-android-1.13.0-bf0d0c82814f1c236aeb6ffc613b4fbd5bdc2e2c.jar" />
     </item>
     <item
-        jar="/Users/J2/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-6a5dfe9d0e64621c7c69fd276e53a444c25d96a9.jar" />
-    </item>
-    <item
-        jar="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-0cd33db8fdb81b458327e3163f33dbc6b40b9592.jar" />
-    </item>
-    <item
-        jar="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-a150a5d2a759b2b37997e2d6116128e66e060317.jar" />
-    </item>
-    <item
-        jar="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-b166fb8d8e73b959d9f42c74b2743203a677588d.jar" />
-    </item>
-    <item
-        jar="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/jars/classes.jar"
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="4a2c63ab232bd2c7b750e74794015c8b09aca351">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-13ddc1d7b164bc73e20bc42e27232238262f2566.jar" />
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-425ae51dd9606e7ba3015de23b013ba73d13bcd5.jar" />
     </item>
     <item
-        jar="/Users/J2/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="76d7e619a84e1c57ad7b153ba84b1213f8ff9ef1">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-5ba93b29ca0a2eed7959aea066070b00ab7c0072.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-8bfa55161b71cfcb4c90baea734a6e76ea1c8c12.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-abafe079471f6b72776bd610c99bed9ca5541d63.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-97b2efcd07aff6a0d9aba57cbca96d8f99eb8bea.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-c35407b5ed71c3825ca269b78c7a059d0e1d4f5c.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-61b90244a6ef5d3086ba50ac34c59867e02165d5.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-f6f30179d3316daafd5f6b65ad87587bbe4eccbd.jar" />
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-f6f3394899aa92edd3094d681f47bbea248c8cc6.jar" />
+    </item>
+    <item
+        jar="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-3d47b9b4c3afab44acde357d1a34539148c2252d.jar" />
     </item>
 
 </items>

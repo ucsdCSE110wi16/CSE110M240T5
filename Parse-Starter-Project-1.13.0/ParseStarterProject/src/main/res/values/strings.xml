@@ -106,4 +106,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_add_new">AddNewActivity</string>
+    <string name="title_activity_browsing_events">BrowsingEventsActivity</string>
 </resources>
