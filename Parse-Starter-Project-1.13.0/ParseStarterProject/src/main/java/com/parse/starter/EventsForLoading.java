@@ -1,45 +1,56 @@
 package com.parse.starter;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 /**
+ * EventsForLoading is Event objects that are designed to load into the
+ * recycler view (Events screen).
  * Created by jennywong on 2/8/16.
  */
 public class EventsForLoading {
 
     private String eventName;
     private String location;
-    private Date date;
+    private String date;
     private String details;
 
     // Create empty parameter ctor
 
-    public EventsForLoading(String eventNameP, String locationP, Date dateP, String detailsP) {
+    public EventsForLoading(String eventNameP, String locationP, String dateP, String detailsP) {
         this.eventName = eventNameP;
         this.location = locationP;
         this.date = dateP;
         this.details = detailsP;
     }
 
-    public String getName() {
-        return mName;
+    public String getEventName() {
+        return this.eventName;
     }
 
-    public boolean isOnline() {
-        return mOnline;
+    public String getLocation() {
+        return this.location;
     }
 
-    private static int lastContactId = 0;
-
-    public static List<Contact> createContactsList(int numContacts) {
-        List<Contact> contacts = new ArrayList<Contact>();
-
-        for (int i = 1; i <= numContacts; i++) {
-            contacts.add(new Contact("Person " + ++lastContactId, i <= numContacts / 2));
-        }
-
-        return contacts;
+    public String getDate() {
+        return this.date;
     }
 
+    public String getDetails() {
+        return this.details;
+    }
+
+    public static ArrayList<EventsForLoading> createEventsList(int size) {
+        ArrayList<EventsForLoading> events = new ArrayList<EventsForLoading>(size);
+
+        EventsForLoading event1 = new EventsForLoading("Pop up restaurant", "CSE Basement", "TODAY!", "");
+        EventsForLoading event2 = new EventsForLoading("Pity party, need a +1", "RIMAC", "Feb 11", "");
+        EventsForLoading event3 = new EventsForLoading("Basketball game COME THRU", "My house", "2/11", "");
+
+        events.add(event1);
+        events.add(event2);
+        events.add(event3);
+
+        return events;
+    }
 
 }

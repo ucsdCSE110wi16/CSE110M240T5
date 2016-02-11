@@ -28,7 +28,7 @@
         android:layout_toLeftOf="@+id/message_button"
         android:layout_toStartOf="@+id/message_button"
         android:background="@drawable/event_row_border"
-        android:text="Hotdog eating context"/>
+        android:text="Hotdog eating context" />
 
     <Button
         android:id="@+id/message_button"
