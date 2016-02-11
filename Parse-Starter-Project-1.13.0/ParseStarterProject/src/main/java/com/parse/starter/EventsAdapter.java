@@ -41,10 +41,10 @@ public class EventsAdapter extends
     }
 
     // Store a member variable for the events
-    private List<EventsForLoading> eventsList;
+    private List<Event> eventsList;
 
     // Pass in the event array into the constructor
-    public EventsAdapter(List<EventsForLoading> events) {
+    public EventsAdapter(List<Event> events) {
             this.eventsList = events;
     }
 
@@ -66,14 +66,14 @@ public class EventsAdapter extends
     @Override
     public void onBindViewHolder(EventsAdapter.ViewHolder viewHolder, int position) {
         // Get the data model based on position
-        EventsForLoading contact = this.eventsList.get(position);
+        Event ev = this.eventsList.get(position);
 
         // Set item views based on the data model
         TextView nameTV = viewHolder.nameTextView;
-        nameTV.setText(contact.getEventName());
+        nameTV.setText(ev.getTitle());
 
         TextView dateTV = viewHolder.dateTextView;
-        dateTV.setText(contact.getDate());
+        dateTV.setText(ev.getDate());
 
         Button button = viewHolder.messageButton;
 
