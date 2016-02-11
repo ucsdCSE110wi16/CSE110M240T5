@@ -13,11 +13,7 @@ public class Event {
     private String title;
     private String description;
     private String userDefinedLocation;
-
-    // just added
     private String date;
-    private String details;
-
     private int id; // TODO generate unique event ids for events
     private int size;
     private int capacity;
@@ -35,8 +31,9 @@ public class Event {
     }
 
 
-    public Event(String name, String loc, String date, String des) {
-        this.title = name;
+    public Event(String title, String loc, String date, String des) {
+        this.title = title;
+        //this.creator = creator;
         this.userDefinedLocation = loc;
         this.date = date;
         this.description = des;

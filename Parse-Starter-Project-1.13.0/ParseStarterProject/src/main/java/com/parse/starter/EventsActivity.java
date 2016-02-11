@@ -1,9 +1,11 @@
 package com.parse.starter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 public class EventsActivity extends AppCompatActivity {
@@ -21,7 +23,11 @@ public class EventsActivity extends AppCompatActivity {
         rvEvents.setAdapter(adapter);
         // Set layout manager to position the items
         rvEvents.setLayoutManager(new LinearLayoutManager(this));
-        // That's all!
+    }
+
+    public void viewEventDetailsOnClick(View v) {
+        Intent intent = new Intent(this, ExpandDetailsActivity.class);
+        startActivity(intent);
     }
 
 }

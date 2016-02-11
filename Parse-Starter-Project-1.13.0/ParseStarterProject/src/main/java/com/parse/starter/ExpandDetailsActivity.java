@@ -21,31 +21,21 @@ public class ExpandDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expand_details);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        // Access Event object -> load instance variables below
+        Event example = new Event("party", "red shoe", "july 3, 1991", "guys $5, girls free");
 
+        TextView myTV = (TextView) findViewById(R.id.tvDetailsName);
+        myTV.setText(example.getTitle());
 
-        // Place holder for back end to implement
-        TextView myTV = (TextView) findViewById(R.id.tvEventName);
-        myTV.setText("Hotdog Eating Contest");
+        TextView myTV2 = (TextView) findViewById(R.id.tvDetailsDate);
+        myTV2.setText(example.getDate());
 
-        TextView myTV2 = (TextView) findViewById(R.id.tvEventName2);
-        myTV2.setText("February 5, 2016");
+        TextView myTV3 = (TextView) findViewById(R.id.tvDetailsLocation);
+        myTV3.setText(example.getUserDefinedLocation());
 
-        TextView myTV3 = (TextView) findViewById(R.id.tvEventName3);
-        myTV3.setText("Falling Star");
-
-        TextView myTV4 = (TextView) findViewById(R.id.tvEventName4);
-        myTV4.setText("Come on down!");
+        TextView myTV4 = (TextView) findViewById(R.id.tvDetailsDescription);
+        myTV4.setText(example.getDescription());
     }
 
 }

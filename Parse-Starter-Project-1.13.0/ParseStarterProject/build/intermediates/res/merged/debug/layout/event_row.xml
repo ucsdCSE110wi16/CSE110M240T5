@@ -41,5 +41,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="9dp"
-        android:text="Reply"/>
+        android:text="Reply"
+        android:onClick="viewEventDetailsOnClick"/>
 </RelativeLayout><!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/event_row.xml -->

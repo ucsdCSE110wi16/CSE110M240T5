@@ -84,4 +84,9 @@ public class EventsAdapter extends
     public int getItemCount() {
         return eventsList.size();
     }
+
+    // Return an item in the list
+    public Event getItem(int index) {
+        return eventsList.get(index);
+    }
 }
