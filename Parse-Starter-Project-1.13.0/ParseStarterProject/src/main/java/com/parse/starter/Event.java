@@ -1,9 +1,11 @@
-import com.parse.ParseUser;
+package com.parse.starter;
 
+import com.parse.ParseUser;
 import java.util.ArrayList;
 
 /** Class to bundle information about an event inside an object.
  * Created by Johnathan on 1/31/2016.
+ * Merged with EventsForLoading.java by Jenny on 2/11/2016.
  */
 public class Event {
 
@@ -11,6 +13,7 @@ public class Event {
     private String title;
     private String description;
     private String userDefinedLocation;
+    private String date;
     private int id; // TODO generate unique event ids for events
     private int size;
     private int capacity;
@@ -25,6 +28,16 @@ public class Event {
     public Event(String title, ParseUser creator) {
         this.title = title;
         this.creator = creator;
+    }
+
+
+    public Event(String title, String loc, String date, String des) {
+        this.title = title;
+        //this.creator = creator;
+        this.userDefinedLocation = loc;
+        this.date = date;
+        this.description = des;
+        this.size = 0;
     }
 
     /** Returns whether or not the event has a limit on the number of
@@ -57,6 +70,21 @@ public class Event {
         attendees.add(toAdd);
         return true;
     }
+
+    public static ArrayList<Event> createEventsList(int size) {
+        ArrayList<Event> events = new ArrayList<Event>(size);
+
+        Event event1 = new Event("Pop up restaurant", "CSE Basement", "TODAY!", "");
+        Event event2 = new Event("Pity party, need a +1", "RIMAC", "Feb 11", "");
+        Event event3 = new Event("Basketball game COME THRU", "My house", "2/11", "");
+
+        events.add(event1);
+        events.add(event2);
+        events.add(event3);
+
+        return events;
+    }
+
 
     ///// Getters /////
 
@@ -95,6 +123,8 @@ public class Event {
     public String getAltContact() {
         return this.altContact;
     }
+
+    public String getDate() { return this.date; }
 
     ///// Setters /////
 

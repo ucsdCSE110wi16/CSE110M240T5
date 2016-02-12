@@ -19,10 +19,9 @@ public class ExpandDetailsActivity extends AppCompatActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expand_details);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -33,20 +32,30 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             }
         });
 
-/*
-        // Place holder for back end to implement
-        TextView myTV = (TextView) findViewById(R.id.tvEventName);
-        myTV.setText("Hotdog Eating Contest");
+        // Access Event object -> load instance variables below
+        // Maybe we can throw all of this in a method. pass in object to update fields.
+        Event example = new Event("Seance", "Red shoe", "July 3, 1991", "Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena Macarena tiene un novio que se llama Que se llama de apellido Vitorino Que en la jura de bandera el muchacho Se la dio con dos amigos Macarena tiene un novio que se llama Que se llama de apellido Vitorino Y en la jura de bandera el muchacho Se la dio con dos amigos Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena");
+        example.setCapacity(10);
 
-        TextView myTV2 = (TextView) findViewById(R.id.tvEventName2);
-        myTV2.setText("February 5, 2016");
+        TextView myTV = (TextView) findViewById(R.id.tvDetailsEventName);
+        myTV.setText(example.getTitle());
 
-        TextView myTV3 = (TextView) findViewById(R.id.tvEventName3);
-        myTV3.setText("Falling Star");
+        TextView myTV2 = (TextView) findViewById(R.id.tvDetailsDate);
+        myTV2.setText(example.getDate());
 
-        TextView myTV4 = (TextView) findViewById(R.id.tvEventName4);
-        myTV4.setText("Come on down!");
-*/
+        TextView myTV3 = (TextView) findViewById(R.id.tvDetailsLocation);
+        myTV3.setText(example.getUserDefinedLocation());
+
+        TextView myTV4 = (TextView) findViewById(R.id.tvDetailsDescription);
+        myTV4.setText(example.getDescription());
+
+        TextView myTV5 = (TextView) findViewById(R.id.tvDetailsAttendees);
+        String sz = "Number of Attendees: " + example.getSize() + "/" + example.getCapacity();
+        myTV5.setText(sz);
+
+        TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
+//        String host = "Hosted by: " + example.getCreator().toString();
+        myTV6.setText("Hosted By: Jenny");
     }
 
 }

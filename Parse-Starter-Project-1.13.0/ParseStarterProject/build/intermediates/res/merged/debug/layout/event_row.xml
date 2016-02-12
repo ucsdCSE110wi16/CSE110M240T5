@@ -43,4 +43,4 @@
         android:layout_marginRight="9dp"
         android:text="Reply"
         android:onClick="replyButtonOnClick" />
-</RelativeLayout><!-- From: file:/C:/Users/vectFluxUltimate/Desktop/Jon/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/event_row.xml -->
+</RelativeLayout><!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/event_row.xml -->
