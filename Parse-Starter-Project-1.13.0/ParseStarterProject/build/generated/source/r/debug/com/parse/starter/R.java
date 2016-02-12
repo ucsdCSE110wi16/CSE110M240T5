@@ -2143,7 +2143,6 @@ containing a value of this type.
         public static final int login_password_input=0x7f0d0071;
         public static final int login_username_input=0x7f0d0070;
         public static final int media_actions=0x7f0d0093;
-        public static final int replyButton =0x7f0d008d;
         public static final int middle=0x7f0d002b;
         public static final int mini=0x7f0d0029;
         public static final int multiply=0x7f0d0036;
@@ -2161,6 +2160,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0d0006;
         public static final int progress_horizontal=0x7f0d0007;
         public static final int radio=0x7f0d0052;
+        public static final int replyButton=0x7f0d008d;
         public static final int right=0x7f0d0026;
         public static final int rvEvents=0x7f0d0069;
         public static final int screen=0x7f0d0037;

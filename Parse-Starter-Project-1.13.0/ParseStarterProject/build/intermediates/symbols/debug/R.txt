@@ -622,7 +622,6 @@ int id login_help_submit 0x7f0d0078
 int id login_password_input 0x7f0d0071
 int id login_username_input 0x7f0d0070
 int id media_actions 0x7f0d0093
-int id message_button 0x7f0d008d
 int id middle 0x7f0d002b
 int id mini 0x7f0d0029
 int id multiply 0x7f0d0036
@@ -640,6 +639,7 @@ int id pin 0x7f0d001a
 int id progress_circular 0x7f0d0006
 int id progress_horizontal 0x7f0d0007
 int id radio 0x7f0d0052
+int id replyButton 0x7f0d008d
 int id right 0x7f0d0026
 int id rvEvents 0x7f0d0069
 int id screen 0x7f0d0037

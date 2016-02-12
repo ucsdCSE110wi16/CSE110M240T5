@@ -33,7 +33,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             }
         });
 
-
+/*
         // Place holder for back end to implement
         TextView myTV = (TextView) findViewById(R.id.tvEventName);
         myTV.setText("Hotdog Eating Contest");
@@ -46,6 +46,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
 
         TextView myTV4 = (TextView) findViewById(R.id.tvEventName4);
         myTV4.setText("Come on down!");
+*/
     }
 
 }
