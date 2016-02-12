@@ -36,7 +36,7 @@ public class EventsAdapter extends
 
             nameTextView = (TextView) itemView.findViewById(R.id.event_title);
             dateTextView = (TextView) itemView.findViewById(R.id.event_date);
-            messageButton = (Button) itemView.findViewById(R.id.message_button);
+            messageButton = (Button) itemView.findViewById(R.id.replyButton);
         }
     }
 

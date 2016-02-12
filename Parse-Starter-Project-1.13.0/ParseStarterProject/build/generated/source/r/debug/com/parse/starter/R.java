@@ -2143,7 +2143,7 @@ containing a value of this type.
         public static final int login_password_input=0x7f0d0071;
         public static final int login_username_input=0x7f0d0070;
         public static final int media_actions=0x7f0d0093;
-        public static final int message_button=0x7f0d008d;
+        public static final int replyButton =0x7f0d008d;
         public static final int middle=0x7f0d002b;
         public static final int mini=0x7f0d0029;
         public static final int multiply=0x7f0d0036;

@@ -42,4 +42,4 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="9dp"
         android:text="Reply"/>
-</RelativeLayout><!-- From: file:/C:/Users/vectFluxUltimate/Desktop/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/event_row.xml -->
+</RelativeLayout><!-- From: file:/home/jlutzke/AndroidStudioProjects/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/event_row.xml -->

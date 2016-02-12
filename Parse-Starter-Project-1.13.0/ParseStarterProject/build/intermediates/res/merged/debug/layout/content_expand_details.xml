@@ -47,13 +47,14 @@
         android:layout_weight="0.79"
         android:fillViewport="false" >
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button"
-            android:layout_gravity="right" />
     </ScrollView>
 
-</LinearLayout><!-- From: file:/C:/Users/vectFluxUltimate/Desktop/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/content_expand_details.xml -->
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RSVP Menu"
+        android:id="@+id/button"
+        android:layout_gravity="right" />
+
+</LinearLayout><!-- From: file:/home/jlutzke/AndroidStudioProjects/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/content_expand_details.xml -->

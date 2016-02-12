@@ -1,5 +1,8 @@
 package com.parse.starter;
 
+import android.content.Intent;
+import android.view.View;
+
 import java.util.ArrayList;
 
 /**
@@ -52,5 +55,13 @@ public class EventsForLoading {
 
         return events;
     }
+
+//    /**
+//     * TODO
+//     * @param v
+//     */
+//    public void replyButtonOnClick(View v) {
+//        EventsActivity.viewEventDetails(v);
+//    }
 
 }

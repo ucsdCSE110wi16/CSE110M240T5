@@ -25,13 +25,13 @@
         android:padding="3dp"
         android:layout_toRightOf="@+id/event_date"
         android:layout_toEndOf="@+id/event_date"
-        android:layout_toLeftOf="@+id/message_button"
-        android:layout_toStartOf="@+id/message_button"
+        android:layout_toLeftOf="@+id/replyButton"
+        android:layout_toStartOf="@+id/replyButton"
         android:background="@drawable/event_row_border"
         android:text="Hotdog eating context" />
 
     <Button
-        android:id="@+id/message_button"
+        android:id="@+id/replyButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:paddingLeft="16dp"
