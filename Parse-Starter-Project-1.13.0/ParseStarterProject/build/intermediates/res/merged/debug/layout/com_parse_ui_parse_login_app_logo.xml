@@ -5,4 +5,4 @@
     android:layout_height="wrap_content"
     android:src="@drawable/com_parse_ui_app_logo"
     android:contentDescription="@string/com_parse_ui_logo_content_description" />
-<!-- From: file:/Users/wangmengyan/Parse/ParseUIAndroid/ParseUI-Android/ParseUI-Login/src/main/res/layout/com_parse_ui_parse_login_app_logo.xml --><!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/res/layout/com_parse_ui_parse_login_app_logo.xml -->
+<!-- From: file:/Users/wangmengyan/Parse/ParseUIAndroid/ParseUI-Android/ParseUI-Login/src/main/res/layout/com_parse_ui_parse_login_app_logo.xml --><!-- From: file:/C:/Users/vectFluxUltimate/Documents/cse110/attempt/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/res/layout/com_parse_ui_parse_login_app_logo.xml -->

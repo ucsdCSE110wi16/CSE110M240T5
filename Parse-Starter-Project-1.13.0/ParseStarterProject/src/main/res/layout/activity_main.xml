@@ -20,15 +20,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/signInOutButton"
-        android:layout_marginBottom="92dp"
         android:onClick="signInOutButtonOnClick"
-        android:layout_alignParentBottom="true"
+        android:nestedScrollingEnabled="false"
+        android:text="Sign In / Sign Out"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:nestedScrollingEnabled="false"
-        android:text="Sign In / Sign Out" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="200dp"
@@ -53,11 +53,22 @@
         android:layout_height="wrap_content"
         android:text="Checkout Events"
         android:id="@+id/viewEventsButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="31dp"
+        android:onClick="viewEventsButtonOnClick"
+        android:layout_below="@+id/signInOutButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="viewEventsButtonOnClick" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Event"
+        android:id="@+id/createNewEventButton"
+        android:layout_below="@+id/viewEventsButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="createNewEventButtonOnClick" />
 </RelativeLayout>

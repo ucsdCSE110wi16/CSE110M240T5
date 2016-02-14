@@ -2,4 +2,4 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
     <solid android:color="#ffffff" />
     <stroke android:width="1dip" android:color="#000000"/>
-</shape><!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/drawable/event_row_border.xml -->
+</shape><!-- From: file:/C:/Users/vectFluxUltimate/Documents/cse110/attempt/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/drawable/event_row_border.xml -->

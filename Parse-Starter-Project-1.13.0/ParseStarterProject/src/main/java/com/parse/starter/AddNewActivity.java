@@ -64,11 +64,14 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
         if(v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm)
         {
             //Send data to the parse Database.
+            System.out.println("This method is running!!");
             ParseObject userEvent = new ParseObject("UserEvent");
             userEvent.put("title", title);
             userEvent.put("loc", loc);
             userEvent.put("time", time);
             userEvent.saveInBackground();
+            //TODO Need a way to update the events
+            finish();
         }
 
 

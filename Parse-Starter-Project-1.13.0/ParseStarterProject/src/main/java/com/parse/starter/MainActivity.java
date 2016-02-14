@@ -98,6 +98,17 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
+     * Initialize the AddNewActivity screen
+     * @param v
+     */
+    public void createNewEventButtonOnClick(View v){
+
+        Intent intent = new Intent( this, AddNewActivity.class);
+        startActivity( intent );
+    }
+
+
+    /**
      * TODO
      * @param menu
      * @return

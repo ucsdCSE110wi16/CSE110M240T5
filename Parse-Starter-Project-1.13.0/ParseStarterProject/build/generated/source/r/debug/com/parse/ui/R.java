@@ -42,25 +42,25 @@ public final class R {
 		public static final int com_parse_ui_twitter_login_logo = 0x7f020040;
 	}
 	public static final class id {
-		public static final int app_logo = 0x7f0d006e;
-		public static final int create_account = 0x7f0d0080;
-		public static final int facebook_login = 0x7f0d0079;
-		public static final int login_help_email_input = 0x7f0d0077;
-		public static final int login_help_instructions = 0x7f0d0076;
-		public static final int login_help_submit = 0x7f0d0078;
-		public static final int login_password_input = 0x7f0d0071;
-		public static final int login_username_input = 0x7f0d0070;
-		public static final int parse_buttons = 0x7f0d0072;
-		public static final int parse_login = 0x7f0d006f;
-		public static final int parse_login_button = 0x7f0d0073;
-		public static final int parse_login_help = 0x7f0d0075;
-		public static final int parse_signup_button = 0x7f0d0074;
-		public static final int signup_confirm_password_input = 0x7f0d007d;
-		public static final int signup_email_input = 0x7f0d007e;
-		public static final int signup_name_input = 0x7f0d007f;
-		public static final int signup_password_input = 0x7f0d007c;
-		public static final int signup_username_input = 0x7f0d007b;
-		public static final int twitter_login = 0x7f0d007a;
+		public static final int app_logo = 0x7f0d006f;
+		public static final int create_account = 0x7f0d0081;
+		public static final int facebook_login = 0x7f0d007a;
+		public static final int login_help_email_input = 0x7f0d0078;
+		public static final int login_help_instructions = 0x7f0d0077;
+		public static final int login_help_submit = 0x7f0d0079;
+		public static final int login_password_input = 0x7f0d0072;
+		public static final int login_username_input = 0x7f0d0071;
+		public static final int parse_buttons = 0x7f0d0073;
+		public static final int parse_login = 0x7f0d0070;
+		public static final int parse_login_button = 0x7f0d0074;
+		public static final int parse_login_help = 0x7f0d0076;
+		public static final int parse_signup_button = 0x7f0d0075;
+		public static final int signup_confirm_password_input = 0x7f0d007e;
+		public static final int signup_email_input = 0x7f0d007f;
+		public static final int signup_name_input = 0x7f0d0080;
+		public static final int signup_password_input = 0x7f0d007d;
+		public static final int signup_username_input = 0x7f0d007c;
+		public static final int twitter_login = 0x7f0d007b;
 	}
 	public static final class layout {
 		public static final int com_parse_ui_parse_login_app_logo = 0x7f04001d;

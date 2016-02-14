@@ -50,4 +50,13 @@ public final class EventsBundler {
         });
         return events;
     }
+
+    public static ArrayList<Event> testEvents(int numEvents){
+        final ArrayList<Event> events = new ArrayList<Event>(numEvents);
+
+        for(int i = 0;i<3;i++){
+            events.add(new Event("We","Are,",new Date(),"Wat","Wattt"));
+        }
+        return events;
+    }
 }
