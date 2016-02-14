@@ -22,7 +22,7 @@ public class Event {
     private String description;
     private String userDefinedLocation;
     private Date date;
-    private int id; // TODO generate unique event ids for events
+    private String id;
     private int size;
     private int capacity;
     ArrayList<ParseUser> attendees;
@@ -39,7 +39,7 @@ public class Event {
     }
 
 
-    public Event(String title, String loc, Date date, String des) {
+    public Event(String title, String loc, Date date, String des, String id) {
         this.title = title;
         //this.creator = creator;
         this.userDefinedLocation = loc;
@@ -79,7 +79,8 @@ public class Event {
         return true;
     }
 
-    // TODO change to more descriptive name
+    // TODO change to more descriptive name and/or move into new class ("EventManager")
+    // currently breaking SRP
     // maybe "getAllEvents
     public static ArrayList<Event> createEventsList(int numEvents) {
         final ArrayList<Event> events = new ArrayList<Event>(numEvents);
@@ -97,7 +98,8 @@ public class Event {
                         String loc = ev.getString("loc");
                         Date date = ev.getDate("date");
                         String desc = ev.getString("description");
-                        events.add(new Event(title, loc, date, desc));
+                        String id = ev.getString("objectId");
+                        events.add(new Event(title, loc, date, desc, id));
                     }
                 }
                 else {
@@ -128,7 +130,7 @@ public class Event {
         return this.userDefinedLocation;
     }
 
-    public int getID() {
+    public String getID() {
         return this.id;
     }
 

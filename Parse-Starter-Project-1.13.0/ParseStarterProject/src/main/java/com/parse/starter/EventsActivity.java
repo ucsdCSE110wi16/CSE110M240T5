@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+// TODO fix events not loading after user presses back
 public class EventsActivity extends AppCompatActivity {
 
     public static final int eventsPerQuery = 10;
