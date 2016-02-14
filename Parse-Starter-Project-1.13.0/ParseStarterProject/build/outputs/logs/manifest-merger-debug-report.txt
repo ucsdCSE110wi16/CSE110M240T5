@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:9:1-56:12
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:9:1-59:12
 	package
 		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:10:5-32
 		INJECTED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-P
 	android:name
 		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:13:22-76
 application
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:15:5-54:19
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:15:5-57:19
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.parse:parseui-login-android:0.0.1] C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.parse\parseui-login-android\0.0.1\AndroidManifest.xml:32:5-20
@@ -72,39 +72,45 @@ ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-P
 	android:name
 		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:34:27-74
 activity#com.parse.ui.ParseLoginActivity
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:37:9-44:20
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:37:9-47:20
 	android:label
 		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:39:13-45
 	android:launchMode
 		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:40:13-43
 	android:name
 		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:38:13-59
+meta-data#com.parse.ui.ParseLoginActivity.APP_LOGO
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:41:13-43:56
+	android:resource
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:43:17-54
+	android:name
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:42:17-72
 meta-data#com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:41:13-43:40
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:44:13-46:40
 	android:value
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:43:17-37
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:46:17-37
 	android:name
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:42:17-83
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:45:17-83
 activity#com.parse.starter.ExpandDetailsActivity
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:45:9-48:59
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:48:9-51:59
 	android:label
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:47:13-66
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:50:13-66
 	android:theme
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:48:13-56
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:51:13-56
 	android:name
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:46:13-50
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:49:13-50
 activity#com.parse.starter.AddNewActivity
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:49:9-52:59
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:52:9-55:59
 	android:label
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:51:13-59
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:54:13-59
 	android:theme
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:52:13-56
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:55:13-56
 	android:name
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:50:13-43
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:53:13-43
 activity#com.parse.starter.EventsActivity
-ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:53:9-61
+ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:56:9-61
 	android:name
-		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:53:19-49
+		ADDED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml:56:19-49
 uses-sdk
 INJECTED from C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Johnathan\AndroidStudioProjects\CSE110M240T5\Parse-Starter-Project-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:20:5-43
