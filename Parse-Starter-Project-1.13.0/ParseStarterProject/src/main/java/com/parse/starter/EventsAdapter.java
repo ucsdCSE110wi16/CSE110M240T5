@@ -73,7 +73,7 @@ public class EventsAdapter extends
         nameTV.setText(ev.getTitle());
 
         TextView dateTV = viewHolder.dateTextView;
-        dateTV.setText(ev.getDate());
+        dateTV.setText(ev.getDate().toString()); // TODO make date format prettier
 
         Button button = viewHolder.messageButton;
 

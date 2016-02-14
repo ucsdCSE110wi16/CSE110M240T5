@@ -1,7 +1,15 @@
 package com.parse.starter;
 
+import android.util.Log;
+
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /** Class to bundle information about an event inside an object.
  * Created by Johnathan on 1/31/2016.
@@ -13,7 +21,7 @@ public class Event {
     private String title;
     private String description;
     private String userDefinedLocation;
-    private String date;
+    private Date date;
     private int id; // TODO generate unique event ids for events
     private int size;
     private int capacity;
@@ -31,7 +39,7 @@ public class Event {
     }
 
 
-    public Event(String title, String loc, String date, String des) {
+    public Event(String title, String loc, Date date, String des) {
         this.title = title;
         //this.creator = creator;
         this.userDefinedLocation = loc;
@@ -71,16 +79,32 @@ public class Event {
         return true;
     }
 
-    public static ArrayList<Event> createEventsList(int size) {
-        ArrayList<Event> events = new ArrayList<Event>(size);
-
-        Event event1 = new Event("Pop up restaurant", "CSE Basement", "TODAY!", "");
-        Event event2 = new Event("Pity party, need a +1", "RIMAC", "Feb 11", "");
-        Event event3 = new Event("Basketball game COME THRU", "My house", "2/11", "");
-
-        events.add(event1);
-        events.add(event2);
-        events.add(event3);
+    // TODO change to more descriptive name
+    // maybe "getAllEvents
+    public static ArrayList<Event> createEventsList(int numEvents) {
+        final ArrayList<Event> events = new ArrayList<Event>(numEvents);
+        // Get numEvents events from the database
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
+        query.addDescendingOrder("date"); // sort by date most recent first
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> userEvents, ParseException e) {
+                if (e == null) {
+                    Log.d("event", "Retrieved " + userEvents.size()
+                            + " events");
+                    for (ParseObject ev : userEvents) {
+                        String title = ev.getString("title");
+                        String loc = ev.getString("loc");
+                        Date date = ev.getDate("date");
+                        String desc = ev.getString("description");
+                        events.add(new Event(title, loc, date, desc));
+                    }
+                }
+                else {
+                    Log.d("event", "Error: " + e.getMessage());
+                }
+            }
+        });
 
         return events;
     }
@@ -124,7 +148,7 @@ public class Event {
         return this.altContact;
     }
 
-    public String getDate() { return this.date; }
+    public Date getDate() { return this.date; }
 
     ///// Setters /////
 

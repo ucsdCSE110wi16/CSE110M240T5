@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class EventsActivity extends AppCompatActivity {
 
+    public static final int eventsPerQuery = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -18,7 +20,8 @@ public class EventsActivity extends AppCompatActivity {
         // Lookup the recyclerview in activity layout
         RecyclerView rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
         // Create adapter passing in the sample user data
-        EventsAdapter adapter = new EventsAdapter(Event.createEventsList(3));
+        EventsAdapter adapter = new EventsAdapter(
+                Event.createEventsList(eventsPerQuery));
         // Attach the adapter to the recyclerview to populate items
         rvEvents.setAdapter(adapter);
         // Set layout manager to position the items
@@ -26,8 +29,9 @@ public class EventsActivity extends AppCompatActivity {
     }
 
     /**
-     * TODO
-     * @param v
+     * Send to the reply page with the event information
+     * @param v - The button view
+     * TODO send the event inormation to the reply page
      */
     public void replyButtonOnClick(View v) {
         Intent intent = new Intent(this, ExpandDetailsActivity.class);
