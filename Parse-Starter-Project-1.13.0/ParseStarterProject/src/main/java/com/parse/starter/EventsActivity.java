@@ -15,18 +15,28 @@ public class EventsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         setContentView(R.layout.activity_events);
         // Lookup the recyclerview in activity layout
         RecyclerView rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
         // Create adapter passing in the sample user data
         EventsAdapter adapter = new EventsAdapter(
-                Event.createEventsList(eventsPerQuery));
+                EventsBundler.recentEvents(eventsPerQuery));
         // Attach the adapter to the recyclerview to populate items
         rvEvents.setAdapter(adapter);
         // Set layout manager to position the items
         rvEvents.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     /**

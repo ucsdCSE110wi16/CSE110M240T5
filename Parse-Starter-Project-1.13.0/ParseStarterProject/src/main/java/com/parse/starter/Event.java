@@ -79,39 +79,6 @@ public class Event {
         return true;
     }
 
-    // TODO change to more descriptive name and/or move into new class ("EventManager")
-    // currently breaking SRP
-    // maybe "getAllEvents
-    public static ArrayList<Event> createEventsList(int numEvents) {
-        final ArrayList<Event> events = new ArrayList<Event>(numEvents);
-        // Get numEvents events from the database
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
-        query.addDescendingOrder("date"); // sort by date most recent first
-        query.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> userEvents, ParseException e) {
-                if (e == null) {
-                    Log.d("event", "Retrieved " + userEvents.size()
-                            + " events");
-                    for (ParseObject ev : userEvents) {
-                        String title = ev.getString("title");
-                        String loc = ev.getString("loc");
-                        Date date = ev.getDate("date");
-                        String desc = ev.getString("description");
-                        String id = ev.getString("objectId");
-                        events.add(new Event(title, loc, date, desc, id));
-                    }
-                }
-                else {
-                    Log.d("event", "Error: " + e.getMessage());
-                }
-            }
-        });
-
-        return events;
-    }
-
-
     ///// Getters /////
 
     public String getTitle() {

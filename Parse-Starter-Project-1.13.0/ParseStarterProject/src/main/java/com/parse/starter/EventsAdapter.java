@@ -18,6 +18,8 @@ import java.util.List;
 public class EventsAdapter extends
         RecyclerView.Adapter<EventsAdapter.ViewHolder> {
 
+    public static int uniqueRows; // number of unique rows
+
     // Provide a direct reference to each of the views within a data item
     // Used to cache the views within the item layout for fast access
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -26,6 +28,7 @@ public class EventsAdapter extends
         public TextView nameTextView;
         public TextView dateTextView;
         public Button messageButton;
+        public Event event;
 
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
