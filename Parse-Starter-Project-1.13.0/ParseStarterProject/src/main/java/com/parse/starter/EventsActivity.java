@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 /**
  * This class is the Activity where the Event Rows are displayed.
  * This activity is reached when CHECKOUT EVENTS is pressed.
@@ -30,10 +32,14 @@ public class EventsActivity extends AppCompatActivity {
         // Lookup the recyclerview in activity layout
         RecyclerView rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
         // Create adapter passing in the sample user data
+        List<Event> vents = EventsBundler.recentEvents(eventsPerQuery);
         Context context = getApplicationContext();
-        EventsAdapter adapter = new EventsAdapter(
-                EventsBundler.testEvents(eventsPerQuery));
+        EventsAdapter adapter = new EventsAdapter(vents);
         // Attach the adapter to the recyclerview to populate items
+        System.out.println("Size of event list: " + vents.size());
+        for (Event e : vents) {
+            System.out.println(e.getTitle());
+        }
         rvEvents.setAdapter(adapter);
         // Set layout manager to position the items
         rvEvents.setLayoutManager(new LinearLayoutManager(this));
@@ -45,17 +51,6 @@ public class EventsActivity extends AppCompatActivity {
         super.onResume();
     }
 
-    /**
-     * Send to the reply page with the event information
-     * @param v - The button view
-     * TODO send the event information to the reply page
-     */
-    public void replyButtonOnClick(View v) {
 
-        //int position = v.getLayoutPosition();
-        //Event e = eventsList.get(position);
-        Intent intent = new Intent(this, ExpandDetailsActivity.class);
-        startActivity(intent);
-    }
 
 }

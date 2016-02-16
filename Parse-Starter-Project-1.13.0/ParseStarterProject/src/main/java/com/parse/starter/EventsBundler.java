@@ -3,6 +3,7 @@ package com.parse.starter;
 import android.util.Log;
 
 import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -18,7 +19,8 @@ import java.util.List;
  */
 public final class EventsBundler {
 
-    /** Fetches numEvents events from the database, largest date value first.
+    /**
+     * Fetches numEvents events from the database, largest date value first.
      *
      * @param numEvents - The number of events to get
      * @return ArrayList of numEvents most recent events.
@@ -42,8 +44,7 @@ public final class EventsBundler {
                         String id = ev.getString("objectId");
                         events.add(new Event(title, loc, date, desc, id));
                     }
-                }
-                else {
+                } else {
                     Log.d("event", "Error: " + e.getMessage());
                 }
             }
@@ -51,22 +52,44 @@ public final class EventsBundler {
         return events;
     }
 
-    public static ArrayList<Event> testEvents(int numEvents){
+    public static ArrayList<Event> testEvents(int numEvents) {
         final ArrayList<Event> events = new ArrayList<Event>(numEvents);
 
-        for(int i = 0;i<3;i++){
-            events.add(new Event("We","Are,",new Date(),"Wat","Wattt"));
+        for (int i = 0; i < 3; i++) {
+            events.add(new Event("We", "Are,", new Date(), "Wat", "Wattt"));
         }
         return events;
     }
 
-    /** getEvent NEEDS TO BE IMPLEMENTED
+    /**
+     * getEvent NEEDS TO BE IMPLEMENTED
      *
      * @param id - identifier of Event object
      * @return Event object
      */
-    public static Event getEvent(String id) {
-        Event example = new Event("Seance", "Red shoe", new Date(), "Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena Macarena tiene un novio que se llama Que se llama de apellido Vitorino Que en la jura de bandera el muchacho Se la dio con dos amigos Macarena tiene un novio que se llama Que se llama de apellido Vitorino Y en la jura de bandera el muchacho Se la dio con dos amigos Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena", "testID");
-        return example;
+    public static Event getEvent(final String id) {
+        final Event[] ev = new Event[1];
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
+        query.getInBackground(id, new GetCallback<ParseObject>() {
+            @Override
+            public void done(ParseObject parEvent, ParseException e) {
+                if (e == null) {
+                    Log.d("event", "Retrieved event id: " + id);
+                    String title = parEvent.getString("title");
+                    String loc = parEvent.getString("loc");
+                    Date date = parEvent.getDate("date");
+                    String desc = parEvent.getString("description");
+                    String id = parEvent.getString("objectId");
+                    ev[0] = new Event(title, loc, date, desc, id);
+
+                } else {
+                    Log.d("event", "Error: " + e.getMessage());
+                    ev[0] = null;
+                }
+            }
+        });
+
+        return ev[0];
     }
+
 }
