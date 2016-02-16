@@ -36,7 +36,11 @@ public class ExpandDetailsActivity extends AppCompatActivity {
 
         // Access Event object -> load instance variables below
         // Maybe we can throw all of this in a method. pass in object to update fields.
-        Event example = new Event("Seance", "Red shoe", new Date(), "Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena Macarena tiene un novio que se llama Que se llama de apellido Vitorino Que en la jura de bandera el muchacho Se la dio con dos amigos Macarena tiene un novio que se llama Que se llama de apellido Vitorino Y en la jura de bandera el muchacho Se la dio con dos amigos Dale a tu cuerpo alegria Macarena Que tu cuerpo es pa' darle alegria y cosa buena Dale a tu cuerpo alegria, Macarena Hey Macarena", "testID");
+        Bundle extras = getIntent().getExtras();
+        String id = extras.getString("id");
+
+        Event example = EventsBundler.getEvent(id);
+
         example.setCapacity(10);
 
         TextView myTV = (TextView) findViewById(R.id.tvDetailsEventName);

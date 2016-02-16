@@ -41,6 +41,5 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="9dp"
-        android:text="Reply"
-        android:onClick="replyButtonOnClick" />
+        android:text="Reply" />
 </RelativeLayout>
