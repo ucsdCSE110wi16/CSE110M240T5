@@ -5,8 +5,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Date;
 
@@ -39,7 +41,10 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String id = extras.getString("id");
 
+        Log.d("ExpandDetailsActivity", "from getExtras: "+id);
+
         Event example = EventsBundler.getEvent(id);
+        Log.d("ExpandDetailsActivity", "event: " + example.getID());
 
         example.setCapacity(10);
 

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,7 +19,7 @@ import java.util.List;
 // TODO fix events not loading after user presses back
 public class EventsActivity extends AppCompatActivity {
 
-    public static final int eventsPerQuery = 10;
+    public static final int eventsPerQuery = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +33,12 @@ public class EventsActivity extends AppCompatActivity {
         // Lookup the recyclerview in activity layout
         RecyclerView rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
         // Create adapter passing in the sample user data
-        List<Event> vents = EventsBundler.recentEvents(eventsPerQuery);
+        List<Event> vents = EventsBundler.testEvents(eventsPerQuery);
         Context context = getApplicationContext();
         EventsAdapter adapter = new EventsAdapter(vents);
         // Attach the adapter to the recyclerview to populate items
-        System.out.println("Size of event list: " + vents.size());
-        for (Event e : vents) {
-            System.out.println(e.getTitle());
-        }
+        Log.d("EventsActivity", "Size of events list: " + vents.size());
+
         rvEvents.setAdapter(adapter);
         // Set layout manager to position the items
         rvEvents.setLayoutManager(new LinearLayoutManager(this));

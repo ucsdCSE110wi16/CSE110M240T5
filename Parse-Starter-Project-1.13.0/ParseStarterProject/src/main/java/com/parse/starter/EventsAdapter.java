@@ -3,6 +3,7 @@ package com.parse.starter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,9 +56,10 @@ public class EventsAdapter extends
         public void onClick(View v) {
             int position = getLayoutPosition(); // gets item position
             String id = eventsList.get(position).getID();
-            Toast.makeText(context, "pos: "+ position, Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(context, ExpandDetailsActivity.class);
+            Log.d("EventsAdapter", "putExtra event: "+eventsList.get(position).getTitle());
+            Log.d("EventsAdapter", "putExtra id: "+id);
             intent.putExtra("id", id);
 
             context.startActivity(intent);

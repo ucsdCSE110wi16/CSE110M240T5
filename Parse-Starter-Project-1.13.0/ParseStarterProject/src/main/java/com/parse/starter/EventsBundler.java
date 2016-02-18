@@ -34,7 +34,7 @@ public final class EventsBundler {
             @Override
             public void done(List<ParseObject> userEvents, ParseException e) {
                 if (e == null) {
-                    Log.d("event", "Retrieved " + userEvents.size()
+                    Log.d("EventsBundler", "Retrieved " + userEvents.size()
                             + " events");
                     for (ParseObject ev : userEvents) {
                         String title = ev.getString("title");
@@ -45,19 +45,20 @@ public final class EventsBundler {
                         events.add(new Event(title, loc, date, desc, id));
                     }
                 } else {
-                    Log.d("event", "Error: " + e.getMessage());
+                    Log.d("EventsBundler", "Error: " + e.getMessage());
                 }
             }
         });
+        Log.d("EventsBundler", "Size of events before return: "+events.size());
         return events;
     }
 
     public static ArrayList<Event> testEvents(int numEvents) {
         final ArrayList<Event> events = new ArrayList<Event>(numEvents);
 
-        for (int i = 0; i < 3; i++) {
-            events.add(new Event("We", "Are,", new Date(), "Wat", "Wattt"));
-        }
+        events.add(new Event("title1", "loc1", new Date(), "desc1", "111"));
+        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222"));
+        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333"));
         return events;
     }
 
@@ -68,6 +69,7 @@ public final class EventsBundler {
      * @return Event object
      */
     public static Event getEvent(final String id) {
+        /*
         final Event[] ev = new Event[1];
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.getInBackground(id, new GetCallback<ParseObject>() {
@@ -88,8 +90,8 @@ public final class EventsBundler {
                 }
             }
         });
-
-        return ev[0];
+        return ev[0]; */
+        return new Event(id, id, new Date(), id, id);
     }
 
 }

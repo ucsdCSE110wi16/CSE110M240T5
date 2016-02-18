@@ -46,6 +46,7 @@ public class Event {
         this.date = date;
         this.description = des;
         this.size = 0;
+        this.id = id;
     }
 
     /** Returns whether or not the event has a limit on the number of
@@ -139,5 +140,9 @@ public class Event {
 
     public void setAltContact(String c) {
         this.altContact = c;
+    }
+
+    public void setID(String ID) {
+        this.id = ID;
     }
 }
