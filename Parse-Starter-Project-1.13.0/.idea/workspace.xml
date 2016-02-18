@@ -44,66 +44,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="event_row.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/event_row.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/Event.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
-              <folding>
-                <element signature="e#3109#3110#0" expanded="true" />
-                <element signature="e#3155#3156#0" expanded="true" />
-                <element signature="e#3340#3341#0" expanded="true" />
-                <element signature="e#3368#3369#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsAdapter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4871795">
-              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-              <folding>
-                <element signature="e#2828#2829#0" expanded="true" />
-                <element signature="e#2872#2873#0" expanded="true" />
-                <element signature="e#4114#4115#0" expanded="true" />
-                <element signature="e#4154#4155#0" expanded="true" />
-                <element signature="e#4227#4228#0" expanded="true" />
-                <element signature="e#4271#4272#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ExpandDetailsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ExpandDetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <folding>
+                <element signature="e#1218#1485#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32051283">
+              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -1595,10 +1563,10 @@
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/AddNewActivity.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/event_row.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsBundler.java" />
-        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsActivity.java" />
-        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ExpandDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsAdapter.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/Event.java" />
+        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsAdapter.java" />
+        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ExpandDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsActivity.java" />
       </list>
     </option>
   </component>
@@ -1917,6 +1885,7 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1941,7 +1910,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2006,12 +1974,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
           <folding>
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4154#4155#0" expanded="true" />
-            <element signature="e#4227#4228#0" expanded="true" />
-            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+            <element signature="e#3902#3903#0" expanded="true" />
+            <element signature="e#3942#3943#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2020,7 +1986,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#1218#1485#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2067,12 +2036,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
           <folding>
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4154#4155#0" expanded="true" />
-            <element signature="e#4227#4228#0" expanded="true" />
-            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+            <element signature="e#3902#3903#0" expanded="true" />
+            <element signature="e#3942#3943#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2081,7 +2048,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#1218#1485#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2128,12 +2098,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4154#4155#0" expanded="true" />
-            <element signature="e#4227#4228#0" expanded="true" />
-            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+            <element signature="e#3902#3903#0" expanded="true" />
+            <element signature="e#3942#3943#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2142,7 +2110,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#1218#1485#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2220,8 +2191,6 @@
           <folding>
             <element signature="e#3109#3110#0" expanded="true" />
             <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2238,12 +2207,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4154#4155#0" expanded="true" />
-            <element signature="e#4227#4228#0" expanded="true" />
-            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+            <element signature="e#3902#3903#0" expanded="true" />
+            <element signature="e#3942#3943#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2255,29 +2222,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_add_new.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/content_add_new.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
@@ -2295,25 +2240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/event_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48076922">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsBundler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5448718">
@@ -2325,47 +2251,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ExpandDetailsActivity.java">
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+        <state vertical-scroll-proportion="-0.12179487">
+          <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_expand_details.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/content_add_new.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1617312">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_add_new.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/drawable/event_row_border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/event_row.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5808656">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="3.2371795">
           <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
           <folding>
             <element signature="e#3109#3110#0" expanded="true" />
             <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4871795">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ExpandDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4154#4155#0" expanded="true" />
-            <element signature="e#4227#4228#0" expanded="true" />
-            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#1218#1485#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32051283">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -13,12 +13,14 @@ import android.widget.Toast;
 import java.util.Date;
 
 /**
- * TODO
+ * Activity that appears after clicking a reply button in EventsActivity.
+ * Shows details of an Event and opportunity to contact host and eventually RSVP.
+ * Created by: jennywong
  */
 public class ExpandDetailsActivity extends AppCompatActivity {
 
-    /**TODO
-     *
+    /**
+     * onCreate -  load the activity
      * @param savedInstanceState
      */
     @Override
@@ -27,25 +29,23 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expand_details);
 
+        // Access Event object
+        Bundle extras = getIntent().getExtras();
+        String id = extras.getString("id");
+        Event example = EventsBundler.getEvent(id);
+
+        // Contact button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Contact: 1-800-HotlineBling", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
-        // Access Event object -> load instance variables below
-        // Maybe we can throw all of this in a method. pass in object to update fields.
-        Bundle extras = getIntent().getExtras();
-        String id = extras.getString("id");
-
-        Log.d("ExpandDetailsActivity", "from getExtras: "+id);
-
-        Event example = EventsBundler.getEvent(id);
-        Log.d("ExpandDetailsActivity", "event: " + example.getID());
-
+        // Capacity and contact info need to be accounted for!! Please ask for these two pieces of
+        // info in AddNewActivity
         example.setCapacity(10);
 
         TextView myTV = (TextView) findViewById(R.id.tvDetailsEventName);

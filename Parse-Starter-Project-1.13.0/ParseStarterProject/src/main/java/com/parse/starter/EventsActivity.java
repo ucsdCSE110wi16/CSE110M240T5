@@ -19,7 +19,7 @@ import java.util.List;
 // TODO fix events not loading after user presses back
 public class EventsActivity extends AppCompatActivity {
 
-    public static final int eventsPerQuery = 3;
+    public static final int eventsPerQuery = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,14 +14,13 @@ import android.widget.Toast;
 import java.util.List;
 
 /**
+ * Adapter for RecyclerView in EventsActivity
  * Created by jennywong on 2/10/16.
  */
 // Create the basic adapter extending from RecyclerView.Adapter
 // Note that we specify the custom ViewHolder which gives us access to our views
 public class EventsAdapter extends
         RecyclerView.Adapter<EventsAdapter.ViewHolder> {
-
-    public static int uniqueRows; // number of unique rows
 
     // Provide a direct reference to each of the views within a data item
     // Used to cache the views within the item layout for fast access
@@ -58,8 +57,7 @@ public class EventsAdapter extends
             String id = eventsList.get(position).getID();
 
             Intent intent = new Intent(context, ExpandDetailsActivity.class);
-            Log.d("EventsAdapter", "putExtra event: "+eventsList.get(position).getTitle());
-            Log.d("EventsAdapter", "putExtra id: "+id);
+
             intent.putExtra("id", id);
 
             context.startActivity(intent);
@@ -101,8 +99,6 @@ public class EventsAdapter extends
         TextView dateTV = viewHolder.dateTextView;
         dateTV.setText(ev.getDate().toString()); // TODO make date format prettier
 
-        Button button = viewHolder.messageButton;
-
     }
 
     // Return the total count of items
@@ -111,8 +107,4 @@ public class EventsAdapter extends
         return eventsList.size();
     }
 
-    // Return an item in the list
-    public Event getItem(int index) {
-        return eventsList.get(index);
-    }
 }
