@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
+    android:background="#E0EEEE"
     >
 
     <TextView
@@ -16,7 +17,7 @@
         android:layout_marginStart="9dp"
         android:layout_marginLeft="9dp"
         android:background="@drawable/event_row_border"
-        android:text="Date:"/>
+        android:text="@string/eventRow_Date"/>
 
     <TextView
         android:id="@+id/event_title"
@@ -36,10 +37,12 @@
         android:layout_height="50dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:textSize="10sp"
+        android:textSize="20sp"
+        android:textColor="#4f4f4f"
         android:layout_alignTop="@+id/event_date"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="9dp"
-        android:text="Reply" />
+        android:text="@string/event_row_reply"
+        android:background="#65ee83"/>
 </RelativeLayout>

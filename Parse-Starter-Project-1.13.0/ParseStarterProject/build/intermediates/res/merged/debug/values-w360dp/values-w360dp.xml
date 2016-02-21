@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-w360dp/values-w360dp.xml -->
+    <!-- From: file:/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-w360dp/values-w360dp.xml -->
     <eat-comment/>
     <integer name="abc_max_action_buttons">3</integer>
 </resources>

@@ -1,132 +1,132 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:9:1-59:12
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:9:1-59:12
 	package
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:10:5-32
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:10:5-32
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:9:11-69
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:9:11-69
 	android:versionCode
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:12:5-67
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:12:22-64
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:12:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:13:5-79
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:13:5-79
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:13:22-76
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:13:22-76
 application
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:15:5-57:19
-MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.parse:parseui-login-android:0.0.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/AndroidManifest.xml:32:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.parse:parseui-widget-android:0.0.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/AndroidManifest.xml:31:5-20
-MERGED from [com.android.support:design:22.2.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:15:5-57:19
+MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.parse:parseui-login-android:0.0.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/AndroidManifest.xml:32:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.parse:parseui-widget-android:0.0.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/AndroidManifest.xml:31:5-20
+MERGED from [com.android.support:design:22.2.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:19:9-41
 	android:allowBackup
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:17:9-35
 	android:icon
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:18:9-43
 	android:theme
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:20:9-40
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:20:9-40
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:16:9-43
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:16:9-43
 meta-data#com.parse.APPLICATION_ID
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:21:9-23:52
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:21:9-23:52
 	android:value
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:23:13-49
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:23:13-49
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:22:13-52
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:22:13-52
 meta-data#com.parse.CLIENT_KEY
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:24:9-26:56
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:24:9-26:56
 	android:value
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:26:13-53
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:26:13-53
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:25:13-48
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:25:13-48
 activity#com.parse.starter.MainActivity
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:28:9-36:20
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:28:9-36:20
 	android:label
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:30:13-45
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:30:13-45
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:29:13-41
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:29:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:31:13-35:29
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:31:13-35:29
 action#android.intent.action.MAIN
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:32:17-69
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:32:25-66
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:34:17-77
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:34:27-74
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:34:27-74
 activity#com.parse.ui.ParseLoginActivity
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:37:9-47:20
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:37:9-47:20
 	android:label
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:39:13-45
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:39:13-45
 	android:launchMode
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:40:13-43
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:40:13-43
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:38:13-59
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:38:13-59
 meta-data#com.parse.ui.ParseLoginActivity.APP_LOGO
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:41:13-43:56
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:41:13-43:56
 	android:resource
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:43:17-54
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:43:17-54
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:42:17-72
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:42:17-72
 meta-data#com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:44:13-46:40
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:44:13-46:40
 	android:value
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:46:17-37
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:46:17-37
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:45:17-83
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:45:17-83
 activity#com.parse.starter.ExpandDetailsActivity
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:48:9-51:59
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:48:9-51:59
 	android:label
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:50:13-66
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:50:13-66
 	android:theme
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:51:13-56
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:51:13-56
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:49:13-50
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:49:13-50
 activity#com.parse.starter.AddNewActivity
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:52:9-55:59
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:52:9-55:59
 	android:label
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:54:13-59
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:54:13-59
 	android:theme
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:55:13-56
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:55:13-56
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:53:13-43
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:53:13-43
 activity#com.parse.starter.EventsActivity
-ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:56:9-61
+ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:56:9-61
 	android:name
-		ADDED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:56:19-49
+		ADDED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml:56:19-49
 uses-sdk
-INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.parse:parseui-login-android:0.0.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/AndroidManifest.xml:28:5-30:41
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.parse:parseui-widget-android:0.0.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/AndroidManifest.xml:27:5-29:41
-MERGED from [com.android.support:design:22.2.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.parse:parseui-login-android:0.0.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/AndroidManifest.xml:28:5-30:41
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.parse:parseui-widget-android:0.0.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/AndroidManifest.xml:27:5-29:41
+MERGED from [com.android.support:design:22.2.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:22.2.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
-		INJECTED from /Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml
+		INJECTED from /Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/AndroidManifest.xml

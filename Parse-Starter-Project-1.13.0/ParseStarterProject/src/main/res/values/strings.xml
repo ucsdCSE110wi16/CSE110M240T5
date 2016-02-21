@@ -107,4 +107,13 @@
     </string>
     <string name="title_activity_add_new">AddNewActivity</string>
     <string name="title_activity_browsing_events">BrowsingEventsActivity</string>
+    <string name="create_new_activity">Create New Activity</string>
+    <string name="activity_name">Activity Name</string>
+    <string name="activity_time">Activity Time</string>
+    <string name="activity_location">Activity Location</string>
+    <string name="activity_tags">Tags</string>
+    <string name="submit_new_activity">Submit New Activity</string>
+    <string name="event_row_reply">Reply</string>
+    <string name="eventRow_Date">Date:</string>
+
 </resources>
