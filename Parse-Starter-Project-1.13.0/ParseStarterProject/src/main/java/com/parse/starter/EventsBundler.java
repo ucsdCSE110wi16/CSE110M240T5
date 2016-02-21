@@ -30,6 +30,7 @@ public final class EventsBundler {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("date"); // sort by date most recent first
+        query.setLimit(numEvents);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> userEvents, ParseException e) {
