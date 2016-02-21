@@ -58,10 +58,18 @@ public class EventsBundler {
      */
     public static Event getEvent(final String id) throws ParseException {
 
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
-        ParseObject parEvent = query.get(id);
+        // Emergency!!! ID is invalid, so create and return a dummy event.
+        if (id.equals("ids of march")) {
+            return new Event();
+        }
 
-        Log.d("event", "Retrieved event id: " + id);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
+        ParseObject parEvent = null;
+        try {
+            parEvent = query.get(id);
+        } catch(ParseException e) {
+            e.printStackTrace();
+        }
         String title = parEvent.getString("title");
         String loc = parEvent.getString("loc");
         Date date = parEvent.getDate("date");

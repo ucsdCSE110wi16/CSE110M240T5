@@ -25,7 +25,23 @@ public class Event {
     private int size;
     private int capacity;
     ArrayList<ParseUser> attendees;
-    private String altContact;
+    private String contact;
+
+    /** Constructor to create a dummy event for when event attempted to be
+     *  accessed is null. (testing)
+     */
+    public Event() {
+        creator = null;
+        title = "Dummy Convention";
+        description = "Free ventriloquism lessons. Sorry your event does not exist.";
+        userDefinedLocation = "Rubio's";
+        date = new Date();
+        id = "ids of march";
+        size = 0;
+        capacity = 3;
+        attendees = new ArrayList<ParseUser>();
+        contact = "831-408-3232";
+    }
 
     /** Constructor with bare minimum information required for an event
      *
@@ -33,19 +49,23 @@ public class Event {
      * @param creator - The user who has created this event
      */
     public Event(String title, ParseUser creator) {
+        super();
         this.title = title;
         this.creator = creator;
     }
 
 
     public Event(String title, String loc, Date date, String des, String id) {
+        this.creator = null; // need to set in AddNewActivity
         this.title = title;
-        //this.creator = creator;
-        this.userDefinedLocation = loc;
-        this.date = date;
         this.description = des;
-        this.size = 0;
+        this.userDefinedLocation = loc;
+        this.date = new Date();
         this.id = id;
+        this.size = 0;
+        this.capacity = 10; // need AddNewActivity form
+        this.attendees = new ArrayList<ParseUser>();
+        this.contact = "Contact "+title; // need AddNewActivity form
     }
 
     /** Returns whether or not the event has a limit on the number of
@@ -118,8 +138,8 @@ public class Event {
         return this.attendees;
     }
 
-    public String getAltContact() {
-        return this.altContact;
+    public String getContact() {
+        return this.contact;
     }
 
     public Date getDate() { return this.date; }
@@ -142,11 +162,14 @@ public class Event {
         this.capacity = c;
     }
 
-    public void setAltContact(String c) {
-        this.altContact = c;
+    public void setContact(String c) {
+        this.contact = c;
     }
 
     public void setID(String ID) {
         this.id = ID;
+    }
+
+    public void updateSize() { this.size++;
     }
 }

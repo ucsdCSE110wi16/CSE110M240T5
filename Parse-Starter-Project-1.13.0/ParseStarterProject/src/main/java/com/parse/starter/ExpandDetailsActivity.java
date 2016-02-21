@@ -7,12 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.ParseException;
 
 import java.util.Date;
+
+import static android.app.PendingIntent.getActivity;
 
 /**
  * Activity that appears after clicking a reply button in EventsActivity.
@@ -21,6 +24,7 @@ import java.util.Date;
  */
 public class ExpandDetailsActivity extends AppCompatActivity {
 
+    Event finalEvent;
     /**
      * onCreate -  load the activity
      * @param savedInstanceState
@@ -41,19 +45,10 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        // Contact button
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Contact: 1-800-HotlineBling", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        // Capacity and contact info need to be accounted for!! Please ask for these two pieces of
-        // info in AddNewActivity
-        example.setCapacity(10);
+        if (example == null) {
+            example = new Event();
+        }
+        this.finalEvent=example;
 
         TextView myTV = (TextView) findViewById(R.id.tvDetailsEventName);
         myTV.setText(example.getTitle());
@@ -72,8 +67,30 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         myTV5.setText(sz);
 
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
-//        String host = "Hosted by: " + example.getCreator().toString();
-        myTV6.setText("Hosted By: Jenny");
+        // uncomment after creator problem resolved
+        //String host = "Hosted by: " + example.getCreator().getUsername();
+        myTV6.setText("Hosted By: Liza Minnelli");
+
+        Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
+        rsvpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Increment size from inside an inner anonymous class. tricky tricky tricky
+                Event event = new Event();
+                event.updateSize();
+                Toast.makeText(ExpandDetailsActivity.this, "lol I don't really do anything yet",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button contactButton = (Button) findViewById(R.id.buttonContact);
+        contactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ExpandDetailsActivity.this, finalEvent.getContact(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 }
