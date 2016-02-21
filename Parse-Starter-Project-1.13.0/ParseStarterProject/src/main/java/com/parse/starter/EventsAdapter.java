@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -93,11 +94,23 @@ public class EventsAdapter extends
         Event ev = this.eventsList.get(position);
 
         // Set item views based on the data model
+        String title = "";
+        String dateText = "";
+        if ( ev != null ) {
+            String tmpTitle = ev.getTitle();
+            Date tmpDate = ev.getDate();
+            if ( tmpTitle != null ) {
+                title = tmpTitle;
+            }
+            if ( tmpDate != null ) {
+                dateText = tmpDate.toString(); // TODO make date format prettier
+            }
+        }
         TextView nameTV = viewHolder.nameTextView;
-        nameTV.setText(ev.getTitle());
+        nameTV.setText(title);
 
         TextView dateTV = viewHolder.dateTextView;
-        dateTV.setText(ev.getDate().toString()); // TODO make date format prettier
+        dateTV.setText(dateText); // TODO make date format prettier
 
     }
 
