@@ -5,6 +5,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.parse.ParseObject;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,7 @@ public class AddNewActivity extends AppCompatActivity implements
     Button bSubmit;
     EditText actName, actLoc, actTime, actTags;
     GoogleApiClient mGoogleApiClient;
+    Location mLastLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -99,12 +101,20 @@ public class AddNewActivity extends AppCompatActivity implements
 
 
     /**
-     * TODO do something
+     * TODO do something when getting location, give user option to use their location
+     * Reference: http://developer.android.com/training/location/retrieve-current.html
+     * https://developers.google.com/android/guides/setup
+     * http://developer.android.com/training/location/index.html
      * @param bundle
      */
     @Override
     public void onConnected(Bundle bundle) {
-
+//        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+//                mGoogleApiClient);
+//        if (mLastLocation != null) {
+//            mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
+//            mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
+//        }
     }
 
     /**
