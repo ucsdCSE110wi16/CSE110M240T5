@@ -80,6 +80,11 @@ public class Event {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "EventID: " + getID() + "; Title: " + getTitle();
+    }
+
     ///// Getters /////
 
     public String getTitle() {
