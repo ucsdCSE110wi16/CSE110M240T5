@@ -63,7 +63,9 @@ public final class EventsBundler {
     }
 
     /**
-     * getEvent NEEDS TO BE IMPLEMENTED
+     * getEvent Returns an Event object created from the entry in the db
+     *          corresponding to the input id
+     * Created by: Johnathan Lutzke and Jenny Wong
      *
      * @param id - identifier of Event object
      * @return Event object
