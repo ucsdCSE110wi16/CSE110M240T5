@@ -98,16 +98,28 @@ public class AddNewActivity extends AppCompatActivity implements
     }
 
 
+    /**
+     * TODO do something
+     * @param bundle
+     */
     @Override
     public void onConnected(Bundle bundle) {
 
     }
 
+    /**
+     * TODO do something
+     * @param i
+     */
     @Override
     public void onConnectionSuspended(int i) {
 
     }
 
+    /**
+     * TODO do something
+     * @param connectionResult
+     */
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
