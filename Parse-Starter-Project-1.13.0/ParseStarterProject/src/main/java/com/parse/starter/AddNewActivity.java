@@ -1,5 +1,6 @@
 package com.parse.starter;
 
+import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.parse.ParseObject;
@@ -14,7 +15,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AddNewActivity extends AppCompatActivity implements View.OnClickListener
+public class AddNewActivity extends AppCompatActivity implements
+        View.OnClickListener,
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener
 {
     Button bSubmit;
     EditText actName, actLoc, actTime, actTags;
@@ -26,14 +30,14 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
 
 
-//        // Create an instance of GoogleAPIClient.
-//        if (mGoogleApiClient == null) {
-//            mGoogleApiClient = new GoogleApiClient.Builder(this)
-//                    .addConnectionCallbacks(this)
-//                    .addOnConnectionFailedListener(this)
-//                    .addApi(LocationServices.API)
-//                    .build();
-//        }
+        // Create an instance of GoogleAPIClient.
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
 
         setContentView(R.layout.activity_add_new);
 
@@ -91,5 +95,21 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
             //TODO Need a way to update the events
             finish();
         }
+    }
+
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
     }
 }
