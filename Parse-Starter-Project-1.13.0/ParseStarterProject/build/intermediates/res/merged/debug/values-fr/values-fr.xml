@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fr/values-fr.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fr/values-fr.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Revenir à l\'accueil"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -19,7 +19,7 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Partager avec"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Partager avec %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Réduire"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fr/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fr/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nécessite un ou plusieurs services Google Play qui ne sont pas disponibles actuellement. Veuillez contacter le développeur pour obtenir de l\'aide."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Activer les services Google Play"</string>
@@ -38,10 +38,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Profil limité"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Erreur lors de la connexion au compte indiqué. Veuillez en sélectionner un autre."</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Échec de la connexion"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-fr/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-fr/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"L\'application <ns1:g id="APP_NAME">%1$s</ns1:g> rencontre des problèmes avec les services Google Play. Si le problème persiste, veuillez contacter le développeur pour obtenir de l\'aide."</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fr/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fr/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> dépend des services Google Play, qui ne sont pas compatibles avec votre appareil. Veuillez contacter le fabricant pour obtenir de l\'aide."</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Services Google Play"</string>
@@ -54,7 +54,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Ouvrir sur le téléphone"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Se connecter"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Se connecter avec Google"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-fr/values-fr.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-fr/values-fr.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Caster"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Recherche d\'appareils en cours…"</string>
@@ -67,14 +67,14 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Arrêter la diffusion"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Système"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Appareils"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-fr/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-fr/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Effacer la recherche"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Rechercher"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fr/values-fr.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fr/values-fr.xml -->
     <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-fr/wallet_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-fr/wallet_strings.xml -->
     <eat-comment/>
     <string msgid="4184147110658930238" name="wallet_buy_button_place_holder">"Acheter avec Google"</string>
 </resources>

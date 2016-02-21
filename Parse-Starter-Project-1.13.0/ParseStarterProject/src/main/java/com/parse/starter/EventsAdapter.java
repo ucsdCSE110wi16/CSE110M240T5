@@ -16,8 +16,9 @@ import java.util.List;
 
 /**
  * Adapter for RecyclerView in EventsActivity
- * Created by jennywong on 2/10/16.
+ * Created by Jenny
  */
+
 // Create the basic adapter extending from RecyclerView.Adapter
 // Note that we specify the custom ViewHolder which gives us access to our views
 public class EventsAdapter extends

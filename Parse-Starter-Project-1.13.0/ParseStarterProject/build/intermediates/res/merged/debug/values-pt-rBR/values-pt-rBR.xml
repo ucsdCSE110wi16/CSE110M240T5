@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-pt-rBR/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-pt-rBR/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> exige um ou mais serviços do Google Play que não estão disponíveis no momento. Entre em contato com o desenvolvedor para receber ajuda."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Ativar o Google Play Services"</string>
@@ -19,10 +19,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Perfil restrito"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Erro ao fazer login na conta especificada. Escolha outra conta."</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Falha de login"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-pt-rBR/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-pt-rBR/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> está tendo problemas com os serviços do Google Play. Se o problema persistir, entre em contato com o desenvolvedor para receber ajuda."</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-pt-rBR/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-pt-rBR/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> depende do Google Play Services, o qual não é compatível com seu dispositivo. Entre em contato com o fabricante para receber ajuda."</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Google Play Services"</string>
@@ -35,11 +35,11 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Abrir no smartphone"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Fazer login"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Fazer login com o Google"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-pt-rBR/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-pt-rBR/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Limpar pesquisa"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Pesquisar"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-pt-rBR/wallet_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-pt-rBR/wallet_strings.xml -->
     <eat-comment/>
     <string msgid="4184147110658930238" name="wallet_buy_button_place_holder">"Comprar com o Google"</string>
 </resources>

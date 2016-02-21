@@ -18,4 +18,4 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_gravity="center"/><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/design/res/layout/layout_tab_icon.xml --><!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/layout/layout_tab_icon.xml -->
+           android:layout_gravity="center"/><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/design/res/layout/layout_tab_icon.xml --><!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/layout/layout_tab_icon.xml -->

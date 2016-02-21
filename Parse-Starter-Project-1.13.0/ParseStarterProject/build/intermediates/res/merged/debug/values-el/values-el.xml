@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-el/values-el.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-el/values-el.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Πλοήγηση στην αρχική σελίδα"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -19,7 +19,7 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Κοινή χρήση με"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Κοινή χρήση με %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Σύμπτυξη"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-el/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-el/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"Η εφαρμογή <ns1:g id="APP_NAME">%1$s</ns1:g> απαιτεί μία ή περισσότερες υπηρεσίες του Google Play που δεν είναι διαθέσιμες προς το παρόν. Επικοινωνήστε με τον προγραμματιστή για βοήθεια."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Ενεργοποίηση υπηρεσιών Google Play"</string>
@@ -38,10 +38,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Προφίλ περιορισμένης πρόσβασης"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Σφάλμα κατά τη σύνδεση στον συγκεκριμένο λογαριασμό. Επιλέξτε έναν διαφορετικό λογαριασμό."</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Η σύνδεση απέτυχε"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-el/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-el/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"Παρουσιάζονται προβλήματα με τις υπηρεσίες Google Play στην εφαρμογή <ns1:g id="APP_NAME">%1$s</ns1:g>. Εάν το πρόβλημα εξακολουθεί να παρουσιάζεται, επικοινωνήστε με τον προγραμματιστή για βοήθεια."</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-el/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-el/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"Η εφαρμογή <ns1:g id="APP_NAME">%1$s</ns1:g> βασίζεται στις υπηρεσίες Google Play, οι οποίες δεν υποστηρίζονται από τη συσκευή σας. Επικοινωνήστε με τον κατασκευαστή για βοήθεια."</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"υπηρεσίες Google Play"</string>
@@ -54,7 +54,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Άνοιγμα σε τηλέφωνο"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Σύνδεση"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Συνδεθείτε με το Google"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-el/values-el.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-el/values-el.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Μετάδοση"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Αναζήτηση συσκευών…"</string>
@@ -67,14 +67,14 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Διακοπή μετάδοσης"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Σύστημα"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Συσκευές"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-el/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-el/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Διαγραφή αναζητήσεων"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Αναζήτηση"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-el/values-el.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-el/values-el.xml -->
     <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-el/wallet_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-el/wallet_strings.xml -->
     <eat-comment/>
     <string msgid="4184147110658930238" name="wallet_buy_button_place_holder">"Αγορά μέσω Google"</string>
 </resources>

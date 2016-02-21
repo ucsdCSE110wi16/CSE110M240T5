@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-hy-rAM/values-hy-rAM.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-hy-rAM/values-hy-rAM.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ուղղվել տուն"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -19,7 +19,7 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Տարածել"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Տարածել ըստ %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Թաքցնել"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-hy-rAM/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-hy-rAM/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> հավելվածի համար պահանջվում է մեկ կամ մի քանի Google Play ծառայություններ, որոնք այս պահին հասանելի չեն: Օգնություն ստանալու համար կապվեք մշակողի հետ:"</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Միացնել Google Play ծառայությունները"</string>
@@ -38,10 +38,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Սահմանափակված պրոֆիլ"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Նշված հաշիվ մուտք գործելիս առաջացել է սխալ: Ընտրեք մեկ այլ հաշիվ:"</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Մուտքը ձախողվեց"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-hy-rAM/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-hy-rAM/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> հավելվածը Google Play ծառայությունների հետ կապված խնդիր ունի: Եթե խնդիրը չվերանա, դիմեք մշակողին՝ օգնություն ստանալու համար:"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-hy-rAM/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-hy-rAM/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> հավելվածի համար հարկավոր են Google Play ծառայություններ, որոնք ձեր սարքը չի աջակցում: Օգնություն ստանալու համար կապվեք արտադրողի հետ:"</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Google Play ծառայություններ"</string>
@@ -54,7 +54,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Բացել հեռախոսով"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Մուտք գործել"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Մուտք գործել Google-ով"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-hy-rAM/values-hy-rAM.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-hy-rAM/values-hy-rAM.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Հեռարձակում"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Որոնվում են սարքեր..."</string>
@@ -67,11 +67,11 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Դադարեցնել հեռարձակումը"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Համակարգ"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Սարքեր"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-hy-rAM/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-hy-rAM/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Մաքրել որոնման դաշտը"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Որոնում"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-hy-rAM/values-hy-rAM.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-hy-rAM/values-hy-rAM.xml -->
     <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

@@ -10,12 +10,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.ParseException;
+
 import java.util.Date;
 
 /**
  * Activity that appears after clicking a reply button in EventsActivity.
  * Shows details of an Event and opportunity to contact host and eventually RSVP.
- * Created by: jennywong
+ * Created by: Jenny, Alex, Hans, Johnathan
  */
 public class ExpandDetailsActivity extends AppCompatActivity {
 
@@ -32,7 +34,12 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         // Access Event object
         Bundle extras = getIntent().getExtras();
         String id = extras.getString("id");
-        Event example = EventsBundler.getEvent(id);
+        Event example = null;
+        try {
+            example = EventsBundler.getEvent(id);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         // Contact button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

@@ -16,6 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+/**
+ * Created by: Alex
+ */
 public class AddNewActivity extends AppCompatActivity implements
         View.OnClickListener,
         GoogleApiClient.ConnectionCallbacks,

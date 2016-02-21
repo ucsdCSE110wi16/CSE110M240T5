@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-mk-rMK/values-mk-rMK.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-mk-rMK/values-mk-rMK.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Движи се кон дома"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
@@ -17,7 +17,7 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Гласовно пребарување"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Сподели со"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Собери"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-mk-rMK/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-mk-rMK/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> бара една или повеќе услуги на Google Play што не се достапни во моментов. Контактирајте со програмерот за помош."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Овозможи ги услугите на Google Play"</string>
@@ -36,10 +36,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Ограничен профил"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Грешка при пријавување во наведената сметка. Изберете друга сметка."</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Најавувањето не успеа"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-mk-rMK/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-mk-rMK/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> има проблеми со услугите на Google Play. Ако проблемот продолжи, контактирајте со програмерот за помош."</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-mk-rMK/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-mk-rMK/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> се потпира на услуги на Google Play што вашиот уред не ги поддржува. Контактирајте со производителот за помош."</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Услуги на Google Play"</string>
@@ -52,7 +52,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Отвори на телефонот"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Најави се"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Најави се со Google"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-mk-rMK/values-mk-rMK.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-mk-rMK/values-mk-rMK.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Емитувај"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Се пребаруваат уреди..."</string>
@@ -65,11 +65,11 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Запри префрлување"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Систем"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Уреди"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-mk-rMK/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-mk-rMK/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Исчисти го полето за пребарување"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Пребарај"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-mk-rMK/values-mk-rMK.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-mk-rMK/values-mk-rMK.xml -->
     <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

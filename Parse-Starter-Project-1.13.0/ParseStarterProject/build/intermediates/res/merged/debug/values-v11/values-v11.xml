@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v11/values-v11.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat.Inverse">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
@@ -160,7 +160,7 @@
         <item name="android:actionModePasteDrawable">?actionModePasteDrawable</item>
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="android:Widget.Holo.Spinner"/>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/res/values-v11/appinvite_styles.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/res/values-v11/appinvite_styles.xml -->
     <eat-comment/>
     <style name="Theme.AppInvite.Preview.Base" parent="@android:style/Theme.Holo.Light.DialogWhenLarge.NoActionBar"/>
 </resources>

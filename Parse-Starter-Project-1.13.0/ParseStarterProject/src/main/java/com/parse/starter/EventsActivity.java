@@ -10,11 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.parse.ParseException;
+
 import java.util.List;
 
 /**
  * This class is the Activity where the Event Rows are displayed.
  * This activity is reached when CHECKOUT EVENTS is pressed.
+ * Created by: Jenny, Ryan, Alex
  */
 // TODO fix events not loading after user presses back
 public class EventsActivity extends AppCompatActivity {
@@ -24,24 +27,29 @@ public class EventsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         setContentView(R.layout.activity_events);
+
         // Lookup the recyclerview in activity layout
         RecyclerView rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
+
         // Create adapter passing in the sample user data
-        List<Event> vents = EventsBundler.testEvents(eventsPerQuery);
+        List<Event> vents = null;
+        try {
+            vents = EventsBundler.recentEvents(eventsPerQuery);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         Context context = getApplicationContext();
         EventsAdapter adapter = new EventsAdapter(vents);
-        // Attach the adapter to the recyclerview to populate items
-        Log.d("EventsActivity", "Size of events list: " + vents.size());
 
+        // Attach the adapter to the recyclerview to populate items
         rvEvents.setAdapter(adapter);
+
         // Set layout manager to position the items
         rvEvents.setLayoutManager(new LinearLayoutManager(this));
     }

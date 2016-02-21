@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fi/values-fi.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fi/values-fi.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Siirry etusivulle"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -19,7 +19,7 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Jakaminen:"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Jakaminen: %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Kutista"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fi/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fi/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> tarvitsee yhtä tai useampaa Google Play Palvelua, jotka eivät ole tällä hetkellä käytettävissä. Ota yhteyttä kehittäjään."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Ota Google Play Palvelut käyttöön"</string>
@@ -38,10 +38,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Rajoitettu profiili"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Määritetylle tilille kirjauduttaessa tapahtui virhe. Valitse toinen tili."</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Kirjautuminen epäonnistui."</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-fi/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-fi/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"Sovelluksella <ns1:g id="APP_NAME">%1$s</ns1:g> on ongelmia Google Play Palveluiden kanssa. Jos ongelma ei poistu, ota yhteyttä sovelluksen kehittäjään."</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fi/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-fi/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> käyttää Google Play Palveluita, joita laitteesi ei tue. Ota yhteyttä laitteen valmistajaan."</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Google Play Palvelut"</string>
@@ -54,7 +54,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Avaa puhelimessa"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Kirjaudu sisään"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Kirjaudu Google-tilille"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-fi/values-fi.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-fi/values-fi.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Lähetä"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Etsitään laitteita…"</string>
@@ -67,14 +67,14 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Lopeta suoratoisto"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Järjestelmä"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Laitteet"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-fi/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-fi/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Tyhjennä haku."</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Haku"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fi/values-fi.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-fi/values-fi.xml -->
     <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-fi/wallet_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-fi/wallet_strings.xml -->
     <eat-comment/>
     <string msgid="4184147110658930238" name="wallet_buy_button_place_holder">"Maksa Googlen kautta"</string>
 </resources>

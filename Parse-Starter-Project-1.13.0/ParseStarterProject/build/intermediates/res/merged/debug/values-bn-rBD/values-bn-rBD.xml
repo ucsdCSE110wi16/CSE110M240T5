@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-bn-rBD/values-bn-rBD.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-bn-rBD/values-bn-rBD.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"হোম এ নেভিগেট করুন"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -19,7 +19,7 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"এর সাথে ভাগ করুন"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s এর সাথে ভাগ করুন"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"সঙ্কুচিত করুন"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-bn-rBD/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-bn-rBD/base_strings.xml -->
     <eat-comment/>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> এর একটি বা আরও বেশি Google Play পরিষেবার প্রয়োজন যা বর্তমানে উপলব্ধ নেই। অনুগ্রহ করে সহায়তার জন্য বিকাশকারীর সাথে যোগাযোগ করুন।"</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Google Play পরিষেবা সক্ষম করুন"</string>
@@ -38,10 +38,10 @@
     <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"বিধিনিষেধযুক্ত প্রোফাইল"</string>
     <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"উল্লিখিত অ্যাকাউন্টে সাইন ইন করার সময় ত্রুটি৷ অনুগ্রহ করে আলাদা কোনো অ্যাকাউন্ট বাছুন৷"</string>
     <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"সাইন ইন করতে ব্যর্থ হয়েছে"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-bn-rBD/common_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-bn-rBD/common_strings.xml -->
     <eat-comment/>
     <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"Google Play পরিষেবাগুলির সাথে <ns1:g id="APP_NAME">%1$s</ns1:g> এর সমস্যা হচ্ছে৷ যদি সমস্যাটি থেকে যায় তাহলে অনুগ্রহ করে সহায়তার জন্য বিকাশকারীর সাথে যোগাযোগ করুন।"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-bn-rBD/base_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-bn-rBD/base_strings.xml -->
     <eat-comment/>
     <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> Google Play পরিষেবার উপর নির্ভরশীল, যা আপনার ডিভাইসে সমর্থিত নয়। সহায়তার জন্য প্রস্তুতকারকের সাথে যোগাযোগ করুন।"</string>
     <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Google Play পরিষেবা"</string>
@@ -54,7 +54,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"ফোনে খুলুন"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"সাইন ইন করুন"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Google এর মাধ্যমে সাইন ইন করুন"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-bn-rBD/values-bn-rBD.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-bn-rBD/values-bn-rBD.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"কাস্ট করুন"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"ডিভাইসগুলি অনুসন্ধান করা হচ্ছে…"</string>
@@ -67,11 +67,11 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"কাস্ট করা বন্ধ করুন"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"সিস্টেম"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"ডিভাইসগুলি"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-bn-rBD/location_strings.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-bn-rBD/location_strings.xml -->
     <eat-comment/>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"অনুসন্ধান মুছুন"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"অনুসন্ধান করুন"</string>
-    <!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-bn-rBD/values-bn-rBD.xml -->
+    <!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-bn-rBD/values-bn-rBD.xml -->
     <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"৯৯৯+"</string>
 </resources>

@@ -18,4 +18,4 @@
         android:text="@string/com_parse_ui_twitter_login_button_label"
         android:visibility="gone" />
 </merge>
-<!-- From: file:/Users/wangmengyan/Parse/ParseUIAndroid/ParseUI-Android/ParseUI-Login/src/main/res/layout/com_parse_ui_parse_login_third_party_section.xml --><!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/res/layout/com_parse_ui_parse_login_third_party_section.xml -->
+<!-- From: file:/Users/wangmengyan/Parse/ParseUIAndroid/ParseUI-Android/ParseUI-Login/src/main/res/layout/com_parse_ui_parse_login_third_party_section.xml --><!-- From: file:/Users/jennywong/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/res/layout/com_parse_ui_parse_login_third_party_section.xml -->

@@ -12,8 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 /** Class to bundle information about an event inside an object.
- * Created by Johnathan on 1/31/2016.
- * Merged with EventsForLoading.java by Jenny on 2/11/2016.
+ * Created by Johnathan, Jenny
  */
 public class Event {
 
