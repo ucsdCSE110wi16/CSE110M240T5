@@ -1,5 +1,7 @@
 package com.parse.starter;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.parse.ParseObject;
 
 import android.os.Bundle;
@@ -16,11 +18,23 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
 {
     Button bSubmit;
     EditText actName, actLoc, actTime, actTags;
+    GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+
+        // Create an instance of GoogleAPIClient.
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+
         setContentView(R.layout.activity_add_new);
 
         actName = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyName);
@@ -30,6 +44,16 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
 
         bSubmit = (Button) findViewById(R.id.bt_NEWACTIVITY_submit);
         bSubmit.setOnClickListener(this);
+    }
+
+    protected void onStart() {
+        mGoogleApiClient.connect(); // connect to Google API
+        super.onStart();
+    }
+
+    protected void onStop() {
+        mGoogleApiClient.disconnect(); // disconnect from Google API
+        super.onStop();
     }
 
     @Override

@@ -46,16 +46,6 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
 
-        // Create an instance of GoogleAPIClient.
-//        if (mGoogleApiClient == null) {
-//            mGoogleApiClient = new GoogleApiClient.Builder(this)
-//                    .addConnectionCallbacks(this)
-//                    .addOnConnectionFailedListener(this)
-//                    .addApi(LocationServices.API)
-//                    .build();
-//        }
-        // TODO uncomment when google play service pushed to repo
-
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
         // currUser = ParseUser.getCurrentUser();
@@ -70,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * TODO
+     * Handles logging in and logging out user as a ParseUser
      * @param v
      */
     public void signInOutButtonOnClick(View v) {
@@ -92,7 +82,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * TODO
+     * Starts EventsActivity
      * @param v
      */
     public void viewEventsButtonOnClick(View v) {
@@ -112,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     /**
-     * TODO
+     * TODO Add options to the options menu
      * @param menu
      * @return
      */
@@ -124,7 +114,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * TODO
+     * TODO do something with settings or remove
      * @param item
      * @return
      */
