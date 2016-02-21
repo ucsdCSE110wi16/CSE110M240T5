@@ -46,6 +46,16 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
 
+        // Create an instance of GoogleAPIClient.
+//        if (mGoogleApiClient == null) {
+//            mGoogleApiClient = new GoogleApiClient.Builder(this)
+//                    .addConnectionCallbacks(this)
+//                    .addOnConnectionFailedListener(this)
+//                    .addApi(LocationServices.API)
+//                    .build();
+//        }
+        // TODO uncomment when google play service pushed to repo
+
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
         // currUser = ParseUser.getCurrentUser();
@@ -57,13 +67,6 @@ public class MainActivity extends ActionBarActivity {
         else {
             loginText.setText(emptyStr);
         }
-
-
-        // Database test. TODO remove later
-        /* ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
-        */
     }
 
     /**

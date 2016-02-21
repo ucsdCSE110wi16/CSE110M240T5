@@ -33,38 +33,32 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         boolean validInputForm = true;
         //Check activity name
         String title = actName.getText().toString();
-        if (title.matches(""))
-        {
+        if (title.matches("")) {
             validInputForm = false;
         }
         //Check activity location
         String loc = actLoc.getText().toString();
-        if (loc.matches(""))
-        {
+        if (loc.matches("")) {
             validInputForm = false;
         }
         //Check activity time
         String time = actTime.getText().toString();
-        if (time.matches(""))
-        {
+        if (time.matches("")) {
             validInputForm = false;
         }
-        if (!validInputForm)
-        {
+        if (!validInputForm) {
             Toast.makeText(this,
                     "Your event is missing some information",
                     Toast.LENGTH_SHORT).show();
         }
 
-        if(v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm)
-        {
+        if (v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm) {
             //Send data to the parse Database.
-            System.out.println("This method is running!!");
+            System.out.println("Pushing new UserEvent to database");
             ParseObject userEvent = new ParseObject("UserEvent");
             userEvent.put("title", title);
             userEvent.put("loc", loc);
@@ -73,7 +67,5 @@ public class AddNewActivity extends AppCompatActivity implements View.OnClickLis
             //TODO Need a way to update the events
             finish();
         }
-
-
     }
 }
