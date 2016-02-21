@@ -5,26 +5,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:padding="10dp"
+    android:background="#E0EEEE"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Create New Activity"
-        android:id="@+id/textView" />
+        android:text="@string/create_new_activity"
+        android:textSize="28sp"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Enter Info"
-        android:id="@+id/textView2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Activity Name"
-        android:textSize="18sp"
+        android:text="@string/activity_name"
+        android:textSize="20sp"
         android:textColor="#000"
         android:layout_margin="10dp"
         android:layout_height="wrap_content" />
@@ -34,12 +30,15 @@
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:background="#ffffff"
+        android:padding="2dp" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:text="Activity Time"
-        android:textSize="18sp"
+        android:text="@string/activity_time"
+        android:textSize="20sp"
         android:textColor="#000"
         android:layout_margin="10dp"
         android:layout_height="wrap_content" />
@@ -49,12 +48,15 @@
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="datetime"
+        android:background="#ffffff"
+        android:padding="2dp" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:text="Activity Location"
-        android:textSize="18sp"
+        android:text="@string/activity_location"
+        android:textSize="20sp"
         android:textColor="#000"
         android:layout_margin="10dp"
         android:layout_height="wrap_content" />
@@ -63,12 +65,15 @@
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:background="#ffffff"
+        android:padding="2dp" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:text="Tags"
-        android:textSize="18sp"
+        android:text="@string/activity_tags"
+        android:textSize="20sp"
         android:textColor="#000"
         android:layout_margin="10dp"
         android:layout_height="wrap_content" />
@@ -77,15 +82,20 @@
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:inputType="text"
+        android:background="#ffffff" />
 
     <Button
-        android:layout_width="match_parent"
-        android:text="Submit New Activity"
-        android:textSize="18sp"
-        android:textColor="#000"
+        android:layout_width="fill_parent"
+        android:text="@string/submit_new_activity"
+        android:textSize="20sp"
+        android:textColor="#4f4f4f"
+        android:background="#65ee83"
         android:id="@+id/bt_NEWACTIVITY_submit"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="2dp" />
 
 </LinearLayout>
-<!-- From: file:/Users/J2/Downloads/Winter_2016/110CSE/ProjectFiles_7:28/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/content_add_new.xml -->
+<!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/layout/content_add_new.xml -->

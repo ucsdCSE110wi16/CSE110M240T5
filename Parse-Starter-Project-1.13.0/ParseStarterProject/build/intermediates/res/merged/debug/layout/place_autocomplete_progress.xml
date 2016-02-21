@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/place_autocomplete_progress"
+    android:padding="3dp"
+    android:visibility="visible"
+    android:indeterminate="true"
+    android:indeterminateTint="#4184F3"
+    android:indeterminateTintMode="src_atop"
+    />
+<!-- From: file:/C:/Users/Johnathan/AndroidStudioProjects/new/CSE110M240T5/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_progress.xml -->
