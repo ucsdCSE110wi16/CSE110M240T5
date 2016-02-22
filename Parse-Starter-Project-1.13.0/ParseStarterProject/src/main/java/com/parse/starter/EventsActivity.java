@@ -19,7 +19,7 @@ import java.util.List;
  * This activity is reached when CHECKOUT EVENTS is pressed.
  * Created by: Jenny, Ryan, Alex
  */
-// TODO fix events not loading after user presses back
+
 public class EventsActivity extends AppCompatActivity {
 
     public static final int eventsPerQuery = 10;

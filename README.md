@@ -1,15 +1,9 @@
 # CSE110M240T5
 
-Android Studio Project is contained within Parse Starter Project. 
+UpYourVent is an Android application that allows users to check out
+local events and share events they are hosting.
 
-
-THINGS TO MAINTAIN FOR GRADING: 2-20-2016
-- SCREENSHOTS because the TA can't load our project
-- USER STORIES IN SPREADSHEET
-- Put comments everywhere.
-- PUT MILESTONES IN SCHEDULE
-- REfer to Jenny's document for Week 7 schedule.
-
+Android Studio Project is contained within Parse Starter Project.
 
 Table of Contents: 
 	Home Folder contains:
@@ -18,8 +12,6 @@ Table of Contents:
 			schedule: file containing schedule for quarter
 			userstories: collection of userstories in one file
 			brainstorm: random thoughts
-			meetingWeek6: notes from meeting with the two teams
-			(I did not update the week4&5 folders - Hans)
 		
 		Parse-Starter-Project-1.13.0: 
 		Folder containing the build for UpUrVent.

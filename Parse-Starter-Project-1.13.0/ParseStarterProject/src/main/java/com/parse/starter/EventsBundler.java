@@ -49,6 +49,55 @@ public class EventsBundler {
         return events;
     }
 
+
+    /**
+     * Fetches numEvents events from the database, largest date value first.
+     * Fetch events that either all or any of the tags
+     *
+     * @param tags - The tags to match
+     * @param numEvents - The number of events to get
+     * @param matchAll - Whether to match all, or any of the tags
+     * @return ArrayList of numEvents events.
+     */
+    public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
+                                                   boolean matchAll) {
+        final ArrayList<Event> events = new ArrayList<Event>(numEvents);
+        // Get numEvents events from the database
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
+        query.addDescendingOrder("date"); // sort by date most recent first
+        if ( matchAll ) {
+            query.whereContainsAll("tags", tags); // match all tags
+        } else {
+            for (int i = 0; i < tags.size(); i++) {
+                query.whereContains("tags", tags.get(i)); // match any tag
+            }
+        }
+        query.setLimit(numEvents);
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> userEvents, ParseException e) {
+                if (e == null) {
+                    Log.d("EventsBundler", "Retrieved " + userEvents.size()
+                            + " events");
+                    for (ParseObject ev : userEvents) {
+                        String title = ev.getString("title");
+                        String loc = ev.getString("loc");
+                        Date date = ev.getDate("date");
+                        String desc = ev.getString("description");
+                        String id = ev.getString("objectId");
+                        events.add(new Event(title, loc, date, desc, id));
+                    }
+                } else {
+                    Log.d("EventsBundler", "Error: " + e.getMessage());
+                }
+            }
+        });
+        Log.d("EventsBundler", "Size of events before return: " + events.size());
+        return events;
+    }
+
+
+
     /**
      * getEvent Returns an Event object created from the entry in the db
      *          corresponding to the input id
