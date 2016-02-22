@@ -35,7 +35,9 @@ public class EventsBundler {
             Date date = ev.getDate("date");
             String desc = ev.getString("description");
             String id = ev.getObjectId();
-            events.add(new Event(title, loc, date, desc, id));
+            String contact = ev.getString("contact");
+            int capacity = ev.getInt("capacity");
+            events.add(new Event(title, loc, date, desc, id, contact, capacity));
         }
         return events;
     }
@@ -43,9 +45,9 @@ public class EventsBundler {
     public static List<Event> testEvents(int numEvents) {
         List<Event> events = new ArrayList<Event>(numEvents);
 
-        events.add(new Event("title1", "loc1", new Date(), "desc1", "111"));
-        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222"));
-        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333"));
+        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1));
+        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1));
+        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1));
         return events;
     }
 
@@ -124,7 +126,9 @@ public class EventsBundler {
         String loc = parEvent.getString("loc");
         Date date = parEvent.getDate("date");
         String desc = parEvent.getString("description");
-        return new Event(title, loc, date, desc, id);
+        String contact = parEvent.getString("contact");
+        int capacity = parEvent.getInt("capacity");
+        return new Event(title, loc, date, desc, id, contact, capacity);
     }
 
 }

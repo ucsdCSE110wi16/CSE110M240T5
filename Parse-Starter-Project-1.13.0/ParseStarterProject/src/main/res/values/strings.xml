@@ -111,6 +111,8 @@
     <string name="activity_name">Activity Name</string>
     <string name="activity_time">Activity Time</string>
     <string name="activity_location">Activity Location</string>
+    <string name="activity_contact">Activity Contact</string>
+    <string name="activity_capacity">Activity Capacity</string>
     <string name="activity_tags">Tags</string>
     <string name="submit_new_activity">Submit New Activity</string>
     <string name="event_row_reply">Reply</string>
