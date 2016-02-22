@@ -55,7 +55,7 @@ public class Event {
     }
 
 
-    public Event(String title, String loc, Date date, String des, String id) {
+    public Event(String title, String loc, Date date, String des, String id, String contact, int capacity) {
         this.creator = null; // need to set in AddNewActivity
         this.title = title;
         this.description = des;
@@ -63,9 +63,9 @@ public class Event {
         this.date = new Date();
         this.id = id;
         this.size = 0;
-        this.capacity = 10; // need AddNewActivity form
+        this.capacity = capacity;
         this.attendees = new ArrayList<ParseUser>();
-        this.contact = "Contact "+title; // need AddNewActivity form
+        this.contact = contact;
     }
 
     /** Returns whether or not the event has a limit on the number of

@@ -26,7 +26,7 @@ public class AddNewActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener
 {
     Button bSubmit;
-    EditText actName, actLoc, actTime, actTags;
+    EditText actName, actLoc, actTime, actTags, actContact, actCapacity;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
 
@@ -50,8 +50,9 @@ public class AddNewActivity extends AppCompatActivity implements
         actName = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyName);
         actLoc = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyLoc);
         actTime = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyTime);
+        actContact = (EditText) findViewById(R.id.et_NEWACTIVITY_contact);
+        actCapacity = (EditText) findViewById(R.id.et_NEWACTIVITY_capacity);
         actTags = (EditText) findViewById(R.id.et_NEWACTIVITY_tags);
-
         bSubmit = (Button) findViewById(R.id.bt_NEWACTIVITY_submit);
         bSubmit.setOnClickListener(this);
     }
@@ -84,6 +85,19 @@ public class AddNewActivity extends AppCompatActivity implements
         if (time.matches("")) {
             validInputForm = false;
         }
+
+        //Check activity contact
+        String contact = actContact.getText().toString();
+        if (time.matches("")) {
+            validInputForm = false;
+        }
+
+        //Check activity capacity
+        String capacity = actCapacity.getText().toString();
+        if (time.matches("")) {
+            validInputForm = false;
+        }
+
         if (!validInputForm) {
             Toast.makeText(this,
                     "Your event is missing some information",
@@ -97,7 +111,9 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("title", title);
             userEvent.put("loc", loc);
             userEvent.put("time", time);
-            userEvent.saveInBackground();
+            userEvent.put("contact", contact);
+            userEvent.put("capacity", capacity);
+            userEvent.saveInBackground(); // consider not saving in background if not working
             //TODO Need a way to update the events
             finish();
         }
