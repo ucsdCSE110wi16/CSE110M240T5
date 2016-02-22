@@ -59,6 +59,7 @@ public class EventsBundler {
      * @param matchAll - Whether to match all, or any of the tags
      * @return ArrayList of numEvents events.
      */
+    /*
     public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
                                                    boolean matchAll) {
         final ArrayList<Event> events = new ArrayList<Event>(numEvents);
@@ -96,7 +97,7 @@ public class EventsBundler {
         return events;
     }
 
-
+*/
 
     /**
      * getEvent Returns an Event object created from the entry in the db
