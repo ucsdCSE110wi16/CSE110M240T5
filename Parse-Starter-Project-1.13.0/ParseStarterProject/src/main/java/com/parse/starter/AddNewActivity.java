@@ -26,7 +26,7 @@ public class AddNewActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener
 {
     Button bSubmit;
-    EditText actName, actLoc, actTime, actTags, actContact, actCapacity;
+    EditText actName, actLoc, actTime, actTags, actContact, actCapacity, actDesc;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
 
@@ -52,6 +52,7 @@ public class AddNewActivity extends AppCompatActivity implements
         actTime = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyTime);
         actContact = (EditText) findViewById(R.id.et_NEWACTIVITY_contact);
         actCapacity = (EditText) findViewById(R.id.et_NEWACTIVITY_capacity);
+        actDesc = (EditText) findViewById(R.id.et_NEWACTIVITY_desc);
         actTags = (EditText) findViewById(R.id.et_NEWACTIVITY_tags);
         bSubmit = (Button) findViewById(R.id.bt_NEWACTIVITY_submit);
         bSubmit.setOnClickListener(this);
@@ -98,6 +99,12 @@ public class AddNewActivity extends AppCompatActivity implements
             validInputForm = false;
         }
 
+        //Check activity description
+        String desc = actDesc.getText().toString();
+        if (time.matches("")) {
+            validInputForm = false;
+        }
+
         if (!validInputForm) {
             Toast.makeText(this,
                     "Your event is missing some information",
@@ -111,6 +118,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("title", title);
             userEvent.put("loc", loc);
             userEvent.put("time", time);
+            userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", capacity);
             userEvent.saveInBackground(); // consider not saving in background if not working

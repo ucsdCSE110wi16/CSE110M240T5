@@ -122,6 +122,23 @@
         android:padding="2dp"
         android:inputType="number"
         android:background="#ffffff" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/activity_desc"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id = "@+id/et_NEWACTIVITY_desc"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:inputType="number"
+        android:background="#ffffff" />
+
 
     <Button
         android:layout_width="fill_parent"
