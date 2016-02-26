@@ -116,7 +116,10 @@
     <string name="activity_desc">Description</string>
     <string name="activity_tags">Tags</string>
     <string name="submit_new_activity">Submit New Activity</string>
-    <string name="event_row_reply">Reply</string>
+    <string name="event_row_reply">">"</string>
     <string name="eventRow_Date">Date:</string>
+    <string name="activity_Main_SignInSignOut">Sign In / Sign Out</string>
+    <string name="activity_Main_Checkout_Events">Checkout Events</string>
+    <string name="activity_Main_Create_Event">Create Event</string>
 
 </resources>

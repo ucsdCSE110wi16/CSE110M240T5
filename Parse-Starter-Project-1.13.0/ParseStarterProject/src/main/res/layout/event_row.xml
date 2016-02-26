@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/event_date"
-        android:layout_width="50dp"
+        android:layout_width="120dp"
         android:layout_height="50dp"
         android:padding="3dp"
         android:layout_marginStart="9dp"
@@ -24,20 +24,18 @@
         android:layout_width="1dp"
         android:layout_height="50dp"
         android:padding="3dp"
-        android:layout_toRightOf="@+id/event_date"
         android:layout_toEndOf="@+id/event_date"
         android:layout_toLeftOf="@+id/replyButton"
-        android:layout_toStartOf="@+id/replyButton"
         android:background="@drawable/event_row_border"
         android:text="Hotdog eating context" />
 
     <Button
         android:id="@+id/replyButton"
-        android:layout_width="100dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:textSize="20sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="30sp"
         android:textColor="#4f4f4f"
         android:layout_alignTop="@+id/event_date"
         android:layout_alignParentRight="true"
