@@ -3,7 +3,9 @@ package com.parse.starter;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.parse.ParseACL;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 import android.location.Location;
 import android.os.Bundle;
@@ -114,7 +116,23 @@ public class AddNewActivity extends AppCompatActivity implements
         if (v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm) {
             //Send data to the parse Database.
             System.out.println("Pushing new UserEvent to database");
+
+            ParseACL acl = new ParseACL(); // access control list
+            acl.setPublicReadAccess(true);
+
             ParseObject userEvent = new ParseObject("UserEvent");
+            userEvent.setACL(acl);
+
+            /* Should always have user logged in here. TODO verify */
+            ParseUser currUser = ParseUser.getCurrentUser();
+            ParseObject eventCreator = new ParseObject("EventCreator");
+            eventCreator.put("username", currUser.getString("username"));
+            eventCreator.put("id", currUser.getString("objectId"));
+            eventCreator.put("name", currUser.getString("name"));
+            eventCreator.put("email", currUser.getString("email"));
+            eventCreator.setACL(acl);
+            eventCreator.saveInBackground();
+
             userEvent.put("title", title);
             userEvent.put("loc", loc);
             userEvent.put("time", time);
