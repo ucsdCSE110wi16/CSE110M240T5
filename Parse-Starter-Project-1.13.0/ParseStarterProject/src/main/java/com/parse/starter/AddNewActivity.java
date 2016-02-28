@@ -139,10 +139,12 @@ public class AddNewActivity extends AppCompatActivity implements
             /* Should always have user logged in here. TODO ENFORCE LOGIN */
             ParseUser currUser = ParseUser.getCurrentUser();
             ParseObject eventCreator = new ParseObject("EventCreator");
-            eventCreator.put("username", currUser.getString("username"));
-            eventCreator.put("id", currUser.getString("objectId"));
-            eventCreator.put("name", currUser.getString("name"));
-            eventCreator.put("email", currUser.getString("email"));
+            if (currUser != null) { // TODO enforce login and remove
+                eventCreator.put("username", currUser.getString("username"));
+                eventCreator.put("id", currUser.getString("objectId"));
+                eventCreator.put("name", currUser.getString("name"));
+                eventCreator.put("email", currUser.getString("email"));
+            }
             // Determine recent location for creator
             String creatorLat = null;
             String creatorLong = null;
