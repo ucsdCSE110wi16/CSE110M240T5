@@ -136,9 +136,19 @@ public class AddNewActivity extends AppCompatActivity implements
             eventCreator.put("id", currUser.getString("objectId"));
             eventCreator.put("name", currUser.getString("name"));
             eventCreator.put("email", currUser.getString("email"));
+            // Determine recent location for creator
+            String latitude = null;
+            String longitude = null;
+            if (mLastLocation != null) {
+                latitude = String.valueOf(mLastLocation.getLatitude());
+                longitude = String.valueOf(mLastLocation.getLongitude());
+            }
+            eventCreator.put("latitude", latitude);
+            eventCreator.put("longitude", longitude);
             eventCreator.setACL(acl);
             eventCreator.saveInBackground();
 
+            // TODO attempt to lookup address for gps location
             userEvent.put("title", title);
             userEvent.put("loc", loc);
             userEvent.put("time", time);
@@ -146,16 +156,6 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("contact", contact);
             userEvent.put("capacity", capacity);
 
-            // Determine location information for event
-            String latitude = null;
-            String longitude = null;
-            if (mLastLocation != null) {
-                latitude = String.valueOf(mLastLocation.getLatitude());
-                longitude = String.valueOf(mLastLocation.getLongitude());
-            } else { // TODO attempt to lookup address for gps location
-            }
-            userEvent.put("latitude", latitude);
-            userEvent.put("longitude", longitude);
             userEvent.saveInBackground(); // consider not saving in background if not working
             //TODO Need a way to update the events
             finish();
