@@ -153,7 +153,17 @@ public class AddNewActivity extends AppCompatActivity implements
             eventCreator.put("longitude", longitude);
             eventCreator.setACL(acl);
             eventCreator.saveInBackground();
-            
+
+            // Attempt to lookup address based on user input
+            Geocoder geocoder = new Geocoder(this);
+            List<Address> addresses = null;
+            try {
+                addresses = geocoder.getFromLocationName(loc, 1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            userEvent.put("formalAddress", addresses.get(0)); // result of lookup
             userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
             userEvent.put("time", time);
