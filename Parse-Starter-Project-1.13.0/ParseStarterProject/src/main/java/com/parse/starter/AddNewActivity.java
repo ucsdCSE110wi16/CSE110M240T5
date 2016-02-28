@@ -9,8 +9,11 @@ import com.parse.ParseUser;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.provider.Telephony;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -21,6 +24,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.util.List;
 
 
 /**
@@ -116,6 +122,7 @@ public class AddNewActivity extends AppCompatActivity implements
             Toast.makeText(this,
                     "Your event is missing some information",
                     Toast.LENGTH_SHORT).show();
+                    return;
         }
 
         if (v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm) {
@@ -128,8 +135,7 @@ public class AddNewActivity extends AppCompatActivity implements
             ParseObject userEvent = new ParseObject("UserEvent");
             userEvent.setACL(acl);
 
-            /* Should always have user logged in here. TODO ENFORCE LOGIN
-            * TODO enforce user filling out ALL text forms before reaching here */
+            /* Should always have user logged in here. TODO ENFORCE LOGIN */
             ParseUser currUser = ParseUser.getCurrentUser();
             ParseObject eventCreator = new ParseObject("EventCreator");
             eventCreator.put("username", currUser.getString("username"));
@@ -147,10 +153,9 @@ public class AddNewActivity extends AppCompatActivity implements
             eventCreator.put("longitude", longitude);
             eventCreator.setACL(acl);
             eventCreator.saveInBackground();
-
-            // TODO attempt to lookup address for gps location
+            
+            userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
-            userEvent.put("loc", loc);
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
