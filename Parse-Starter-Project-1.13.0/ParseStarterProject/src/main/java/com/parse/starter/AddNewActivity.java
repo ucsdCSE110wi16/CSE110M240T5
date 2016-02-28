@@ -136,12 +136,13 @@ public class AddNewActivity extends AppCompatActivity implements
             ParseObject userEvent = new ParseObject("UserEvent");
             userEvent.setACL(acl);
 
-            /* Should always have user logged in here. TODO ENFORCE LOGIN */
+            /* Should always have user logged in here. */
             ParseUser currUser = ParseUser.getCurrentUser();
             ParseObject eventCreator = new ParseObject("EventCreator");
-            if (currUser != null) { // TODO enforce login and remove
+            if (currUser == null) { // TODO enforce login and remove
                 eventCreator.put("username", currUser.getString("username"));
-                eventCreator.put("id", currUser.getString("objectId"));
+                /* eventCreator.put("id", currUser.getString("objectId"));
+                TODO investigate why this is null */
                 eventCreator.put("name", currUser.getString("name"));
                 eventCreator.put("email", currUser.getString("email"));
             }
