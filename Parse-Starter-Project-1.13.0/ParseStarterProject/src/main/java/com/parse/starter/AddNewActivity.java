@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 
 /**
- * Created by: Alex
+ * Created by: Alex, Johnathan
  */
 public class AddNewActivity extends AppCompatActivity implements
         View.OnClickListener,
@@ -144,6 +144,17 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", capacity);
+
+            // Determine location information for event
+            String latitude = null;
+            String longitude = null;
+            if (mLastLocation != null) {
+                latitude = String.valueOf(mLastLocation.getLatitude());
+                longitude = String.valueOf(mLastLocation.getLongitude());
+            } else { // TODO attempt to lookup address for gps location
+            }
+            userEvent.put("latitude", latitude);
+            userEvent.put("longitude", longitude);
             userEvent.saveInBackground(); // consider not saving in background if not working
             //TODO Need a way to update the events
             finish();
@@ -151,11 +162,12 @@ public class AddNewActivity extends AppCompatActivity implements
     }
 
 
-    /**
-     * TODO do something when getting location, give user option to use their location
+    /** What to do once connected to GoogleApiClient
+     *
      * Reference: http://developer.android.com/training/location/retrieve-current.html
      * https://developers.google.com/android/guides/setup
      * http://developer.android.com/training/location/index.html
+     * http://developer.android.com/training/permissions/requesting.html
      * @param bundle
      */
     @Override
