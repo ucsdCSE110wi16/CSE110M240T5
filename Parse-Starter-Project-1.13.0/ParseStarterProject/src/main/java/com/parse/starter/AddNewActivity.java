@@ -4,6 +4,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.parse.ParseACL;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
@@ -143,14 +144,14 @@ public class AddNewActivity extends AppCompatActivity implements
             eventCreator.put("name", currUser.getString("name"));
             eventCreator.put("email", currUser.getString("email"));
             // Determine recent location for creator
-            String latitude = null;
-            String longitude = null;
+            String creatorLat = null;
+            String creatorLong = null;
             if (mLastLocation != null) {
-                latitude = String.valueOf(mLastLocation.getLatitude());
-                longitude = String.valueOf(mLastLocation.getLongitude());
+                creatorLat = String.valueOf(mLastLocation.getLatitude());
+                creatorLong = String.valueOf(mLastLocation.getLongitude());
             }
-            eventCreator.put("latitude", latitude);
-            eventCreator.put("longitude", longitude);
+            eventCreator.put("latitude", creatorLat);
+            eventCreator.put("longitude", creatorLong);
             eventCreator.setACL(acl);
             eventCreator.saveInBackground();
 
@@ -162,8 +163,17 @@ public class AddNewActivity extends AppCompatActivity implements
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            double eventLat = 0;
+            double eventLong = 0;
+            if (addresses != null && addresses.size() > 0) {
+                eventLat = addresses.get(0).getLatitude();
+                eventLong = addresses.get(0).getLongitude();
+            }
 
-            userEvent.put("formalAddress", addresses.get(0)); // result of lookup
+            // Create Parse Geo information so we can lookup this event later
+            ParseGeoPoint geoPoint = new ParseGeoPoint(eventLat, eventLong);
+
+            userEvent.put("geoLocation", geoPoint); // result of lookup
             userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
             userEvent.put("time", time);
