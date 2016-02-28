@@ -27,6 +27,7 @@ public class EventsBundler {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("date"); // sort by date most recent first
+        // query.whereNear("location", <user ParseGeoPoint goes here>);
         query.setLimit(numEvents);
         List<ParseObject> userEvents = query.find();
         for (ParseObject ev : userEvents) {
@@ -61,7 +62,7 @@ public class EventsBundler {
      * @param matchAll - Whether to match all, or any of the tags
      * @return ArrayList of numEvents events.
      */
-    /*
+    /* // TODO update and add location search
     public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
                                                    boolean matchAll) {
         final ArrayList<Event> events = new ArrayList<Event>(numEvents);
