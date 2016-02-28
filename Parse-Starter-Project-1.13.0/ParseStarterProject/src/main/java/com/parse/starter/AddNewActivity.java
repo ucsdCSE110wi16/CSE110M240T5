@@ -153,8 +153,10 @@ public class AddNewActivity extends AppCompatActivity implements
                 creatorLat = String.valueOf(mLastLocation.getLatitude());
                 creatorLong = String.valueOf(mLastLocation.getLongitude());
             }
-            eventCreator.put("latitude", creatorLat);
-            eventCreator.put("longitude", creatorLong);
+            if ( creatorLat != null && creatorLong != null ) {
+                eventCreator.put("latitude", creatorLat);
+                eventCreator.put("longitude", creatorLong);
+            }
             eventCreator.setACL(acl);
             eventCreator.saveInBackground();
 
