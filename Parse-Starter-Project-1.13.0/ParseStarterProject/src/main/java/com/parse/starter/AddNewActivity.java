@@ -185,6 +185,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", capacity);
+            userEvent.put("creator", eventCreator);
 
             userEvent.saveInBackground(); // consider not saving in background if not working
             //TODO Need a way to update the events
