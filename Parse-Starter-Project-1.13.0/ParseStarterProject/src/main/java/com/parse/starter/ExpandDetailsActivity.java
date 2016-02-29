@@ -64,7 +64,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         TextView myTV4 = (TextView) findViewById(R.id.tvDetailsDescription);
         myTV4.setText(example.getDescription());
 
-        TextView myTV5 = (TextView) findViewById(R.id.tvDetailsAttendees);
+        final TextView myTV5 = (TextView) findViewById(R.id.tvDetailsAttendees);
         String sz = "Number of Attendees: " + example.getSize() + "/" + example.getCapacity();
         myTV5.setText(sz);
 
@@ -81,11 +81,15 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         rsvpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Increment size from inside an inner anonymous class. tricky tricky tricky
-                Event event = new Event();
-                event.updateSize();
-                Toast.makeText(ExpandDetailsActivity.this, "lol I don't really do anything yet",
-                        Toast.LENGTH_LONG).show();
+                // PUSH THIS CHANGE TO PARSE
+                finalEvent.updateSize();
+
+                String newsz = "Number of Attendees: " + finalEvent.getSize() + "/" + finalEvent.getCapacity();
+                myTV5.setText(newsz);
+
+                Toast.makeText(ExpandDetailsActivity.this, "RSVP complete!",
+                        Toast.LENGTH_SHORT).show();
+
             }
         });
 
