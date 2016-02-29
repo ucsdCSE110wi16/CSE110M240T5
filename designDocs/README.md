@@ -1,11 +1,8 @@
 # designDocs README
-## AppScreenshots
-Screenshots of our app
 
-## MockUps
-Sketches of our app
+### Schedule & Big Board
 
-## Schedule x Big Board
+[Week 9](https://docs.google.com/document/d/19hCNjk5LmLrupPm5lf9nDfpGbOfJ7aMy1yvT0F7hMLw/edit?usp=sharing)
 
 [Week 8](https://docs.google.com/document/d/1mZT_VVANN1k6Pt4d6vYmzxU7FOH0n_At5gx8L-SgoSU/edit#heading=h.f0h1yvkov2ob)
 
@@ -13,5 +10,11 @@ Sketches of our app
 
 The rest can be found in WeekX folders or in “schedule” file.
 
-## User Stories
+### User Stories
 Found in designDocs in .xlsx and plain text
+
+### AppScreenshots
+Screenshots of our app
+
+### MockUps
+Sketches of our app
