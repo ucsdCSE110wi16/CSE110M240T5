@@ -276,6 +276,7 @@ public class AddNewActivity extends AppCompatActivity implements
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             // TODO: take hourOfDay and minute and put into parse events
+
         }
     }
 

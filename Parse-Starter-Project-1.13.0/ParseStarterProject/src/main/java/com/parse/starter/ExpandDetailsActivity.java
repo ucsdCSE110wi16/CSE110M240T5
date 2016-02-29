@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseUser;
 
 import java.util.Date;
 
@@ -65,7 +66,8 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         myTV4.setText(example.getDescription());
 
         final TextView myTV5 = (TextView) findViewById(R.id.tvDetailsAttendees);
-        String sz = "Number of Attendees: " + example.getSize() + "/" + example.getCapacity();
+        String sz = "Number of Attendees: " + example.getSize() + "/" +
+                example.getCapacity();
         myTV5.setText(sz);
 
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
@@ -73,7 +75,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         try {
             example.getCreator().getUsername(); }
         catch(Exception e) {
-            host = "Dad";
+            host = "Fake dad";
         }
         myTV6.setText("Hosted by: " + host);
 
@@ -81,14 +83,15 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         rsvpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // PUSH THIS CHANGE TO PARSE
-                finalEvent.updateSize();
 
-                String newsz = "Number of Attendees: " + finalEvent.getSize() + "/" + finalEvent.getCapacity();
+                finalEvent.toggleAttendance(ParseUser.getCurrentUser());
+
+                String newsz = "Number of Attendees: " + finalEvent.getSize() +
+                        "/" + finalEvent.getCapacity();
                 myTV5.setText(newsz);
 
-                Toast.makeText(ExpandDetailsActivity.this, "RSVP complete!",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(ExpandDetailsActivity.this, "RSVP "+
+                        ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_SHORT).show();
 
             }
         });

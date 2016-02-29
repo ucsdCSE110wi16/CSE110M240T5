@@ -68,34 +68,33 @@ public class Event {
         this.contact = contact;
     }
 
-    /** Returns whether or not the event has a limit on the number of
-     * attendees.
-     *
-     * @return True if event is capacity limited
-     *         False otherwise
-     */
-    public boolean hasCapacity() {
-        if ( this.capacity > 0 ) {
-            return true;
-        }
-        return false;
-    }
 
-    /** Add a user to the attendee list
+    /** Add or remove a user to the attendee list
      *
-     * @param toAdd The user to add
-     * @return Whether or not the add was successful
+     * @param pu The user to add/remove
+     * @return true for added, false for not added (for whatever reason)
      */
-    public boolean addAttendee(ParseUser toAdd) {
+    public boolean toggleAttendance(ParseUser pu) {
+        // First attendee, need to initialize list
         if (attendees == null) {
             attendees = new ArrayList<ParseUser>();
         }
-        if ( this.hasCapacity() ) {
+        // Already attending
+        if (attendees.contains(pu)) {
+            this.size--;
+            attendees.remove(pu);
+            // TODO update parse database of change
+            return false;
+        }
+        else {
+            // Event at full capacity already
             if (!(size < capacity)) {
                 return false;
             }
+            // Event is not at capacity yet
+            attendees.add(pu);
+            // TODO update parse database of change
         }
-        attendees.add(toAdd);
         return true;
     }
 
@@ -170,6 +169,4 @@ public class Event {
         this.id = ID;
     }
 
-    public void updateSize() { this.size++;
-    }
 }
