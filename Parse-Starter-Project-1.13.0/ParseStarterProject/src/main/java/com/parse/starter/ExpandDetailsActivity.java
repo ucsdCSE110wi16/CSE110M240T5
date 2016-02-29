@@ -1,5 +1,7 @@
 package com.parse.starter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -67,9 +69,13 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         myTV5.setText(sz);
 
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
-        // uncomment after creator problem resolved
-        //String host = "Hosted by: " + example.getCreator().getUsername();
-        myTV6.setText("Hosted By: Liza Minnelli");
+        String host = "";
+        try {
+            example.getCreator().getUsername(); }
+        catch(Exception e) {
+            host = "Dad";
+        }
+        myTV6.setText("Hosted by: " + host);
 
         Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
         rsvpButton.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +93,15 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         contactButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ExpandDetailsActivity.this, finalEvent.getContact(),
-                        Toast.LENGTH_LONG).show();
+
+                String phone = finalEvent.getContact();
+                String body = "Hey fam, can I slide thru to " +
+                                                            finalEvent.getTitle() + "?";
+
+                Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                sendIntent.setData(Uri.parse("sms:" + phone));
+                sendIntent.putExtra("sms_body", body);
+                ExpandDetailsActivity.this.startActivity(sendIntent);
             }
         });
     }

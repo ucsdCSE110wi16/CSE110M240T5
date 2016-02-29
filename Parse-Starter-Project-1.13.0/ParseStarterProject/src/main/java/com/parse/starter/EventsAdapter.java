@@ -121,4 +121,18 @@ public class EventsAdapter extends
         return eventsList.size();
     }
 
+
+    // Clean all elements of the recycler
+    public void clear() {
+        eventsList.clear();
+        notifyDataSetChanged();
+    }
+
+    // Add a list of items
+    public void addAll(List<Event> list) {
+        eventsList.addAll(list);
+        notifyDataSetChanged();
+    }
+
+
 }
