@@ -111,8 +111,8 @@ public class EventsBundler {
      */
     public static Event getEvent(final String id) throws ParseException {
 
-        // Emergency!!! ID is invalid, so create and return a dummy event.
-        if (id.equals("ids of march")) {
+        // ID is invalid, so create and return a dummy event.
+        if (id==null || id.equals("ids of march")) {
             return new Event();
         }
 

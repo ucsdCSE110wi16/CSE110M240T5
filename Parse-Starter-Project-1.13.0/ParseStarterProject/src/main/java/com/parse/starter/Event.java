@@ -49,7 +49,7 @@ public class Event {
      * @param creator - The user who has created this event
      */
     public Event(String title, ParseUser creator) {
-        super();
+        this();
         this.title = title;
         this.creator = creator;
     }
@@ -63,7 +63,8 @@ public class Event {
         this.date = new Date();
         this.id = id;
         this.size = 0;
-        this.capacity = capacity;
+        if (capacity ==0) // if capacity=0, set to default 50
+            this.capacity = 50;
         this.attendees = new ArrayList<ParseUser>();
         this.contact = contact;
     }
