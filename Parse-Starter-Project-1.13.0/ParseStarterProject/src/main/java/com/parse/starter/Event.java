@@ -83,17 +83,26 @@ public class Event {
         if (attendees.contains(pu)) {
             this.size--;
             attendees.remove(pu);
-            // TODO update parse database of change
+            // Update parse database of changes to size & attendees
+            try {
+                EventsBundler.updateRSVP(this.getID(), pu.getUsername());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             return false;
         }
-        else {
-            // Event at full capacity already
-            if (!(size < capacity)) {
-                return false;
-            }
-            // Event is not at capacity yet
-            attendees.add(pu);
-            // TODO update parse database of change
+        // Event at full capacity already
+        if (!(size < capacity)) {
+            return false;
+        }
+        // Event is not at capacity yet
+        this.size++; // @Johnathan I change size from within the method just for display to the current user.
+        attendees.add(pu);
+        // Update parse database of changes to size & attendees
+        try {
+            EventsBundler.updateRSVP(this.getID(), pu.getUsername());
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
         return true;
     }

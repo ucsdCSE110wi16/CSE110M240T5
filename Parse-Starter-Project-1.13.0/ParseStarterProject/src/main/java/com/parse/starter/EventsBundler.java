@@ -134,13 +134,13 @@ public class EventsBundler {
 
     /**
      * Increase the size of the event(number of attendees)
-     *
+     * TODO: Decrease size and remove user from attendees, remove size<cap check
      * @param eventId - The id of the event to update
      * @param userId - The id of the user to add to the attendees list TODO update
      * @return Boolean - True if successfully updated
      *                   False if unsuccessful
      */
-    public static boolean recentEvents(String eventId, String userId) throws ParseException {
+    public static boolean updateRSVP(String eventId, String userId) throws ParseException {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         ParseObject parEvent = null;

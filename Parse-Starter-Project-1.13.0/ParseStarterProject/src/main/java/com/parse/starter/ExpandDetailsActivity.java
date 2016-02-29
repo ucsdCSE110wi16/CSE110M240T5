@@ -84,14 +84,17 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                finalEvent.toggleAttendance(ParseUser.getCurrentUser());
+                boolean ok = finalEvent.toggleAttendance(ParseUser.getCurrentUser());
 
                 String newsz = "Number of Attendees: " + finalEvent.getSize() +
                         "/" + finalEvent.getCapacity();
                 myTV5.setText(newsz);
 
-                Toast.makeText(ExpandDetailsActivity.this, "RSVP "+
-                        ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_SHORT).show();
+                String st = "RSVP successful";
+                if (!ok) {
+                    st = "unRSVP'd or event full";
+                }
+                Toast.makeText(ExpandDetailsActivity.this, st, Toast.LENGTH_SHORT).show();
 
             }
         });
