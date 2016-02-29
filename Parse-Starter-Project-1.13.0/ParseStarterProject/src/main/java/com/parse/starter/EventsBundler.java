@@ -132,4 +132,33 @@ public class EventsBundler {
         return new Event(title, loc, date, desc, id, contact, capacity);
     }
 
+    /**
+     * Increase the size of the event(number of attendees)
+     *
+     * @param eventId - The id of the event to update
+     * @param userId - The id of the user to add to the attendees list TODO update
+     * @return Boolean - True if successfully updated
+     *                   False if unsuccessful
+     */
+    public static boolean recentEvents(String eventId, String userId) throws ParseException {
+        // Get numEvents events from the database
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
+        ParseObject parEvent = null;
+        try {
+            parEvent = query.get(eventId);
+        } catch(ParseException e) {
+            e.printStackTrace();
+        }
+        if (parEvent != null) {
+            int cap = parEvent.getInt("capacity");
+            int size = parEvent.getInt("size");
+            if ( size < cap ) {
+                parEvent.put("size",++size);
+                parEvent.save();
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

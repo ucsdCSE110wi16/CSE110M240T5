@@ -191,6 +191,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", capacity);
+            userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
 
             userEvent.saveInBackground(); // consider not saving in background if not working
