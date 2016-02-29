@@ -50,6 +50,13 @@
             android:layout_margin="10dp"
             android:layout_height="wrap_content" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a Time"
+            android:onClick="showTimePickerDialog"
+            android:visibility="visible" />
+
         <EditText
             android:id = "@+id/et_NEWACTIVITY_actvitiyTime"
             android:layout_width="match_parent"
@@ -58,7 +65,8 @@
             android:layout_height="wrap_content"
             android:inputType="datetime"
             android:background="#ffffff"
-            android:padding="2dp" />
+            android:padding="2dp"
+            android:onClick="showTimePickerDialog"/>
 
         <TextView
             android:layout_width="wrap_content"

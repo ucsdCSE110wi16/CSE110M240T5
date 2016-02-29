@@ -258,7 +258,7 @@ public class AddNewActivity extends AppCompatActivity implements
 
     }
 
-    /*
+
     public static class TimePickerFragment extends DialogFragment
             implements TimePickerDialog.OnTimeSetListener {
 
@@ -275,8 +275,12 @@ public class AddNewActivity extends AppCompatActivity implements
         }
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            // Do something with the time chosen by the user
+            // TODO: take hourOfDay and minute and put into parse events
         }
     }
-    */
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
 }
