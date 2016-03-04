@@ -2,6 +2,7 @@ package com.parse.starter;
 
 import android.util.Log;
 
+import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -62,10 +63,15 @@ public class EventsBundler {
      * @param matchAll - Whether to match all, or any of the tags
      * @return ArrayList of numEvents events.
      */
-    /* // TODO update and add location search
+    // TODO update and add location search
     public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
                                                    boolean matchAll) {
+
         final ArrayList<Event> events = new ArrayList<Event>(numEvents);
+        Event c = new Event();
+        c.setTitle("mcsearch");
+        events.add(c);
+        /*
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("date"); // sort by date most recent first
@@ -97,10 +103,10 @@ public class EventsBundler {
             }
         });
         Log.d("EventsBundler", "Size of events before return: " + events.size());
+        */
         return events;
     }
 
-*/
 
     /**
      * getEvent Returns an Event object created from the entry in the db
