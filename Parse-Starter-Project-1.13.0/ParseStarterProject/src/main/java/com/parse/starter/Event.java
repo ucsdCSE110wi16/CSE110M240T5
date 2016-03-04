@@ -27,13 +27,16 @@ public class Event {
     ArrayList<ParseUser> attendees;
     private String contact;
 
+    // TEMP TEMP TEMP
+    private String username = "Real mom";
+
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
      */
     public Event() {
         creator = null;
         title = "Dummy Convention";
-        description = "Free ventriloquism lessons. Sorry your event does not exist.";
+        description = "Sorry your event does not exist.";
         userDefinedLocation = "Rubio's";
         date = new Date();
         id = "ids of march";
@@ -55,20 +58,38 @@ public class Event {
     }
 
 
-    public Event(String title, String loc, Date date, String des, String id, String contact, int capacity) {
-        this.creator = null; // need to set in AddNewActivity
+    public Event(String title, String loc, Date date, String des, String id,
+String contact, int capacity, ParseUser creator) {
+        this.creator = creator;
         this.title = title;
         this.description = des;
         this.userDefinedLocation = loc;
         this.date = new Date();
         this.id = id;
         this.size = 0;
+        this.capacity = capacity;
         if (capacity ==0) // if capacity=0, set to default 50
             this.capacity = 50;
         this.attendees = new ArrayList<ParseUser>();
         this.contact = contact;
     }
 
+    public Event(String title, String loc, Date date, String des, String id,
+                 String contact, int capacity, ParseUser creator, String username) {
+        this.creator = creator;
+        this.title = title;
+        this.description = des;
+        this.userDefinedLocation = loc;
+        this.date = new Date();
+        this.id = id;
+        this.size = 0;
+        this.capacity = capacity;
+        if (capacity ==0) // if capacity=0, set to default 50
+            this.capacity = 50;
+        this.attendees = new ArrayList<ParseUser>();
+        this.contact = contact;
+        this.username = username;
+    }
 
     /** Add or remove a user to the attendee list
      *
@@ -97,7 +118,7 @@ public class Event {
             return false;
         }
         // Event is not at capacity yet
-        this.size++; // @Johnathan I change size from within the method just for display to the current user.
+        this.size++; // size changed just for display to the current user
         attendees.add(pu);
         // Update parse database of changes to size & attendees
         try {
@@ -150,6 +171,9 @@ public class Event {
     public String getContact() {
         return this.contact;
     }
+    public String getUsername() {
+        return username;
+    }
 
     public Date getDate() { return this.date; }
 
@@ -178,5 +202,6 @@ public class Event {
     public void setID(String ID) {
         this.id = ID;
     }
+
 
 }

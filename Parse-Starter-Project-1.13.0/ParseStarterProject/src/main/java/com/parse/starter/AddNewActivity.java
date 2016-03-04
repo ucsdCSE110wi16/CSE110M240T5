@@ -26,6 +26,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -149,6 +150,7 @@ public class AddNewActivity extends AppCompatActivity implements
                 TODO investigate why this is null */
                 eventCreator.put("name", currUser.getString("name"));
                 eventCreator.put("email", currUser.getString("email"));
+                eventCreator.put("user", currUser); // for Event ctor
             }
             // Determine recent location for creator
             String creatorLat = null;
@@ -194,9 +196,11 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
-            userEvent.put("capacity", capacity);
+            userEvent.put("capacity", capacity); // this is getting put into the database as a String
+                                                // and probably size too
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
+            userEvent.put("username", currUser.getUsername());
 
             try {
                 userEvent.save(); // consider not saving in background if not working

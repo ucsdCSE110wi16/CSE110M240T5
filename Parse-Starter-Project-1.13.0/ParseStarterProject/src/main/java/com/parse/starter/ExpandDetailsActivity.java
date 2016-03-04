@@ -75,7 +75,10 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         try {
             example.getCreator().getUsername(); }
         catch(Exception e) {
-            host = "Fake dad";
+            host = example.getUsername();
+            if (host==null) {
+                host = "delete me i'm missing fields";
+            }
         }
         myTV6.setText("Hosted by: " + host);
 

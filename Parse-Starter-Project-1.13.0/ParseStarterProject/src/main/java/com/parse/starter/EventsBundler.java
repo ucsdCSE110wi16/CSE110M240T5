@@ -6,6 +6,7 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -39,7 +40,16 @@ public class EventsBundler {
             String id = ev.getObjectId();
             String contact = ev.getString("contact");
             int capacity = ev.getInt("capacity");
-            events.add(new Event(title, loc, date, desc, id, contact, capacity));
+            ParseObject po = ev.getParseObject("creator");
+            ParseUser pu = null;
+            if (po!=null) {
+                try {
+                    pu = po.getParseUser("user");
+                } catch (IllegalStateException e) {
+                    pu = null;
+                }
+            }
+            events.add(new Event(title, loc, date, desc, id, contact, capacity, pu));
         }
         return events;
     }
@@ -47,9 +57,9 @@ public class EventsBundler {
     public static List<Event> testEvents(int numEvents) {
         List<Event> events = new ArrayList<Event>(numEvents);
 
-        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1));
-        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1));
-        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1));
+        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1, null));
+        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1, null));
+        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1, null));
         return events;
     }
 
@@ -134,8 +144,19 @@ public class EventsBundler {
         Date date = parEvent.getDate("date");
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
-        int capacity = parEvent.getInt("capacity");
-        return new Event(title, loc, date, desc, id, contact, capacity);
+        String capString = parEvent.getString("capacity");
+        int capacity = Integer.parseInt(capString);
+        ParseObject po = parEvent.getParseObject("creator");
+        ParseUser pu = null;
+        if (po!=null) {
+            try {
+                pu = po.getParseUser("user");
+            } catch (IllegalStateException e) {
+                pu = null;
+            }
+        }
+        String un = parEvent.getString("username");
+        return new Event(title, loc, date, desc, id, contact, capacity, pu, un);
     }
 
     /**
