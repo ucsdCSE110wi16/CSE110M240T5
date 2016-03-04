@@ -4,6 +4,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.parse.ParseACL;
+import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
@@ -139,9 +140,6 @@ public class AddNewActivity extends AppCompatActivity implements
             ParseACL acl = new ParseACL(); // access control list
             acl.setPublicReadAccess(true);
 
-            ParseObject userEvent = new ParseObject("UserEvent");
-            userEvent.setACL(acl);
-
             /* Should always have user logged in here. */
             ParseUser currUser = ParseUser.getCurrentUser();
             ParseObject eventCreator = new ParseObject("EventCreator");
@@ -164,7 +162,11 @@ public class AddNewActivity extends AppCompatActivity implements
                 eventCreator.put("longitude", creatorLong);
             }
             eventCreator.setACL(acl);
-            eventCreator.saveInBackground();
+            try {
+                eventCreator.save();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
 
             // Attempt to lookup address based on user input
             Geocoder geocoder = new Geocoder(this);
@@ -184,6 +186,8 @@ public class AddNewActivity extends AppCompatActivity implements
             // Create Parse Geo information so we can lookup this event later
             ParseGeoPoint geoPoint = new ParseGeoPoint(eventLat, eventLong);
 
+            ParseObject userEvent = new ParseObject("UserEvent");
+            userEvent.setACL(acl);
             userEvent.put("geoLocation", geoPoint); // result of lookup
             userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
@@ -194,7 +198,11 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
 
-            userEvent.saveInBackground(); // consider not saving in background if not working
+            try {
+                userEvent.save(); // consider not saving in background if not working
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             //TODO Need a way to update the events
             finish();
         }
