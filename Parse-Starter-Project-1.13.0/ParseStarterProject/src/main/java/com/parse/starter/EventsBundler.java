@@ -27,7 +27,7 @@ public class EventsBundler {
         List<Event> events = new ArrayList<Event>(numEvents);
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
-        query.addDescendingOrder("date"); // sort by date most recent first
+        query.addDescendingOrder("updatedAt"); // sort by date most recent first
         // query.whereNear("location", <user ParseGeoPoint goes here>);
         query.setLimit(numEvents);
         List<ParseObject> userEvents = query.find();

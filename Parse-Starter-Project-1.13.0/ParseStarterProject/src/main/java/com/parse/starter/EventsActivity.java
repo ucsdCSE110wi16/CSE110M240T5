@@ -27,7 +27,7 @@ public class EventsActivity extends AppCompatActivity {
     private SwipeRefreshLayout swipeContainer;
     private RecyclerView rvEvents;
     private android.support.v7.widget.SearchView search;
-    private List<Event> vents;
+    private List<Event> vents = null;
     private EventsAdapter adapter;
 
     @Override
@@ -38,7 +38,6 @@ public class EventsActivity extends AppCompatActivity {
 
         // Set up and load the recycler view
         rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
-        vents = null;
         try {
             vents = EventsBundler.recentEvents(100);
         } catch (ParseException e) {
@@ -50,15 +49,12 @@ public class EventsActivity extends AppCompatActivity {
 
         // Set up the swipe container view
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
-        // Setup refresh listener which triggers new data loading
         swipeContainer.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh() {
                 adapter.clear();
                 try {
                     vents = EventsBundler.recentEvents(100);
-                    vents.add(0, new Event()); // for testing purposes since AddNewActivity not working.
-                    // once it's working, must test that new events are put on the top
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -78,7 +74,7 @@ public class EventsActivity extends AppCompatActivity {
         search.setOnQueryTextListener(new android.support.v7.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                // TODO: separate terms by comma and feed into a new arraylist
+                // TODO: separate terms in query by comma and feed into a new arraylist
                 ArrayList<String> tags = new ArrayList<String>();
                 tags.add(query);
                 List<Event> searchResults = EventsBundler.getEventsByTags(tags, 100, true);
@@ -86,6 +82,7 @@ public class EventsActivity extends AppCompatActivity {
                 adapter.addAll(searchResults);
                 return true;
             }
+
             @Override
             public boolean onQueryTextChange(String newText) {
                 adapter.clear();
