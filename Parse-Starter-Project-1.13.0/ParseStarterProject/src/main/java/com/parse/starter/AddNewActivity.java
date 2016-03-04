@@ -145,7 +145,7 @@ public class AddNewActivity extends AppCompatActivity implements
             /* Should always have user logged in here. */
             ParseUser currUser = ParseUser.getCurrentUser();
             ParseObject eventCreator = new ParseObject("EventCreator");
-            if (currUser == null) { // TODO enforce login and remove
+            if (currUser != null) { // TODO enforce login and remove
                 eventCreator.put("username", currUser.getString("username"));
                 /* eventCreator.put("id", currUser.getString("objectId"));
                 TODO investigate why this is null */
