@@ -1,6 +1,7 @@
 package com.parse.starter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -135,5 +136,11 @@ public class EventsActivity extends AppCompatActivity {
         startActivityForResult(builder.build(), 0);
 
         //MainActivity.signInOutButtonOnClick();
+    }
+
+    public void toCreationPageOnClick(View v){
+        Intent intent = new Intent( this, AddNewActivity.class);
+        startActivity( intent );
+
     }
 }
