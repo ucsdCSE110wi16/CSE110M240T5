@@ -78,7 +78,7 @@ public class EventsActivity extends AppCompatActivity {
         search.setOnQueryTextListener(new android.support.v7.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                ArrayList<String> tags = (ArrayList<String>) Arrays.asList(query.split(","));
+                ArrayList<String> tags = new ArrayList<String>(Arrays.asList(query.split(",")));
                 Log.d("EventsActivity", tags.toString());
 
                 List<Event> searchResults = EventsBundler.getEventsByTags(tags, 100, true);
