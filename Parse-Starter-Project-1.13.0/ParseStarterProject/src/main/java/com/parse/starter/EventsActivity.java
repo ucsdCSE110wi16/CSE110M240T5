@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.SearchView;
 
 import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.ui.ParseLoginBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -121,4 +123,17 @@ public class EventsActivity extends AppCompatActivity {
         super.onResume();
     }
 
+    public void toTheLoginButtonOnClick(View v){
+        System.out.println("WHERE");
+        System.out.println("WHERE");
+        System.out.println("WHERE");
+        System.out.println("WHERE");
+
+        ParseUser.logOut();
+        //MainActivity.currUser = null;
+        ParseLoginBuilder builder = new ParseLoginBuilder(EventsActivity.this);
+        startActivityForResult(builder.build(), 0);
+
+        //MainActivity.signInOutButtonOnClick();
+    }
 }

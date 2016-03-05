@@ -106,6 +106,8 @@ public class MainActivity extends ActionBarActivity {
             ParseUser.logOut();
             currUser = null;
             loginText.setText(loggedOutMessage);
+            ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
+            startActivityForResult(builder.build(), 0);
         }
     }
 
