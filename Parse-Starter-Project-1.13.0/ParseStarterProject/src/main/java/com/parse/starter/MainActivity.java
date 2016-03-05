@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
         else {
             //Access event rows
             Toast.makeText(getApplicationContext(),
-                    "Welcome. GET UPURVENTTTT", Toast.LENGTH_LONG).show();
+                    "Welcome. GET FRIENDSYY!!!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, EventsActivity.class);
             startActivity(intent);
 
