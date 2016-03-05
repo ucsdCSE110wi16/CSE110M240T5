@@ -27,9 +27,6 @@ public class Event {
     ArrayList<ParseUser> attendees;
     private String contact;
 
-    // TEMP TEMP TEMP
-    private String username = "Real mom";
-
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
      */
@@ -72,23 +69,6 @@ String contact, int capacity, ParseUser creator) {
             this.capacity = 50;
         this.attendees = new ArrayList<ParseUser>();
         this.contact = contact;
-    }
-
-    public Event(String title, String loc, Date date, String des, String id,
-                 String contact, int capacity, ParseUser creator, String username) {
-        this.creator = creator;
-        this.title = title;
-        this.description = des;
-        this.userDefinedLocation = loc;
-        this.date = new Date();
-        this.id = id;
-        this.size = 0;
-        this.capacity = capacity;
-        if (capacity ==0) // if capacity=0, set to default 50
-            this.capacity = 50;
-        this.attendees = new ArrayList<ParseUser>();
-        this.contact = contact;
-        this.username = username;
     }
 
     /** Add or remove a user to the attendee list
@@ -171,9 +151,7 @@ String contact, int capacity, ParseUser creator) {
     public String getContact() {
         return this.contact;
     }
-    public String getUsername() {
-        return username;
-    }
+
 
     public Date getDate() { return this.date; }
 
@@ -203,5 +181,51 @@ String contact, int capacity, ParseUser creator) {
         this.id = ID;
     }
 
+    /** Null checker */
+    public boolean validateMe() {
+        boolean changed = false;
+        if (this.creator == null) {
+            this.creator = new ParseUser();
+            this.creator.setUsername("COOL STEPDAD");
+            changed = true;
+        }
+        if (this.title == null) {
+            this.title = "COOL TITLE";
+            changed = true;
+        }
+        if (this.description == null) {
+            this.description = "COOL DESCRIPTION";
+            changed = true;
+        }
+        if (this.userDefinedLocation == null) {
+            this.userDefinedLocation = "COOL LOCATION";
+            changed = true;
+        }
+        if (this.date == null) {
+            date = new Date();
+            changed = true;
+        }
+        if (this.id == null) {
+            this.id = "ids of march";
+            changed = true;
+        }
+        if (this.size < 0) {
+            this.size = 0;
+            changed = true;
+        }
+        if (this.capacity == 0) {
+            this.capacity = 100;
+            changed = true;
+        }
+        if (this.attendees == null) {
+            this.attendees = new ArrayList<ParseUser>();
+            changed = true;
+        }
+        if (this.contact == null) {
+            this.contact = "8675309";
+            changed = true;
+        }
+        return changed;
+    }
 
 }

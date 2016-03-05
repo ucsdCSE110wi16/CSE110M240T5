@@ -49,7 +49,9 @@ public class EventsBundler {
                     pu = null;
                 }
             }
-            events.add(new Event(title, loc, date, desc, id, contact, capacity, pu));
+            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu);
+            //newEv.validateMe();
+            events.add(newEv);
         }
         return events;
     }
@@ -155,8 +157,9 @@ public class EventsBundler {
                 pu = null;
             }
         }
-        String un = parEvent.getString("username");
-        return new Event(title, loc, date, desc, id, contact, capacity, pu, un);
+        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu);
+        newEv.validateMe();
+        return newEv;
     }
 
     /**

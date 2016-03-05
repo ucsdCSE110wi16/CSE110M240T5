@@ -200,7 +200,6 @@ public class AddNewActivity extends AppCompatActivity implements
                                                 // and probably size too
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
-            userEvent.put("username", currUser.getUsername());
 
             try {
                 userEvent.save(); // consider not saving in background if not working
