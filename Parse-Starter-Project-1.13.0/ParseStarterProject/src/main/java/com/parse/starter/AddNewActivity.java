@@ -34,6 +34,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -205,6 +206,10 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("tags", tags);
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
+
+            ArrayList<ParseUser> attendees =
+                    new ArrayList<ParseUser>(Integer.parseInt(capacity));
+            userEvent.put("attendees", attendees);
 
             try {
                 userEvent.save(); // consider not saving in background if not working
