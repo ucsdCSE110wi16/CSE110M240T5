@@ -127,6 +127,12 @@ public class AddNewActivity extends AppCompatActivity implements
             validInputForm = false;
         }
 
+        //Check activity tags
+        String tags = actTags.getText().toString();
+        if (time.matches("")) {
+            validInputForm = false;
+        }
+
         if (!validInputForm) {
             Toast.makeText(this,
                     "Your event is missing some information",
@@ -196,11 +202,10 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
-            userEvent.put("capacity", capacity); // this is getting put into the database as a String
-                                                // and probably size too
+            userEvent.put("capacity", capacity);
+            userEvent.put("tags", tags);
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
-            userEvent.put("username", currUser.getUsername());
 
             try {
                 userEvent.save(); // consider not saving in background if not working

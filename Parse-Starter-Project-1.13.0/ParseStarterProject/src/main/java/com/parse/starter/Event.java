@@ -3,6 +3,7 @@ package com.parse.starter;
 import android.util.Log;
 
 import com.parse.FindCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -16,7 +17,7 @@ import java.util.List;
  */
 public class Event {
 
-    private ParseUser creator;
+    private ParseObject creator;
     private String title;
     private String description;
     private String userDefinedLocation;
@@ -24,11 +25,9 @@ public class Event {
     private String id;
     private int size;
     private int capacity;
-    ArrayList<ParseUser> attendees;
+    ArrayList<ParseObject> attendees;
     private String contact;
-
-    // TEMP TEMP TEMP
-    private String username = "Real mom";
+    private String tags;
 
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
@@ -42,7 +41,7 @@ public class Event {
         id = "ids of march";
         size = 0;
         capacity = 3;
-        attendees = new ArrayList<ParseUser>();
+        attendees = new ArrayList<ParseObject>();
         contact = "831-408-3232";
     }
 
@@ -51,7 +50,7 @@ public class Event {
      * @param title - The title of the event
      * @param creator - The user who has created this event
      */
-    public Event(String title, ParseUser creator) {
+    public Event(String title, ParseObject creator) {
         this();
         this.title = title;
         this.creator = creator;
@@ -59,7 +58,7 @@ public class Event {
 
 
     public Event(String title, String loc, Date date, String des, String id,
-String contact, int capacity, ParseUser creator) {
+String contact, int capacity, ParseObject creator, String tags) {
         this.creator = creator;
         this.title = title;
         this.description = des;
@@ -68,27 +67,9 @@ String contact, int capacity, ParseUser creator) {
         this.id = id;
         this.size = 0;
         this.capacity = capacity;
-        if (capacity ==0) // if capacity=0, set to default 50
-            this.capacity = 50;
-        this.attendees = new ArrayList<ParseUser>();
+        this.attendees = new ArrayList<ParseObject>();
         this.contact = contact;
-    }
-
-    public Event(String title, String loc, Date date, String des, String id,
-                 String contact, int capacity, ParseUser creator, String username) {
-        this.creator = creator;
-        this.title = title;
-        this.description = des;
-        this.userDefinedLocation = loc;
-        this.date = new Date();
-        this.id = id;
-        this.size = 0;
-        this.capacity = capacity;
-        if (capacity ==0) // if capacity=0, set to default 50
-            this.capacity = 50;
-        this.attendees = new ArrayList<ParseUser>();
-        this.contact = contact;
-        this.username = username;
+        this.tags = tags;
     }
 
     /** Add or remove a user to the attendee list
@@ -96,10 +77,10 @@ String contact, int capacity, ParseUser creator) {
      * @param pu The user to add/remove
      * @return true for added, false for not added (for whatever reason)
      */
-    public boolean toggleAttendance(ParseUser pu) {
+    public boolean toggleAttendance(ParseObject pu) {
         // First attendee, need to initialize list
         if (attendees == null) {
-            attendees = new ArrayList<ParseUser>();
+            attendees = new ArrayList<ParseObject>();
         }
         // Already attending
         if (attendees.contains(pu)) {
@@ -107,7 +88,8 @@ String contact, int capacity, ParseUser creator) {
             attendees.remove(pu);
             // Update parse database of changes to size & attendees
             try {
-                EventsBundler.updateRSVP(this.getID(), pu.getUsername());
+                // Pass in event ID and user's username
+                EventsBundler.updateRSVP(this.getID(), (String) pu.get("username"));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -122,7 +104,7 @@ String contact, int capacity, ParseUser creator) {
         attendees.add(pu);
         // Update parse database of changes to size & attendees
         try {
-            EventsBundler.updateRSVP(this.getID(), pu.getUsername());
+            EventsBundler.updateRSVP(this.getID(), (String) pu.get("username"));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -140,7 +122,7 @@ String contact, int capacity, ParseUser creator) {
         return this.title;
     }
 
-    public ParseUser getCreator() {
+    public ParseObject getCreator() {
         return this.creator;
     }
 
@@ -164,16 +146,18 @@ String contact, int capacity, ParseUser creator) {
         return this.capacity;
     }
 
-    public ArrayList<ParseUser> getAttendees() {
+    public ArrayList<ParseObject> getAttendees() {
         return this.attendees;
     }
 
     public String getContact() {
         return this.contact;
     }
-    public String getUsername() {
-        return username;
+
+    public String getTags() {
+        return tags;
     }
+
 
     public Date getDate() { return this.date; }
 
@@ -203,5 +187,49 @@ String contact, int capacity, ParseUser creator) {
         this.id = ID;
     }
 
+    /** Null checker */
+    public boolean validateMe() {
+        boolean changed = false;
+        if (this.creator == null) {
+            changed = true;
+        }
+        if (this.title == null) {
+            this.title = "COOL TITLE";
+            changed = true;
+        }
+        if (this.description == null) {
+            this.description = "COOL DESCRIPTION";
+            changed = true;
+        }
+        if (this.userDefinedLocation == null) {
+            this.userDefinedLocation = "COOL LOCATION";
+            changed = true;
+        }
+        if (this.date == null) {
+            date = new Date();
+            changed = true;
+        }
+        if (this.id == null) {
+            this.id = "ids of march";
+            changed = true;
+        }
+        if (this.size < 0) {
+            this.size = 0;
+            changed = true;
+        }
+        if (this.capacity == 0) {
+            this.capacity = 100;
+            changed = true;
+        }
+        if (this.attendees == null) {
+            this.attendees = new ArrayList<ParseObject>();
+            changed = true;
+        }
+        if (this.contact == null) {
+            this.contact = "8675309";
+            changed = true;
+        }
+        return changed;
+    }
 
 }

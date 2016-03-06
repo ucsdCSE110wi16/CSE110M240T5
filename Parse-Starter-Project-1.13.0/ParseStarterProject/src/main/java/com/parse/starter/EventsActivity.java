@@ -17,6 +17,7 @@ import com.parse.ParseUser;
 import com.parse.ui.ParseLoginBuilder;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -77,9 +78,9 @@ public class EventsActivity extends AppCompatActivity {
         search.setOnQueryTextListener(new android.support.v7.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                // TODO: separate terms in query by comma and feed into a new arraylist
-                ArrayList<String> tags = new ArrayList<String>();
-                tags.add(query);
+                ArrayList<String> tags = new ArrayList<String>(Arrays.asList(query.split(",")));
+                Log.d("EventsActivity", tags.toString());
+
                 List<Event> searchResults = EventsBundler.getEventsByTags(tags, 100, true);
                 adapter.clear();
                 adapter.addAll(searchResults);

@@ -41,46 +41,41 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         // Access Event object
         Bundle extras = getIntent().getExtras();
         String id = extras.getString("id");
-        Event example = null;
+        this.finalEvent = null;
         try {
-            example = EventsBundler.getEvent(id);
+            this.finalEvent = EventsBundler.getEvent(id);
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        if (example == null) {
-            example = new Event();
+        if (this.finalEvent == null) {
+            this.finalEvent = new Event();
         }
-        this.finalEvent=example;
+        this.finalEvent.validateMe();
 
         TextView myTV = (TextView) findViewById(R.id.tvDetailsEventName);
-        myTV.setText(example.getTitle());
+        myTV.setText(this.finalEvent.getTitle());
 
         TextView myTV2 = (TextView) findViewById(R.id.tvDetailsDate);
-        myTV2.setText(example.getDate().toString()); // TODO make prettier
+        myTV2.setText(this.finalEvent.getDate().toString()); // TODO make prettier
 
         TextView myTV3 = (TextView) findViewById(R.id.tvDetailsLocation);
-        myTV3.setText(example.getUserDefinedLocation());
+        myTV3.setText(this.finalEvent.getUserDefinedLocation());
 
         TextView myTV4 = (TextView) findViewById(R.id.tvDetailsDescription);
-        myTV4.setText(example.getDescription());
+        myTV4.setText(this.finalEvent.getDescription());
 
         final TextView myTV5 = (TextView) findViewById(R.id.tvDetailsAttendees);
-        String sz = "Number of Attendees: " + example.getSize() + "/" +
-                example.getCapacity();
+        String sz = "Number of Attendees: " + this.finalEvent.getSize() + "/" +
+                this.finalEvent.getCapacity();
         myTV5.setText(sz);
 
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
-        String host = "";
-        try {
-            example.getCreator().getUsername(); }
-        catch(Exception e) {
-            host = example.getUsername();
-            if (host==null) {
-                host = "delete me i'm missing fields";
-            }
-        }
+        String host = this.finalEvent.getCreator().getUsername();
         myTV6.setText("Hosted by: " + host);
+
+        TextView myTV7 = (TextView) findViewById(R.id.tvDetailsTags);
+        myTV7.setText(this.finalEvent.getTags());
 
         Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
         rsvpButton.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +102,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                finalEvent.validateMe();
                 String phone = finalEvent.getContact();
                 String body = "Hey fam, can I slide thru to " +
                                                             finalEvent.getTitle() + "?";
