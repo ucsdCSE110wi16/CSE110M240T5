@@ -36,8 +36,10 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
 /**
@@ -50,7 +52,7 @@ public class AddNewActivity extends AppCompatActivity implements
 {
     private static int MY_PERMISSIONS_REQUEST_COURSE_LOCATION;
     Button bSubmit;
-    EditText actName, actLoc, actTime, actTags, actContact, actCapacity, actDesc;
+    static EditText actName, actLoc, actTime, actTags, actContact, actCapacity, actDesc;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
 
@@ -290,7 +292,10 @@ public class AddNewActivity extends AppCompatActivity implements
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // Do something with the date chosen by the user
-
+            Calendar calendar = Calendar.getInstance();
+            String format = "MM/dd/yy";
+            SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
+            actTime.setText(sdf.format(calendar.getTime()));
         }
     }
 
