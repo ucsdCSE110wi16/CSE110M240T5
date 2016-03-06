@@ -1,5 +1,7 @@
 package com.parse.starter;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
@@ -17,6 +19,7 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Telephony;
 import android.support.design.widget.FloatingActionButton;
@@ -40,6 +43,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -54,29 +58,33 @@ public class AddNewActivity extends AppCompatActivity implements
 {
     private static int MY_PERMISSIONS_REQUEST_COURSE_LOCATION;
     Button bSubmit;
-    static EditText actName, actLoc, actTime, actTags, actContact, actCapacity, actDesc;
+    static EditText actName, actLoc, actDate, actTime, actTags, actContact, actCapacity, actDesc;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
+    //static Date date;
+    static Calendar calendar = Calendar.getInstance();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
         // Create an instance of GoogleAPIClient.
         if (mGoogleApiClient == null) {
+            // ATTENTION: This "addApi(AppIndex.API)"was auto-generated to implement the App Indexing API.
+            // See https://g.co/AppIndexing/AndroidStudio for more information.
             mGoogleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API)
-                    .build();
+                    .addApi(AppIndex.API).build();
         }
 
         setContentView(R.layout.activity_add_new);
 
         actName = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyName);
         actLoc = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyLoc);
+        actDate = (EditText) findViewById(R.id.et_NEWACTIVITY_activityDate);
         actTime = (EditText) findViewById(R.id.et_NEWACTIVITY_actvitiyTime);
         actContact = (EditText) findViewById(R.id.et_NEWACTIVITY_contact);
         actCapacity = (EditText) findViewById(R.id.et_NEWACTIVITY_capacity);
@@ -89,15 +97,42 @@ public class AddNewActivity extends AppCompatActivity implements
     protected void onStart() {
         mGoogleApiClient.connect(); // connect to Google API
         super.onStart();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "AddNew Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.parse.starter/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(mGoogleApiClient, viewAction);
     }
 
     protected void onStop() {
         mGoogleApiClient.disconnect(); // disconnect from Google API
         super.onStop();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "AddNew Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.parse.starter/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(mGoogleApiClient, viewAction);
     }
 
     @Override
     public void onClick(View v) {
+        Date dt = new Date(calendar.getTimeInMillis());
         boolean validInputForm = true;
         //Check activity name
         String title = actName.getText().toString();
@@ -109,6 +144,10 @@ public class AddNewActivity extends AppCompatActivity implements
         if (loc.matches("")) {
             validInputForm = false;
         }
+        String date = actDate.getText().toString();
+        if (date.matches("")) {
+            validInputForm = false;
+        }
         //Check activity time
         String time = actTime.getText().toString();
         if (time.matches("")) {
@@ -117,19 +156,19 @@ public class AddNewActivity extends AppCompatActivity implements
 
         //Check activity contact
         String contact = actContact.getText().toString();
-        if (time.matches("")) {
+        if (contact.matches("")) {
             validInputForm = false;
         }
 
         //Check activity capacity
         String capacity = actCapacity.getText().toString();
-        if (time.matches("")) {
+        if (capacity.matches("")) {
             validInputForm = false;
         }
 
         //Check activity description
         String desc = actDesc.getText().toString();
-        if (time.matches("")) {
+        if (desc.matches("")) {
             validInputForm = false;
         }
 
@@ -188,6 +227,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("geoLocation", geoPoint); // result of lookup
             userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
+            userEvent.put("date", date);
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
@@ -287,18 +327,44 @@ public class AddNewActivity extends AppCompatActivity implements
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // Do something with the date chosen by the user
-            Calendar calendar = Calendar.getInstance();
             calendar.set(Calendar.YEAR, year);
             calendar.set(Calendar.MONTH, month);
             calendar.set(Calendar.DAY_OF_MONTH, day);
-            String format = "MM/dd/yy";
-            SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
-            actTime.setText(sdf.format(calendar.getTime()));
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yy", Locale.US);
+            actDate.setText(sdf.format(calendar.getTime()));
         }
     }
 
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    public static class TimePickerFragment extends DialogFragment
+            implements TimePickerDialog.OnTimeSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current time as the default values for the picker
+            final Calendar c = Calendar.getInstance();
+            int hour = c.get(Calendar.HOUR_OF_DAY);
+            int minute = c.get(Calendar.MINUTE);
+
+            // Create a new instance of TimePickerDialog and return it
+            return new TimePickerDialog(getActivity(), this, hour, minute,
+                    DateFormat.is24HourFormat(getActivity()));
+        }
+
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            // Do something with the time chosen by the user
+            calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+            calendar.set(Calendar.MINUTE, minute);
+            actTime.setText(calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
+        }
+    }
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 }

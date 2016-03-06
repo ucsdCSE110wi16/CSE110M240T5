@@ -44,6 +44,35 @@
 
         <TextView
             android:layout_width="wrap_content"
+            android:text="@string/activity_date"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a Date"
+            android:onClick="showDatePickerDialog"
+            android:visibility="visible"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/et_NEWACTIVITY_activityDate"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:background="#ffffff"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:text="@string/activity_time"
             android:textSize="20sp"
             android:textColor="#000"
@@ -54,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pick a Time"
-            android:onClick="showDatePickerDialog"
+            android:onClick="showTimePickerDialog"
             android:visibility="visible" />
 
         <EditText
