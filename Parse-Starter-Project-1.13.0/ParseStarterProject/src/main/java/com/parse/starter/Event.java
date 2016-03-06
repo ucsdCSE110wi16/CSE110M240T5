@@ -27,6 +27,7 @@ public class Event {
     private int capacity;
     ArrayList<ParseObject> attendees;
     private String contact;
+    private String tags;
 
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
@@ -57,7 +58,7 @@ public class Event {
 
 
     public Event(String title, String loc, Date date, String des, String id,
-String contact, int capacity, ParseObject creator) {
+String contact, int capacity, ParseObject creator, String tags) {
         this.creator = creator;
         this.title = title;
         this.description = des;
@@ -66,10 +67,9 @@ String contact, int capacity, ParseObject creator) {
         this.id = id;
         this.size = 0;
         this.capacity = capacity;
-        if (capacity ==0) // if capacity=0, set to default 50
-            this.capacity = 50;
         this.attendees = new ArrayList<ParseObject>();
         this.contact = contact;
+        this.tags = tags;
     }
 
     /** Add or remove a user to the attendee list
@@ -88,6 +88,7 @@ String contact, int capacity, ParseObject creator) {
             attendees.remove(pu);
             // Update parse database of changes to size & attendees
             try {
+                // Pass in event ID and user's username
                 EventsBundler.updateRSVP(this.getID(), (String) pu.get("username"));
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -151,6 +152,10 @@ String contact, int capacity, ParseObject creator) {
 
     public String getContact() {
         return this.contact;
+    }
+
+    public String getTags() {
+        return tags;
     }
 
 
