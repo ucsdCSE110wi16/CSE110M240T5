@@ -41,10 +41,10 @@ public class EventsBundler {
             String contact = ev.getString("contact");
             String tags = ev.getString("tags");
             int capacity = ev.getInt("capacity");
-            ParseUser pu = ev.getParseUser("creator");
+            ParseUser pu = ev.getParseUser("user");
 
             Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
-            //newEv.validateMe();
+            newEv.validateMe();
             events.add(newEv);
         }
         return events;

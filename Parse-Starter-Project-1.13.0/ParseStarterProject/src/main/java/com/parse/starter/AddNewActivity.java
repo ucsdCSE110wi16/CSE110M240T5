@@ -150,30 +150,13 @@ public class AddNewActivity extends AppCompatActivity implements
 
             /* Should always have user logged in here. */
             ParseUser currUser = ParseUser.getCurrentUser();
-            ParseObject eventCreator = new ParseObject("EventCreator");
-            if (currUser != null) { // TODO enforce login and remove
-                /* eventCreator.put("id", currUser.getString("objectId"));
-                TODO investigate why this is null */
-                eventCreator.put("name", currUser.getString("name"));
-                eventCreator.put("email", currUser.getString("email"));
-                eventCreator.put("user", currUser); // for Event ctor
-            }
+
             // Determine recent location for creator
             String creatorLat = null;
             String creatorLong = null;
             if (mLastLocation != null) {
                 creatorLat = String.valueOf(mLastLocation.getLatitude());
                 creatorLong = String.valueOf(mLastLocation.getLongitude());
-            }
-            if ( creatorLat != null && creatorLong != null ) {
-                eventCreator.put("latitude", creatorLat);
-                eventCreator.put("longitude", creatorLong);
-            }
-            eventCreator.setACL(acl);
-            try {
-                eventCreator.save();
-            } catch (ParseException e) {
-                e.printStackTrace();
             }
 
             // Attempt to lookup address based on user input
@@ -205,7 +188,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("capacity", Integer.parseInt(capacity));
             userEvent.put("tags", tags);
             userEvent.put("size", 0); // number of attendees
-            userEvent.put("creator", eventCreator);
+            userEvent.put("creator", currUser);
 
             ArrayList<ParseUser> attendees =
                     new ArrayList<ParseUser>(Integer.parseInt(capacity));
