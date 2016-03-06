@@ -135,6 +135,9 @@ public class EventsActivity extends AppCompatActivity {
         //MainActivity.currUser = null;
         ParseLoginBuilder builder = new ParseLoginBuilder(EventsActivity.this);
         startActivityForResult(builder.build(), 0);
+        if( ParseUser.getCurrentUser() == null){
+            finish();
+        }
 
         //MainActivity.signInOutButtonOnClick();
     }
