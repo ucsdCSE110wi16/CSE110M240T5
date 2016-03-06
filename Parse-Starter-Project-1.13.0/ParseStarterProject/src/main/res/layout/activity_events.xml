@@ -18,24 +18,12 @@
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Out"
-        android:id="@+id/toTheLoginButton"
-        android:onClick="toTheLoginButtonOnClick"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/toTheLoginButton"
         android:layout_below="@+id/searchView" />
 
     <Button
@@ -45,8 +33,6 @@
         android:text="Create Event"
         android:id="@+id/ToCreationPage"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/toTheLoginButton"
-        android:layout_toEndOf="@+id/toTheLoginButton"
         android:onClick="toCreationPageOnClick" />
 
 </RelativeLayout>

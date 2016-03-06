@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity {
 
     private static final String loggedOutMessage = "You are logged out.";
     private static final String emptyStr = "";
+    Button button;
 
     /**
      * TODO
@@ -50,12 +51,17 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
         TextView loginText = (TextView)findViewById(R.id.loginTextView);
+        button = (Button) findViewById(R.id.signInOutButton);
+        button.setText("Log Out");
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
         //ParseUser.logOutInBackground();
         // currUser = ParseUser.getCurrentUser();
         currUser = ParseUser.getCurrentUser();
+
+
+
 
         if(currUser == null) {
             //Enter the Login Screen
@@ -66,6 +72,7 @@ public class MainActivity extends ActionBarActivity {
             startActivityForResult(builder.build(), 0);
 
 
+
         }
 
         else {
@@ -74,6 +81,7 @@ public class MainActivity extends ActionBarActivity {
                     "Welcome. GET FRIENDSYY!!!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, EventsActivity.class);
             startActivity(intent);
+
 
         }
 
@@ -93,6 +101,7 @@ public class MainActivity extends ActionBarActivity {
      */
     public void signInOutButtonOnClick(View v) {
         TextView loginText = (TextView)findViewById(R.id.loginTextView);
+
         if (currUser == null) {
             // Open login builder and update currUser
             ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
@@ -105,7 +114,7 @@ public class MainActivity extends ActionBarActivity {
         else {
             ParseUser.logOut();
             currUser = null;
-            loginText.setText(loggedOutMessage);
+            //loginText.setText(loggedOutMessage);
             ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
             startActivityForResult(builder.build(), 0);
         }
@@ -116,8 +125,14 @@ public class MainActivity extends ActionBarActivity {
      * @param v
      */
     public void viewEventsButtonOnClick(View v) {
-        Intent intent = new Intent(this, EventsActivity.class);
-        startActivity(intent);
+        currUser = ParseUser.getCurrentUser();
+        if (currUser != null) {
+            Intent intent = new Intent(this, EventsActivity.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Welcome. Please log in.", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
@@ -125,9 +140,14 @@ public class MainActivity extends ActionBarActivity {
      * @param v
      */
     public void createNewEventButtonOnClick(View v){
-
-        Intent intent = new Intent( this, AddNewActivity.class);
-        startActivity( intent );
+        currUser = ParseUser.getCurrentUser();
+        if (currUser != null) {
+            Intent intent = new Intent( this, AddNewActivity.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Welcome. Please log in.", Toast.LENGTH_LONG).show();
+        }
     }
 
 
