@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/event_date"
         android:layout_width="120dp"
-        android:layout_height="60dp"
+        android:layout_height="90dp"
         android:padding="3dp"
         android:layout_marginStart="9dp"
         android:layout_marginLeft="9dp"
@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/event_title"
         android:layout_width="1dp"
-        android:layout_height="60dp"
+        android:layout_height="90dp"
         android:padding="3dp"
         android:layout_toEndOf="@+id/event_date"
         android:layout_toLeftOf="@+id/replyButton"
@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/replyButton"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="90dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="30sp"

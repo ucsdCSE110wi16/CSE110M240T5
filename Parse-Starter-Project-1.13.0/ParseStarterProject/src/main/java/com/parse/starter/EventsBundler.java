@@ -39,6 +39,7 @@ public class EventsBundler {
             String desc = ev.getString("description");
             String id = ev.getObjectId();
             String contact = ev.getString("contact");
+            String tags = ev.getString("tags");
             int capacity = ev.getInt("capacity");
             ParseObject po = ev.getParseObject("creator");
             ParseUser pu = null;
@@ -49,7 +50,7 @@ public class EventsBundler {
                     pu = null;
                 }
             }
-            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu);
+            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
             //newEv.validateMe();
             events.add(newEv);
         }
@@ -59,9 +60,9 @@ public class EventsBundler {
     public static List<Event> testEvents(int numEvents) {
         List<Event> events = new ArrayList<Event>(numEvents);
 
-        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1, null));
-        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1, null));
-        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1, null));
+        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1, null, "tags"));
+        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1, null, "tags"));
+        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1, null, "tags"));
         return events;
     }
 
@@ -148,6 +149,7 @@ public class EventsBundler {
         String contact = parEvent.getString("contact");
         String capString = parEvent.getString("capacity");
         int capacity = Integer.parseInt(capString);
+        String tags = parEvent.getString("tags");
         ParseObject po = parEvent.getParseObject("creator");
         ParseUser pu = null;
         if (po!=null) {
@@ -157,7 +159,7 @@ public class EventsBundler {
                 pu = null;
             }
         }
-        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu);
+        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
         newEv.validateMe();
         return newEv;
     }

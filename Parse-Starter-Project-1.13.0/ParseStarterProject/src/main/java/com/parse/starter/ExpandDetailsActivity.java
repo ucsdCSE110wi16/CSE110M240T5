@@ -72,8 +72,10 @@ public class ExpandDetailsActivity extends AppCompatActivity {
 
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
         String host = this.finalEvent.getCreator().getUsername();
-
         myTV6.setText("Hosted by: " + host);
+
+        TextView myTV7 = (TextView) findViewById(R.id.tvDetailsTags);
+        myTV7.setText(this.finalEvent.getTags());
 
         Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
         rsvpButton.setOnClickListener(new View.OnClickListener() {
