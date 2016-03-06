@@ -74,7 +74,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-
         android:onClick="createNewEventButtonOnClick"
         android:text="@string/activity_Main_Create_Event"
         android:background="#65ee83"
