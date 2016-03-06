@@ -367,9 +367,12 @@ public class AddNewActivity extends AppCompatActivity implements
             // Put in 12 hr mode
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
             String state = " AM";
-            if(hour > 12){
+            if (hour > 12){
                 hour -=12;
                 state = " PM";
+            }
+            if (hour==0) {
+                hour = 12;
             }
 
             // Get leading zero

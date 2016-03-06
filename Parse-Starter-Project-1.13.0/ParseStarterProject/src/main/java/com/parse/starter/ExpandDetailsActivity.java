@@ -93,12 +93,12 @@ public class ExpandDetailsActivity extends AppCompatActivity {
                         "/" + finalEvent.getCapacity();
                 myTV5.setText(newsz);
 
-                String st = "RSVP successful";
+/*                String st = "RSVP successful";
                 if (!ok) {
                     st = "unRSVP'd or event full";
                 }
                 Toast.makeText(ExpandDetailsActivity.this, st, Toast.LENGTH_SHORT).show();
-
+*/
             }
         });
 
