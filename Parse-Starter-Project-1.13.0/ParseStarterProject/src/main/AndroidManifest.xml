@@ -43,7 +43,7 @@
             android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="com.parse.ui.ParseLoginActivity.APP_LOGO"
-                android:resource="@drawable/applogo512x512"/>
+                android:resource="@drawable/applogosmaller"/>
             <meta-data
                 android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"
                 android:value="true" />
