@@ -121,5 +121,6 @@
     <string name="activity_Main_SignInSignOut">Sign Out</string>
     <string name="activity_Main_Checkout_Events">Checkout Events</string>
     <string name="activity_Main_Create_Event">Create Event</string>
+    <string name="tagFormatting">"(tag1, tag2, tag3...)"</string>
 
 </resources>
