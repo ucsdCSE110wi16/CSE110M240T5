@@ -196,8 +196,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
-            userEvent.put("capacity", capacity); // this is getting put into the database as a String
-                                                // and probably size too
+            userEvent.put("capacity", Integer.parseInt(capacity));
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
 
