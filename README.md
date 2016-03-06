@@ -1,6 +1,6 @@
 # CSE110M240T5
 
-UpYourVent is an Android application that allows users to check out
+Friendsy is an Android application that allows users to check out
 local events and share events they are hosting.
 
 Android Studio Project is contained within Parse Starter Project.
@@ -14,4 +14,4 @@ Table of Contents:
 			brainstorm: random thoughts
 		
 		Parse-Starter-Project-1.13.0: 
-		Folder containing the build for UpUrVent.
+		Folder containing the build for Friendsy.
