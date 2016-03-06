@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -18,6 +19,8 @@ import java.util.List;
  */
 public class EventsBundler {
 
+    public static final ParseGeoPoint UNI_GEOLOCATION = new ParseGeoPoint(32.8753618, -117.2358622);
+
     /**
      * Fetches numEvents events from the database, largest date value first.
      *
@@ -29,7 +32,7 @@ public class EventsBundler {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("updatedAt"); // sort by date most recent first
-        // query.whereNear("location", <user ParseGeoPoint goes here>);
+        query.whereNear("location", UNI_GEOLOCATION); // search near the university
         query.setLimit(numEvents);
         List<ParseObject> userEvents = query.find();
         for (ParseObject ev : userEvents) {
