@@ -70,8 +70,13 @@ public class ExpandDetailsActivity extends AppCompatActivity {
                 this.finalEvent.getCapacity();
         myTV5.setText(sz);
 
+        String host = "Steve";
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
-        String host = this.finalEvent.getCreator().getUsername();
+        try {
+            host = this.finalEvent.getCreator().getUsername();
+        } catch (Exception pe) {
+            // nothing
+        }
         myTV6.setText("Hosted by: " + host);
 
         TextView myTV7 = (TextView) findViewById(R.id.tvDetailsTags);

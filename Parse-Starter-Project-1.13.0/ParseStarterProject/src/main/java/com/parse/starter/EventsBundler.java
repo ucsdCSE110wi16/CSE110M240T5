@@ -38,7 +38,7 @@ public class EventsBundler {
         for (ParseObject ev : userEvents) {
             String title = ev.getString("title");
             String loc = ev.getString("loc");
-            Date date = ev.getDate("date");
+            String date = ev.getString("date");
             String desc = ev.getString("description");
             String id = ev.getObjectId();
             String contact = ev.getString("contact");
@@ -56,9 +56,9 @@ public class EventsBundler {
     public static List<Event> testEvents(int numEvents) {
         List<Event> events = new ArrayList<Event>(numEvents);
 
-        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1, null, "tags"));
-        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1, null, "tags"));
-        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1, null, "tags"));
+        events.add(new Event("title1", "loc1", "date", "desc1", "111", "contact1", 1, null, "tags"));
+        events.add(new Event("title2", "loc2,", "date", "desc2", "222", "contact1", 1, null, "tags"));
+        events.add(new Event("title3", "loc3,", "date", "desc3", "333", "contact1", 1, null, "tags"));
         return events;
     }
 
@@ -140,7 +140,7 @@ public class EventsBundler {
         }
         String title = parEvent.getString("title");
         String loc = parEvent.getString("loc");
-        Date date = parEvent.getDate("date");
+        String date = parEvent.getString("date");
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
         int capacity = parEvent.getInt("capacity");
