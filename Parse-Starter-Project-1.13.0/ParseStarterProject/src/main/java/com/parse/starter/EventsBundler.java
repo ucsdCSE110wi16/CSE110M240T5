@@ -32,7 +32,7 @@ public class EventsBundler {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("updatedAt"); // sort by date most recent first
-        query.whereNear("location", UNI_GEOLOCATION); // search near the university
+        query.whereNear("geoLocation", UNI_GEOLOCATION); // search near the university
         query.setLimit(numEvents);
         List<ParseObject> userEvents = query.find();
         for (ParseObject ev : userEvents) {
