@@ -9,6 +9,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -42,7 +43,7 @@ public class EventsBundler {
             String desc = ev.getString("description");
             String id = ev.getObjectId();
             String contact = ev.getString("contact");
-            String tags = ev.getString("tags");
+            ArrayList<String> tags = (ArrayList<String>) ev.get("tags");
             int capacity = ev.getInt("capacity");
             ParseUser pu = ev.getParseUser("user");
 
@@ -56,12 +57,12 @@ public class EventsBundler {
     public static List<Event> testEvents(int numEvents) {
         List<Event> events = new ArrayList<Event>(numEvents);
 
-        events.add(new Event("title1", "loc1", "date", "desc1", "111", "contact1", 1, null, "tags"));
-        events.add(new Event("title2", "loc2,", "date", "desc2", "222", "contact1", 1, null, "tags"));
-        events.add(new Event("title3", "loc3,", "date", "desc3", "333", "contact1", 1, null, "tags"));
+        ArrayList<String> s = new ArrayList<String>();
+        events.add(new Event("title1", "loc1", "date", "desc1", "111", "contact1", 1, null, s));
+        events.add(new Event("title2", "loc2,", "date", "desc2", "222", "contact1", 1, null, s));
+        events.add(new Event("title3", "loc3,", "date", "desc3", "333", "contact1", 1, null, s));
         return events;
     }
-
 
     /**
      * Fetches numEvents events from the database, largest date value first.
@@ -74,13 +75,8 @@ public class EventsBundler {
      */
     // TODO update and add location search
     public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
-                                                   boolean matchAll) {
-
-        final ArrayList<Event> events = new ArrayList<Event>(numEvents);
-        Event c = new Event();
-        c.setTitle("mcsearch");
-        events.add(c);
-        /*
+                                                  boolean matchAll) throws ParseException {
+        ArrayList<Event> events = new ArrayList<Event>(numEvents);
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("date"); // sort by date most recent first
@@ -91,30 +87,77 @@ public class EventsBundler {
                 query.whereContains("tags", tags.get(i)); // match any tag
             }
         }
-        query.setLimit(numEvents);
-        query.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> userEvents, ParseException e) {
-                if (e == null) {
-                    Log.d("EventsBundler", "Retrieved " + userEvents.size()
-                            + " events");
-                    for (ParseObject ev : userEvents) {
-                        String title = ev.getString("title");
-                        String loc = ev.getString("loc");
-                        Date date = ev.getDate("date");
-                        String desc = ev.getString("description");
-                        String id = ev.getString("objectId");
-                        events.add(new Event(title, loc, date, desc, id));
-                    }
-                } else {
-                    Log.d("EventsBundler", "Error: " + e.getMessage());
-                }
-            }
-        });
-        Log.d("EventsBundler", "Size of events before return: " + events.size());
-        */
+        List<ParseObject> userEvents = query.find();
+        for (ParseObject ev : userEvents) {
+            String title = ev.getString("title");
+            String loc = ev.getString("loc");
+            String date = ev.getString("date");
+            String desc = ev.getString("description");
+            String id = ev.getObjectId();
+            String contact = ev.getString("contact");
+            ArrayList<String> tagsArr = (ArrayList<String>) ev.get("tags");
+            int capacity = ev.getInt("capacity");
+            ParseUser pu = ev.getParseUser("user");
+
+            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tagsArr);
+            newEv.validateMe();
+            events.add(newEv);
+        }
         return events;
     }
+
+    /**
+     * Fetches numEvents events from the database, largest date value first.
+     * Fetch events that either all or any of the tags
+     *
+     * @param tags - The tags to match
+     * @param numEvents - The number of events to get
+     * @param matchAll - Whether to match all, or any of the tags
+     * @return ArrayList of numEvents events.
+     */
+    // TODO update and add location search
+//    public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
+//                                                   boolean matchAll) {
+//
+//        final ArrayList<Event> events = new ArrayList<Event>(numEvents);
+//        Event c = new Event();
+//        c.setTitle("mcsearch");
+//        events.add(c);
+//        /*
+//        // Get numEvents events from the database
+//        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
+//        query.addDescendingOrder("date"); // sort by date most recent first
+//        if ( matchAll ) {
+//            query.whereContainsAll("tags", tags); // match all tags
+//        } else {
+//            for (int i = 0; i < tags.size(); i++) {
+//                query.whereContains("tags", tags.get(i)); // match any tag
+//            }
+//        }
+//        query.setLimit(numEvents);
+//        query.findInBackground(new FindCallback<ParseObject>() {
+//            @Override
+//            public void done(List<ParseObject> userEvents, ParseException e) {
+//                if (e == null) {
+//                    Log.d("EventsBundler", "Retrieved " + userEvents.size()
+//                            + " events");
+//                    for (ParseObject ev : userEvents) {
+//                        String title = ev.getString("title");
+//                        String loc = ev.getString("loc");
+//                        Date date = ev.getDate("date");
+//                        String desc = ev.getString("description");
+//                        String id = ev.getString("objectId");
+//                        events.add(new Event(title, loc, date, desc, id));
+//                    }
+//                } else {
+//                    Log.d("EventsBundler", "Error: " + e.getMessage());
+//                }
+//            }
+//        });
+//        Log.d("EventsBundler", "Size of events before return: " + events.size());
+//        */
+//        return events;
+//    }
 
 
     /**
@@ -144,7 +187,7 @@ public class EventsBundler {
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
         int capacity = parEvent.getInt("capacity");
-        String tags = parEvent.getString("tags");
+        ArrayList<String> tags = (ArrayList<String>) parEvent.get("tags");
         ParseUser pu = parEvent.getParseUser("creator");
 
         Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
