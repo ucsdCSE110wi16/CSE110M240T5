@@ -28,13 +28,15 @@
         android:layout_alignParentStart="true"
         android:nestedScrollingEnabled="false"
         android:onClick="signInOutButtonOnClick"
-        android:text="@string/activity_Main_SignInSignOut" />
+        android:text="@string/activity_Main_SignInSignOut"
+        android:background="#65ee83"
+        android:layout_marginBottom="10dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/upurvent"
+        android:src="@drawable/applogo512x512"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp" />
@@ -58,7 +60,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:onClick="viewEventsButtonOnClick"
-        android:text="@string/activity_Main_Checkout_Events" />
+        android:text="@string/activity_Main_Checkout_Events"
+        android:background="#65ee83"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
 
     <Button
         android:id="@+id/createNewEventButton"
@@ -69,7 +74,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
+
         android:onClick="createNewEventButtonOnClick"
-        android:text="@string/activity_Main_Create_Event" />
+        android:text="@string/activity_Main_Create_Event"
+        android:background="#65ee83"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>
