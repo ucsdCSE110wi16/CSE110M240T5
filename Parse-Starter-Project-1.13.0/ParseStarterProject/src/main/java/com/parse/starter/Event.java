@@ -27,7 +27,7 @@ public class Event {
     private int capacity;
     ArrayList<ParseUser> attendees;
     private String contact;
-    private String tags;
+    private ArrayList<String> tags;
 
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
@@ -58,7 +58,7 @@ public class Event {
 
 
     public Event(String title, String loc, Date date, String des, String id,
-String contact, int capacity, ParseUser creator, String tags) {
+String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.creator = creator;
         this.title = title;
         this.description = des;
@@ -154,7 +154,7 @@ String contact, int capacity, ParseUser creator, String tags) {
         return this.contact;
     }
 
-    public String getTags() {
+    public ArrayList<String> getTags() {
         return tags;
     }
 
