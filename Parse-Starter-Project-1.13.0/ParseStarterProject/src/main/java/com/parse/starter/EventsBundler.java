@@ -73,13 +73,13 @@ public class EventsBundler {
      * @param matchAll - Whether to match all, or any of the tags
      * @return ArrayList of numEvents events.
      */
-    // TODO update and add location search
+    // TODO update and add location search, case insensitivity
     public static ArrayList<Event> getEventsByTags(ArrayList<String> tags, int numEvents,
                                                   boolean matchAll) throws ParseException {
         ArrayList<Event> events = new ArrayList<Event>(numEvents);
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
-        query.addDescendingOrder("date"); // sort by date most recent first
+        query.addDescendingOrder("updatedAt"); // sort by date most recent first
         if ( matchAll ) {
             query.whereContainsAll("tags", tags); // match all tags
         } else {
@@ -187,23 +187,26 @@ public class EventsBundler {
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
         int capacity = parEvent.getInt("capacity");
+        int size = parEvent.getInt("size");
         ArrayList<String> tags = (ArrayList<String>) parEvent.get("tags");
         ParseUser pu = parEvent.getParseUser("creator");
+        ArrayList<ParseUser> attending = (ArrayList<ParseUser>) parEvent.get("attendees");
 
         Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
+        newEv.setAttendees(attending);
+        newEv.setSize(size);
         newEv.validateMe();
         return newEv;
     }
 
     /**
-     * Increase the size of the event(number of attendees)
-     * TODO: Decrease size and remove user from attendees, remove size<cap check
+     * Increase or decrease the size of the event(number of attendees)
      * @param eventId - The id of the event to update
-     * @param userId - The id of the user to add to the attendees list TODO update
+     * @param user - ParseUser to add/remove
      * @return Boolean - True if successfully updated
      *                   False if unsuccessful
      */
-    public static boolean updateRSVP(String eventId, String userId) throws ParseException {
+    public static boolean updateRSVP(String eventId, ParseUser user) throws ParseException {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         ParseObject parEvent = null;
@@ -215,8 +218,21 @@ public class EventsBundler {
         if (parEvent != null) {
             int cap = parEvent.getInt("capacity");
             int size = parEvent.getInt("size");
-            if ( size < cap ) {
+            ArrayList<ParseUser> attending = (ArrayList<ParseUser>) parEvent.get("attendees");
+
+            // user not attending yet
+            if (!(attending.contains(user)) && (size < cap) ) {
                 parEvent.put("size",++size);
+                attending.add(user);
+                parEvent.put("attendees", attending);
+                parEvent.save();
+                return true;
+            }
+            // user already attending
+            else if (attending.contains(user)) {
+                parEvent.put("size",--size);
+                attending.remove(user);
+                parEvent.put("attendees", attending);
                 parEvent.save();
                 return true;
             }

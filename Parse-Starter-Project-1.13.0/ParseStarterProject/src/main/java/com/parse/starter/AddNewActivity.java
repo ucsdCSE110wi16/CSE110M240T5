@@ -378,7 +378,7 @@ public class AddNewActivity extends AppCompatActivity implements
             // Get leading zero
             String min = String.format("%02d",calendar.get(Calendar.MINUTE));
 
-            actTime.setText( hour + ":" + min + state);
+            actTime.setText(hour + ":" + min + state);
         }
     }
 

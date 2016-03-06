@@ -36,6 +36,12 @@ public class ExpandDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onStart() {
+
+        super.onStart();
         setContentView(R.layout.activity_expand_details);
 
         // Access Event object
@@ -110,7 +116,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
                 finalEvent.validateMe();
                 String phone = finalEvent.getContact();
                 String body = "Hey fam, can I slide thru to " +
-                                                            finalEvent.getTitle() + "?";
+                        finalEvent.getTitle() + "?";
 
                 Intent sendIntent = new Intent(Intent.ACTION_VIEW);
                 sendIntent.setData(Uri.parse("sms:" + phone));
@@ -119,5 +125,4 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             }
         });
     }
-
 }

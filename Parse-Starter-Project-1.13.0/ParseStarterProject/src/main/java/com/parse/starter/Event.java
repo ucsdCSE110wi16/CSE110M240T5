@@ -74,42 +74,40 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
     }
 
     /** Add or remove a user to the attendee list
-     *
+     *  Note: attendees and size changed here just for display to user
      * @param pu The user to add/remove
      * @return true for added, false for not added (for whatever reason)
      */
     public boolean toggleAttendance(ParseUser pu) {
-        // First attendee, need to initialize list
-        if (attendees == null) {
-            attendees = new ArrayList<ParseUser>();
+
+        // Event at full capacity already
+        if (!(size < capacity)) {
+            return false;
         }
         // Already attending
-        if (attendees.contains(pu)) {
+        if (this.attendees.contains(pu)) {
             this.size--;
-            attendees.remove(pu);
+            this.attendees.remove(pu);
             // Update parse database of changes to size & attendees
             try {
                 // Pass in event ID and user ID
-                EventsBundler.updateRSVP(this.getID(), ParseUser.getCurrentUser().getObjectId());
+                EventsBundler.updateRSVP(this.getID(), pu);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
             return false;
         }
-        // Event at full capacity already
-        if (!(size < capacity)) {
-            return false;
+        else {
+            this.size++;
+            this.attendees.add(pu);
+            // Update parse database of changes to size & attendees
+            try {
+                EventsBundler.updateRSVP(this.getID(), pu);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            return true;
         }
-        // Event is not at capacity yet
-        this.size++; // size changed just for display to the current user
-        attendees.add(pu);
-        // Update parse database of changes to size & attendees
-        try {
-            EventsBundler.updateRSVP(this.getID(), pu.getObjectId());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return true;
     }
 
     @Override
@@ -187,6 +185,8 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.id = ID;
     }
 
+    public void setSize(int size) { this.size = size; }
+
     /** Null checker */
     public boolean validateMe() {
         boolean changed = false;
@@ -234,4 +234,7 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         return changed;
     }
 
+    public void setAttendees(ArrayList<ParseUser> attendees) {
+        this.attendees = attendees;
+    }
 }
