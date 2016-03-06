@@ -5,10 +5,12 @@
 
     <android.support.v7.widget.SearchView
         android:id="@+id/searchView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"></android.support.v7.widget.SearchView>
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/ToCreationPage"
+        android:layout_toStartOf="@+id/ToCreationPage"></android.support.v7.widget.SearchView>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -17,9 +19,8 @@
         android:text="Sign Out"
         android:id="@+id/toTheLoginButton"
         android:onClick="toTheLoginButtonOnClick"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -27,10 +28,10 @@
         android:layout_height="wrap_content"
         android:text="Create Event"
         android:id="@+id/ToCreationPage"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/toTheLoginButton"
-        android:layout_toEndOf="@+id/toTheLoginButton"
-        android:onClick="toCreationPageOnClick" />
+        android:onClick="toCreationPageOnClick"
+        android:layout_above="@+id/swipeContainer"
+        android:layout_toLeftOf="@+id/toTheLoginButton"
+        android:layout_toStartOf="@+id/toTheLoginButton" />
 
     <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeContainer"
@@ -44,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_above="@+id/toTheLoginButton"
             android:layout_below="@+id/searchView" />
 
     </android.support.v4.widget.SwipeRefreshLayout>

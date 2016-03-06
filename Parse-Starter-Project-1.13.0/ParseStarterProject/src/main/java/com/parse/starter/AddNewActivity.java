@@ -37,6 +37,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -131,6 +132,12 @@ public class AddNewActivity extends AppCompatActivity implements
             validInputForm = false;
         }
 
+        //Check activity tags
+        String tags = actTags.getText().toString();
+        if (time.matches("")) {
+            validInputForm = false;
+        }
+
         if (!validInputForm) {
             Toast.makeText(this,
                     "Your event is missing some information",
@@ -147,31 +154,13 @@ public class AddNewActivity extends AppCompatActivity implements
 
             /* Should always have user logged in here. */
             ParseUser currUser = ParseUser.getCurrentUser();
-            ParseObject eventCreator = new ParseObject("EventCreator");
-            if (currUser != null) { // TODO enforce login and remove
-                eventCreator.put("username", currUser.getString("username"));
-                /* eventCreator.put("id", currUser.getString("objectId"));
-                TODO investigate why this is null */
-                eventCreator.put("name", currUser.getString("name"));
-                eventCreator.put("email", currUser.getString("email"));
-                eventCreator.put("user", currUser); // for Event ctor
-            }
+
             // Determine recent location for creator
             String creatorLat = null;
             String creatorLong = null;
             if (mLastLocation != null) {
                 creatorLat = String.valueOf(mLastLocation.getLatitude());
                 creatorLong = String.valueOf(mLastLocation.getLongitude());
-            }
-            if ( creatorLat != null && creatorLong != null ) {
-                eventCreator.put("latitude", creatorLat);
-                eventCreator.put("longitude", creatorLong);
-            }
-            eventCreator.setACL(acl);
-            try {
-                eventCreator.save();
-            } catch (ParseException e) {
-                e.printStackTrace();
             }
 
             // Attempt to lookup address based on user input
@@ -200,10 +189,14 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
-            userEvent.put("capacity", capacity); // this is getting put into the database as a String
-                                                // and probably size too
+            userEvent.put("capacity", Integer.parseInt(capacity));
+            userEvent.put("tags", tags);
             userEvent.put("size", 0); // number of attendees
-            userEvent.put("creator", eventCreator);
+            userEvent.put("creator", currUser);
+
+            ArrayList<ParseUser> attendees =
+                    new ArrayList<ParseUser>(Integer.parseInt(capacity));
+            userEvent.put("attendees", attendees);
 
             try {
                 userEvent.save(); // consider not saving in background if not working

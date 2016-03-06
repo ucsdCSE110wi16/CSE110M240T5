@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -18,6 +19,8 @@ import java.util.List;
  */
 public class EventsBundler {
 
+    public static final ParseGeoPoint UNI_GEOLOCATION = new ParseGeoPoint(32.8753618, -117.2358622);
+
     /**
      * Fetches numEvents events from the database, largest date value first.
      *
@@ -29,7 +32,7 @@ public class EventsBundler {
         // Get numEvents events from the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         query.addDescendingOrder("updatedAt"); // sort by date most recent first
-        // query.whereNear("location", <user ParseGeoPoint goes here>);
+        query.whereNear("location", UNI_GEOLOCATION); // search near the university
         query.setLimit(numEvents);
         List<ParseObject> userEvents = query.find();
         for (ParseObject ev : userEvents) {
@@ -39,18 +42,12 @@ public class EventsBundler {
             String desc = ev.getString("description");
             String id = ev.getObjectId();
             String contact = ev.getString("contact");
+            String tags = ev.getString("tags");
             int capacity = ev.getInt("capacity");
-            ParseObject po = ev.getParseObject("creator");
-            ParseUser pu = null;
-            if (po!=null) {
-                try {
-                    pu = po.getParseUser("user");
-                } catch (IllegalStateException e) {
-                    pu = null;
-                }
-            }
-            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu);
-            //newEv.validateMe();
+            ParseUser pu = ev.getParseUser("user");
+
+            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
+            newEv.validateMe();
             events.add(newEv);
         }
         return events;
@@ -59,9 +56,9 @@ public class EventsBundler {
     public static List<Event> testEvents(int numEvents) {
         List<Event> events = new ArrayList<Event>(numEvents);
 
-        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1, null));
-        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1, null));
-        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1, null));
+        events.add(new Event("title1", "loc1", new Date(), "desc1", "111", "contact1", 1, null, "tags"));
+        events.add(new Event("title2", "loc2,", new Date(), "desc2", "222", "contact1", 1, null, "tags"));
+        events.add(new Event("title3", "loc3,", new Date(), "desc3", "333", "contact1", 1, null, "tags"));
         return events;
     }
 
@@ -146,18 +143,11 @@ public class EventsBundler {
         Date date = parEvent.getDate("date");
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
-        String capString = parEvent.getString("capacity");
-        int capacity = Integer.parseInt(capString);
-        ParseObject po = parEvent.getParseObject("creator");
-        ParseUser pu = null;
-        if (po!=null) {
-            try {
-                pu = po.getParseUser("user");
-            } catch (IllegalStateException e) {
-                pu = null;
-            }
-        }
-        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu);
+        int capacity = parEvent.getInt("capacity");
+        String tags = parEvent.getString("tags");
+        ParseUser pu = parEvent.getParseUser("creator");
+
+        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
         newEv.validateMe();
         return newEv;
     }
