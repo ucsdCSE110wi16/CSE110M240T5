@@ -44,15 +44,8 @@ public class EventsBundler {
             String contact = ev.getString("contact");
             String tags = ev.getString("tags");
             int capacity = ev.getInt("capacity");
-            ParseObject po = ev.getParseObject("creator");
-            ParseUser pu = null;
-            if (po!=null) {
-                try {
-                    pu = po.getParseUser("user");
-                } catch (IllegalStateException e) {
-                    pu = null;
-                }
-            }
+            ParseUser pu = ev.getParseUser("creator");
+
             Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
             //newEv.validateMe();
             events.add(newEv);
@@ -150,18 +143,10 @@ public class EventsBundler {
         Date date = parEvent.getDate("date");
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
-        String capString = parEvent.getString("capacity");
-        int capacity = Integer.parseInt(capString);
+        int capacity = parEvent.getInt("capacity");
         String tags = parEvent.getString("tags");
-        ParseObject po = parEvent.getParseObject("creator");
-        ParseUser pu = null;
-        if (po!=null) {
-            try {
-                pu = po.getParseUser("user");
-            } catch (IllegalStateException e) {
-                pu = null;
-            }
-        }
+        ParseUser pu = parEvent.getParseUser("creator");
+
         Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
         newEv.validateMe();
         return newEv;

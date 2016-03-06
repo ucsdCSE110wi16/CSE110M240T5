@@ -152,7 +152,6 @@ public class AddNewActivity extends AppCompatActivity implements
             ParseUser currUser = ParseUser.getCurrentUser();
             ParseObject eventCreator = new ParseObject("EventCreator");
             if (currUser != null) { // TODO enforce login and remove
-                eventCreator.put("username", currUser.getString("username"));
                 /* eventCreator.put("id", currUser.getString("objectId"));
                 TODO investigate why this is null */
                 eventCreator.put("name", currUser.getString("name"));
@@ -203,10 +202,8 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("time", time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
-
             userEvent.put("capacity", Integer.parseInt(capacity));
             userEvent.put("tags", tags);
-
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", eventCreator);
 
