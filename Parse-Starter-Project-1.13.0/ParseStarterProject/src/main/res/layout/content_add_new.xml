@@ -65,8 +65,7 @@
             android:layout_height="wrap_content"
             android:inputType="datetime"
             android:background="#ffffff"
-            android:padding="2dp"
-            android:onClick="showTimePickerDialog"/>
+            android:padding="2dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:text="@string/tagFormatting"
                 android:textStyle="italic"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="#000"
                 android:layout_height="20dp"
                 android:layout_gravity="center"

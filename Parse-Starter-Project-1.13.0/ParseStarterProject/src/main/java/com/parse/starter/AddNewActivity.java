@@ -288,6 +288,9 @@ public class AddNewActivity extends AppCompatActivity implements
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // Do something with the date chosen by the user
             Calendar calendar = Calendar.getInstance();
+            calendar.set(Calendar.YEAR, year);
+            calendar.set(Calendar.MONTH, month);
+            calendar.set(Calendar.DAY_OF_MONTH, day);
             String format = "MM/dd/yy";
             SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
             actTime.setText(sdf.format(calendar.getTime()));
