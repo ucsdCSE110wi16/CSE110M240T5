@@ -21,13 +21,13 @@ public class Event {
     private String title;
     private String description;
     private String userDefinedLocation;
-    private Date date;
+    private String date;
     private String id;
     private int size;
     private int capacity;
     ArrayList<ParseUser> attendees;
     private String contact;
-    private String tags;
+    private ArrayList<String> tags;
 
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
@@ -37,7 +37,7 @@ public class Event {
         title = "Dummy Convention";
         description = "Sorry your event does not exist.";
         userDefinedLocation = "Rubio's";
-        date = new Date();
+        date = "April 3, 2016";
         id = "ids of march";
         size = 0;
         capacity = 3;
@@ -57,13 +57,14 @@ public class Event {
     }
 
 
-    public Event(String title, String loc, Date date, String des, String id,
-String contact, int capacity, ParseUser creator, String tags) {
+
+    public Event(String title, String loc, String date, String des, String id,
+String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.creator = creator;
         this.title = title;
         this.description = des;
         this.userDefinedLocation = loc;
-        this.date = new Date();
+        this.date = date;
         this.id = id;
         this.size = 0;
         this.capacity = capacity;
@@ -154,12 +155,12 @@ String contact, int capacity, ParseUser creator, String tags) {
         return this.contact;
     }
 
-    public String getTags() {
+    public ArrayList<String> getTags() {
         return tags;
     }
 
 
-    public Date getDate() { return this.date; }
+    public String getDate() { return this.date; }
 
     ///// Setters /////
 
@@ -208,7 +209,7 @@ String contact, int capacity, ParseUser creator, String tags) {
             changed = true;
         }
         if (this.date == null) {
-            date = new Date();
+            date = (new Date()).toString();
             changed = true;
         }
         if (this.id == null) {
