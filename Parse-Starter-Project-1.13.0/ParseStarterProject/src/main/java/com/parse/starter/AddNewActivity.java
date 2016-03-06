@@ -134,6 +134,7 @@ public class AddNewActivity extends AppCompatActivity implements
     public void onClick(View v) {
         Date dt = new Date(calendar.getTimeInMillis());
         boolean validInputForm = true;
+        int phoneNumberLength = 10;
         //Check activity name
         String title = actName.getText().toString();
         if (title.matches("")) {
@@ -158,7 +159,7 @@ public class AddNewActivity extends AppCompatActivity implements
 
         //Check activity contact
         String contact = actContact.getText().toString();
-        if (contact.matches("")) {
+        if ((contact.matches("")) || (contact.length() < phoneNumberLength)) {
             validInputForm = false;
         }
 
