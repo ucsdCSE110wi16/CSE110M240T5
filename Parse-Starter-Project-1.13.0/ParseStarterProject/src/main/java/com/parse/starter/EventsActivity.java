@@ -81,7 +81,13 @@ public class EventsActivity extends AppCompatActivity {
                 ArrayList<String> tags = new ArrayList<String>(Arrays.asList(query.split(",")));
                 Log.d("EventsActivity", tags.toString());
 
-                List<Event> searchResults = EventsBundler.getEventsByTags(tags, 100, true);
+                List<Event> searchResults;
+                try {
+                searchResults= EventsBundler.getEventsByTags(tags, 100, true);
+                } catch (ParseException eee) {
+                    searchResults = new ArrayList<Event>();
+                    searchResults.add(new Event());
+                }
                 adapter.clear();
                 adapter.addAll(searchResults);
                 return true;

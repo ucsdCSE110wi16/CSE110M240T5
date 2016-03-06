@@ -144,6 +144,8 @@ public class AddNewActivity extends AppCompatActivity implements
         if (loc.matches("")) {
             validInputForm = false;
         }
+
+        //Check activity date
         String date = actDate.getText().toString();
         if (date.matches("")) {
             validInputForm = false;
@@ -227,8 +229,9 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("geoLocation", geoPoint); // result of lookup
             userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
-            userEvent.put("date", date);
-            userEvent.put("time", time);
+
+            userEvent.put("date", date+"\n"+time);
+
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", Integer.parseInt(capacity));
@@ -359,7 +362,19 @@ public class AddNewActivity extends AppCompatActivity implements
             // Do something with the time chosen by the user
             calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
             calendar.set(Calendar.MINUTE, minute);
-            actTime.setText(calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
+
+            // Put in 12 hr mode
+            int hour = calendar.get(Calendar.HOUR_OF_DAY);
+            String state = " AM";
+            if(hour > 12){
+                hour -=12;
+                state = " PM";
+            }
+
+            // Get leading zero
+            String min = String.format("%02d",calendar.get(Calendar.MINUTE));
+
+            actTime.setText( hour + ":" + min + state);
         }
     }
 

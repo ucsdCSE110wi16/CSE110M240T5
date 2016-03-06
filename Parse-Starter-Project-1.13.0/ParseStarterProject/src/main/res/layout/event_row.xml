@@ -17,7 +17,8 @@
         android:layout_marginStart="9dp"
         android:layout_marginLeft="9dp"
         android:background="@drawable/event_row_border"
-        android:text="@string/eventRow_Date"/>
+        android:text="@string/eventRow_Date"
+        android:layout_alignBottom="@+id/event_title" />
 
     <TextView
         android:id="@+id/event_title"

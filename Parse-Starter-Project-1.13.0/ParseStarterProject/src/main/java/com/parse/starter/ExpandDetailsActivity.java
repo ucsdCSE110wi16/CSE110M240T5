@@ -57,7 +57,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         myTV.setText(this.finalEvent.getTitle());
 
         TextView myTV2 = (TextView) findViewById(R.id.tvDetailsDate);
-        myTV2.setText(this.finalEvent.getDate().toString()); // TODO make prettier
+        myTV2.setText(this.finalEvent.getDate()); // TODO make prettier
 
         TextView myTV3 = (TextView) findViewById(R.id.tvDetailsLocation);
         myTV3.setText(this.finalEvent.getUserDefinedLocation());
@@ -70,17 +70,17 @@ public class ExpandDetailsActivity extends AppCompatActivity {
                 this.finalEvent.getCapacity();
         myTV5.setText(sz);
 
-        String host = "Steve";
+        String host;
         TextView myTV6 = (TextView) findViewById(R.id.tvDetailsHostName);
         try {
             host = this.finalEvent.getCreator().getUsername();
         } catch (Exception pe) {
-            // nothing
+            host = "UCSD";
         }
         myTV6.setText("Hosted by: " + host);
 
         TextView myTV7 = (TextView) findViewById(R.id.tvDetailsTags);
-        myTV7.setText(this.finalEvent.getTags());
+        myTV7.setText("Tags: "+(this.finalEvent.getTags()).toString());
 
         Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
         rsvpButton.setOnClickListener(new View.OnClickListener() {

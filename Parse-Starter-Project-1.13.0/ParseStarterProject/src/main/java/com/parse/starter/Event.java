@@ -159,7 +159,6 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         return tags;
     }
 
-
     public String getDate() { return this.date; }
 
     ///// Setters /////
