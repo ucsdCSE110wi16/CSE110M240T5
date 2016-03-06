@@ -135,59 +135,91 @@ public class AddNewActivity extends AppCompatActivity implements
         Date dt = new Date(calendar.getTimeInMillis());
         boolean validInputForm = true;
         int phoneNumberLength = 10;
+
         //Check activity name
         String title = actName.getText().toString();
         if (title.matches("")) {
             validInputForm = false;
+            Toast.makeText(this,
+                    "Wait, what's your event called?",
+                    Toast.LENGTH_SHORT).show();
+            return;
         }
-        //Check activity location
-        String loc = actLoc.getText().toString();
-        if (loc.matches("")) {
-            validInputForm = false;
-        }
-
         //Check activity date
         String date = actDate.getText().toString();
         if (date.matches("")) {
             validInputForm = false;
+            Toast.makeText(this,
+                    "What day does this happen?",
+                    Toast.LENGTH_SHORT).show();
+            return;
         }
         //Check activity time
         String time = actTime.getText().toString();
         if (time.matches("")) {
             validInputForm = false;
+            Toast.makeText(this,
+                    "So, what time?",
+                    Toast.LENGTH_SHORT).show();
+            return;
         }
-
+        //Check activity location
+        String loc = actLoc.getText().toString();
+        if (loc.matches("")) {
+            validInputForm = false;
+            Toast.makeText(this,
+                    "But where is it?",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+        //Check activity tags
+        String tags = actTags.getText().toString();
+        ArrayList<String> tagsArr = new ArrayList<String>(Arrays.asList(tags.split(",")));
+        if(tagsArr.size() < 3) {
+            validInputForm = false;
+            Toast.makeText(this,
+                    "Please enter at least 3 tags.",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
         //Check activity contact
         String contact = actContact.getText().toString();
         if ((contact.matches("")) || (contact.length() < phoneNumberLength)) {
             validInputForm = false;
+            Toast.makeText(this,
+                    "Can I get yo numba?",
+                    Toast.LENGTH_SHORT).show();
+            return;
         }
 
         //Check activity capacity
         String capacity = actCapacity.getText().toString();
-        if (capacity.matches("")) {
+        if (capacity.matches("") || capacity.matches("0")) {
             validInputForm = false;
+            Toast.makeText(this,
+                    "How many people can come?",
+                    Toast.LENGTH_SHORT).show();
+            return;
         }
 
         //Check activity description
         String desc = actDesc.getText().toString();
         if (desc.matches("")) {
             validInputForm = false;
+            Toast.makeText(this,
+                    "Briefly describe your event!",
+                    Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        //Check activity tags
-        String tags = actTags.getText().toString();
-        ArrayList<String> tagsArr = new ArrayList<String>(Arrays.asList(tags.split(",")));
-        if(tagsArr.size() < 3) {
-            validInputForm = false;
-        }
-
+        /*
         if (!validInputForm) {
             Toast.makeText(this,
                     "Your event is missing some information",
                     Toast.LENGTH_SHORT).show();
                     return;
         }
+        */
 
         if (v.getId() == R.id.bt_NEWACTIVITY_submit && validInputForm) {
             //Send data to the parse Database.
@@ -230,9 +262,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("geoLocation", geoPoint); // result of lookup
             userEvent.put("loc", loc); // user defined location
             userEvent.put("title", title);
-
             userEvent.put("date", date+"\n"+time);
-
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", Integer.parseInt(capacity));

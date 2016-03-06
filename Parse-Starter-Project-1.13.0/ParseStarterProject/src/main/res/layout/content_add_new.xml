@@ -103,6 +103,7 @@
             android:textColor="#000"
             android:layout_margin="10dp"
             android:layout_height="wrap_content" />
+
         <EditText
             android:id = "@+id/et_NEWACTIVITY_actvitiyLoc"
             android:layout_width="match_parent"
@@ -112,6 +113,7 @@
             android:inputType="text"
             android:background="#ffffff"
             android:padding="2dp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -146,10 +148,10 @@
             android:inputType="text"
             android:background="#ffffff" />
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/activity_contact"
@@ -157,6 +159,7 @@
                 android:textColor="#000"
                 android:layout_margin="10dp"
                 android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -166,6 +169,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
                 android:text="@string/contactFormatting"/>
+
         </LinearLayout>
 
         <EditText
@@ -186,6 +190,7 @@
             android:textColor="#000"
             android:layout_margin="10dp"
             android:layout_height="wrap_content" />
+
         <EditText
             android:id = "@+id/et_NEWACTIVITY_capacity"
             android:layout_width="match_parent"
@@ -195,6 +200,7 @@
             android:padding="2dp"
             android:inputType="number"
             android:background="#ffffff" />
+
         <TextView
             android:layout_width="wrap_content"
             android:text="@string/activity_desc"
@@ -202,6 +208,7 @@
             android:textColor="#000"
             android:layout_margin="10dp"
             android:layout_height="wrap_content" />
+
         <EditText
             android:id = "@+id/et_NEWACTIVITY_desc"
             android:layout_width="match_parent"
@@ -213,7 +220,6 @@
             android:scrollHorizontally="false"
             android:background="#ffffff"
             android:longClickable="false" />
-
 
         <Button
             android:layout_width="fill_parent"
@@ -227,6 +233,6 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="30dp"/>
 
-
     </LinearLayout>
+
 </ScrollView>
