@@ -5,7 +5,7 @@ import android.util.Log;
 import com.parse.FindCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
-import com.parse.ParseObject;
+import com.parse.ParseUser;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class Event {
 
-    private ParseObject creator;
+    private ParseUser creator;
     private String title;
     private String description;
     private String userDefinedLocation;
@@ -25,7 +25,7 @@ public class Event {
     private String id;
     private int size;
     private int capacity;
-    ArrayList<ParseObject> attendees;
+    ArrayList<ParseUser> attendees;
     private String contact;
     private String tags;
 
@@ -41,7 +41,7 @@ public class Event {
         id = "ids of march";
         size = 0;
         capacity = 3;
-        attendees = new ArrayList<ParseObject>();
+        attendees = new ArrayList<ParseUser>();
         contact = "831-408-3232";
     }
 
@@ -50,7 +50,7 @@ public class Event {
      * @param title - The title of the event
      * @param creator - The user who has created this event
      */
-    public Event(String title, ParseObject creator) {
+    public Event(String title, ParseUser creator) {
         this();
         this.title = title;
         this.creator = creator;
@@ -58,7 +58,7 @@ public class Event {
 
 
     public Event(String title, String loc, Date date, String des, String id,
-String contact, int capacity, ParseObject creator, String tags) {
+String contact, int capacity, ParseUser creator, String tags) {
         this.creator = creator;
         this.title = title;
         this.description = des;
@@ -67,7 +67,7 @@ String contact, int capacity, ParseObject creator, String tags) {
         this.id = id;
         this.size = 0;
         this.capacity = capacity;
-        this.attendees = new ArrayList<ParseObject>();
+        this.attendees = new ArrayList<ParseUser>();
         this.contact = contact;
         this.tags = tags;
     }
@@ -77,10 +77,10 @@ String contact, int capacity, ParseObject creator, String tags) {
      * @param pu The user to add/remove
      * @return true for added, false for not added (for whatever reason)
      */
-    public boolean toggleAttendance(ParseObject pu) {
+    public boolean toggleAttendance(ParseUser pu) {
         // First attendee, need to initialize list
         if (attendees == null) {
-            attendees = new ArrayList<ParseObject>();
+            attendees = new ArrayList<ParseUser>();
         }
         // Already attending
         if (attendees.contains(pu)) {
@@ -88,8 +88,8 @@ String contact, int capacity, ParseObject creator, String tags) {
             attendees.remove(pu);
             // Update parse database of changes to size & attendees
             try {
-                // Pass in event ID and user's username
-                EventsBundler.updateRSVP(this.getID(), (String) pu.get("username"));
+                // Pass in event ID and user ID
+                EventsBundler.updateRSVP(this.getID(), ParseUser.getCurrentUser().getObjectId());
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -104,7 +104,7 @@ String contact, int capacity, ParseObject creator, String tags) {
         attendees.add(pu);
         // Update parse database of changes to size & attendees
         try {
-            EventsBundler.updateRSVP(this.getID(), (String) pu.get("username"));
+            EventsBundler.updateRSVP(this.getID(), pu.getObjectId());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -122,7 +122,7 @@ String contact, int capacity, ParseObject creator, String tags) {
         return this.title;
     }
 
-    public ParseObject getCreator() {
+    public ParseUser getCreator() {
         return this.creator;
     }
 
@@ -146,7 +146,7 @@ String contact, int capacity, ParseObject creator, String tags) {
         return this.capacity;
     }
 
-    public ArrayList<ParseObject> getAttendees() {
+    public ArrayList<ParseUser> getAttendees() {
         return this.attendees;
     }
 
@@ -191,6 +191,8 @@ String contact, int capacity, ParseObject creator, String tags) {
     public boolean validateMe() {
         boolean changed = false;
         if (this.creator == null) {
+            this.creator = new ParseUser();
+            this.creator.setUsername("COOL USER");
             changed = true;
         }
         if (this.title == null) {
@@ -222,7 +224,7 @@ String contact, int capacity, ParseObject creator, String tags) {
             changed = true;
         }
         if (this.attendees == null) {
-            this.attendees = new ArrayList<ParseObject>();
+            this.attendees = new ArrayList<ParseUser>();
             changed = true;
         }
         if (this.contact == null) {
