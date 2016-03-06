@@ -38,6 +38,7 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -134,7 +135,8 @@ public class AddNewActivity extends AppCompatActivity implements
 
         //Check activity tags
         String tags = actTags.getText().toString();
-        if (time.matches("")) {
+        ArrayList<String> tagsArr = new ArrayList<String>(Arrays.asList(tags.split(",")));
+        if(tagsArr.size() < 3) {
             validInputForm = false;
         }
 
@@ -190,7 +192,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
             userEvent.put("capacity", Integer.parseInt(capacity));
-            userEvent.put("tags", tags);
+            userEvent.put("tags", tagsArr);
             userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", currUser);
 
