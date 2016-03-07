@@ -132,10 +132,6 @@ public class EventsActivity extends AppCompatActivity {
     }
 
     public void toTheLoginButtonOnClick(View v){
-        System.out.println("WHERE");
-        System.out.println("WHERE");
-        System.out.println("WHERE");
-        System.out.println("WHERE");
 
         ParseUser.logOut();
         //MainActivity.currUser = null;
