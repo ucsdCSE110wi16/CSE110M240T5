@@ -187,14 +187,12 @@ public class EventsBundler {
         String desc = parEvent.getString("description");
         String contact = parEvent.getString("contact");
         int capacity = parEvent.getInt("capacity");
-        int size = parEvent.getInt("size");
         ArrayList<String> tags = (ArrayList<String>) parEvent.get("tags");
         ParseUser pu = parEvent.getParseUser("creator");
         ArrayList<ParseUser> attending = (ArrayList<ParseUser>) parEvent.get("attendees");
 
         Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
         newEv.setAttendees(attending);
-        newEv.setSize(size);
         newEv.validateMe();
         return newEv;
     }
@@ -202,42 +200,25 @@ public class EventsBundler {
     /**
      * Increase or decrease the size of the event(number of attendees)
      * @param eventId - The id of the event to update
-     * @param user - ParseUser to add/remove
+     * @param attendees - New list
      * @return Boolean - True if successfully updated
      *                   False if unsuccessful
      */
-    public static boolean updateRSVP(String eventId, ParseUser user) throws ParseException {
-        // Get numEvents events from the database
+    public static boolean updateRSVP(String eventId, ArrayList<ParseUser> attendees) throws ParseException {
+
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         ParseObject parEvent = null;
         try {
             parEvent = query.get(eventId);
         } catch(ParseException e) {
+            Log.d("EventsBundler", "Event not found for RSVP");
             e.printStackTrace();
         }
         if (parEvent != null) {
-            int cap = parEvent.getInt("capacity");
-            int size = parEvent.getInt("size");
-            ArrayList<ParseUser> attending = (ArrayList<ParseUser>) parEvent.get("attendees");
-
-            // user not attending yet
-            if (!(attending.contains(user)) && (size < cap) ) {
-                parEvent.put("size",++size);
-                attending.add(user);
-                parEvent.put("attendees", attending);
-                parEvent.save();
-                return true;
-            }
-            // user already attending
-            else if (attending.contains(user)) {
-                parEvent.put("size",--size);
-                attending.remove(user);
-                parEvent.put("attendees", attending);
-                parEvent.save();
-                return true;
-            }
+            parEvent.put("attendees", attendees);
+            parEvent.save();
+            return true;
         }
         return false;
     }
-
 }

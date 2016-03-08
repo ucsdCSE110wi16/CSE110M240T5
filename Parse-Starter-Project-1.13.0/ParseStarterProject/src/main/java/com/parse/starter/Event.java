@@ -23,7 +23,6 @@ public class Event {
     private String userDefinedLocation;
     private String date;
     private String id;
-    private int size;
     private int capacity;
     ArrayList<ParseUser> attendees;
     private String contact;
@@ -39,7 +38,6 @@ public class Event {
         userDefinedLocation = "Rubio's";
         date = "April 3, 2016";
         id = "ids of march";
-        size = 0;
         capacity = 3;
         attendees = new ArrayList<ParseUser>();
         contact = "831-408-3232";
@@ -66,18 +64,16 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.userDefinedLocation = loc;
         this.date = date;
         this.id = id;
-        this.size = 0;
         this.capacity = capacity;
         this.attendees = new ArrayList<ParseUser>();
         this.contact = contact;
         this.tags = tags;
     }
 
-    /** Add or remove a user to the attendee list
+/*    *//** Add or remove a user to the attendee list
      *  Note: attendees and size changed here just for display to user
-     * @param pu The user to add/remove
      * @return true for added, false for not added (for whatever reason)
-     */
+     *//*
     public boolean toggleAttendance(ParseUser pu) {
 
         // Event at full capacity already
@@ -108,7 +104,7 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
             }
             return true;
         }
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -137,12 +133,12 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         return this.id;
     }
 
-    public int getSize() {
-        return this.size;
-    }
-
     public int getCapacity() {
         return this.capacity;
+    }
+
+    public int getSize() {
+        return (this.attendees.size());
     }
 
     public ArrayList<ParseUser> getAttendees() {
@@ -185,7 +181,9 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.id = ID;
     }
 
-    public void setSize(int size) { this.size = size; }
+    public void setAttendees(ArrayList<ParseUser> attendees) {
+        this.attendees = attendees;
+    }
 
     /** Null checker */
     public boolean validateMe() {
@@ -215,10 +213,7 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
             this.id = "ids of march";
             changed = true;
         }
-        if (this.size < 0) {
-            this.size = 0;
-            changed = true;
-        }
+
         if (this.capacity == 0) {
             this.capacity = 100;
             changed = true;
@@ -234,7 +229,4 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         return changed;
     }
 
-    public void setAttendees(ArrayList<ParseUser> attendees) {
-        this.attendees = attendees;
-    }
 }

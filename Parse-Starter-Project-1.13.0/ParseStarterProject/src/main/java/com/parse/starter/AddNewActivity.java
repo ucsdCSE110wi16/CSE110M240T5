@@ -49,7 +49,7 @@ import java.util.Locale;
 
 
 /**
- * Created by: Alex, Johnathan
+ * Created by: Alex, Johnathan, Jenny
  */
 public class AddNewActivity extends AppCompatActivity implements
         View.OnClickListener,
@@ -267,7 +267,6 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("contact", contact);
             userEvent.put("capacity", Integer.parseInt(capacity));
             userEvent.put("tags", tagsArr);
-            userEvent.put("size", 0); // number of attendees
             userEvent.put("creator", currUser);
 
             ArrayList<ParseUser> attendees =

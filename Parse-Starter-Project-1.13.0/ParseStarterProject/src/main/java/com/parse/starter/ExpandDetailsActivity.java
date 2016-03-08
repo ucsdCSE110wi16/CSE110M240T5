@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import static android.app.PendingIntent.getActivity;
@@ -93,18 +94,37 @@ public class ExpandDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                boolean ok = finalEvent.toggleAttendance(ParseUser.getCurrentUser());
+                ParseUser pu = ParseUser.getCurrentUser();
+                ArrayList<ParseUser> guests = finalEvent.getAttendees();
 
+                if (guests.contains(pu)) {
+                    // Remove user
+                    guests.remove(pu);
+                    finalEvent.setAttendees(guests);
+                } else {
+                    // Add user
+                    if (finalEvent.getSize() < finalEvent.getCapacity()) {
+                        guests.add(pu);
+                        finalEvent.setAttendees(guests);
+                    } else {
+                        // Event is maxed out
+                        String st = "Sorry, event is at capacity.";
+                        Toast.makeText(ExpandDetailsActivity.this, st, Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                // Update database
+                try {
+                    EventsBundler.updateRSVP(finalEvent.getID(), guests);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                // Update GUI
                 String newsz = "Number of Attendees: " + finalEvent.getSize() +
                         "/" + finalEvent.getCapacity();
                 myTV5.setText(newsz);
 
-/*                String st = "RSVP successful";
-                if (!ok) {
-                    st = "unRSVP'd or event full";
-                }
-                Toast.makeText(ExpandDetailsActivity.this, st, Toast.LENGTH_SHORT).show();
-*/
             }
         });
 
