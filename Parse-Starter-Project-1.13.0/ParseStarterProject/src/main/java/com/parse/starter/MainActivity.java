@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         TextView loginText = (TextView)findViewById(R.id.loginTextView);
         button = (Button) findViewById(R.id.signInOutButton);
-        button.setText("Log Out");
+        button.setText("Log Out/Log In");
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
