@@ -78,6 +78,8 @@ public class EventsActivity extends AppCompatActivity {
         search.setOnQueryTextListener(new android.support.v7.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                query = query.replaceAll("\\s+", ""); // remove whitespace
+                query = query.toLowerCase(); // consistent formatting
                 ArrayList<String> tags = new ArrayList<String>(Arrays.asList(query.split(",")));
                 Log.d("EventsActivity", tags.toString());
 

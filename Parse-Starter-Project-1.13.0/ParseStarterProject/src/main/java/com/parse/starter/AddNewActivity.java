@@ -175,7 +175,7 @@ public class AddNewActivity extends AppCompatActivity implements
         //Check activity tags
         String tags = actTags.getText().toString();
         tags = tags.replaceAll("\\s+", ""); // remove whitespace
-        tags = tags.toLowerCase();
+        tags = tags.toLowerCase(); // consistent formatting
         ArrayList<String> tagsArr = new ArrayList<String>(Arrays.asList(tags.split(",")));
         if(tagsArr.size() < 3) {
             validInputForm = false;
