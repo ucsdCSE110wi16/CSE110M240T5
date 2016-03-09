@@ -227,6 +227,7 @@ public class AddNewActivity extends AppCompatActivity implements
 
             ParseACL acl = new ParseACL(); // access control list
             acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
 
             /* Should always have user logged in here. */
             ParseUser currUser = ParseUser.getCurrentUser();
@@ -399,6 +400,9 @@ public class AddNewActivity extends AppCompatActivity implements
             if (hour > 12){
                 hour -=12;
                 state = " PM";
+            }
+            if(hour==12) {
+                state= " PM";
             }
             if (hour==0) {
                 hour = 12;

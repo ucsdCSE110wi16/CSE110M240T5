@@ -199,6 +199,7 @@ public class EventsBundler {
      */
     public static boolean updateRSVP(String eventId, ArrayList<ParseUser> attendees) throws ParseException {
 
+        // Retrieve event
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserEvent");
         ParseObject parEvent = null;
         try {
@@ -207,11 +208,19 @@ public class EventsBundler {
             Log.d("EventsBundler", "Event not found for RSVP");
             e.printStackTrace();
         }
+
+        // Update attendees
         if (parEvent != null) {
             parEvent.put("attendees", attendees);
-            parEvent.save();
+            try {
+                parEvent.save();
+            } catch (Exception e) {
+                Log.d("EventsBundler", "Save didn't work");
+                e.printStackTrace();
+            }
             return true;
         }
+
         return false;
     }
 }
