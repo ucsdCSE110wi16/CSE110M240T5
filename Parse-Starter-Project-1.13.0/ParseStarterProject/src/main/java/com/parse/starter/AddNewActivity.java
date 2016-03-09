@@ -174,6 +174,8 @@ public class AddNewActivity extends AppCompatActivity implements
         }
         //Check activity tags
         String tags = actTags.getText().toString();
+        tags = tags.replaceAll("\\s+", ""); // remove whitespace
+        tags = tags.toLowerCase();
         ArrayList<String> tagsArr = new ArrayList<String>(Arrays.asList(tags.split(",")));
         if(tagsArr.size() < 3) {
             validInputForm = false;
@@ -194,10 +196,29 @@ public class AddNewActivity extends AppCompatActivity implements
 
         //Check activity capacity
         String capacity = actCapacity.getText().toString();
-        if (capacity.matches("") || capacity.matches("0")) {
+        if (capacity.matches("") || capacity.matches("0") ) {
             validInputForm = false;
             Toast.makeText(this,
                     "How many people can come?",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int capacityNum = 0;
+        try {
+            capacityNum = Integer.parseInt(capacity);
+        } catch (Exception e) {
+            validInputForm = false;
+            Toast.makeText(this,
+                    "Please enter an integer for event capacity.",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (capacityNum <= 0) {
+            validInputForm = false;
+            Toast.makeText(this,
+                    "Event capacity must be greater than 0.",
                     Toast.LENGTH_SHORT).show();
             return;
         }
@@ -266,13 +287,13 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("date", date+"\n"+time);
             userEvent.put("description", desc);
             userEvent.put("contact", contact);
-            userEvent.put("capacity", Integer.parseInt(capacity));
+            userEvent.put("capacity", capacityNum);
             userEvent.put("tags", tagsArr);
             userEvent.put("creator", currUser);
             userEvent.put("hostname", currUser.getUsername());
 
             ArrayList<ParseUser> attendees =
-                    new ArrayList<ParseUser>(Integer.parseInt(capacity));
+                    new ArrayList<ParseUser>(capacityNum);
             userEvent.put("attendees", attendees);
 
             try {
