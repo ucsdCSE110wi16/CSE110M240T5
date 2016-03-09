@@ -46,21 +46,12 @@ public class EventsBundler {
             ArrayList<String> tags = (ArrayList<String>) ev.get("tags");
             int capacity = ev.getInt("capacity");
             ParseUser pu = ev.getParseUser("user");
+            String hostname = ev.getString("hostname");
 
-            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
+            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags, hostname);
             newEv.validateMe();
             events.add(newEv);
         }
-        return events;
-    }
-
-    public static List<Event> testEvents(int numEvents) {
-        List<Event> events = new ArrayList<Event>(numEvents);
-
-        ArrayList<String> s = new ArrayList<String>();
-        events.add(new Event("title1", "loc1", "date", "desc1", "111", "contact1", 1, null, s));
-        events.add(new Event("title2", "loc2,", "date", "desc2", "222", "contact1", 1, null, s));
-        events.add(new Event("title3", "loc3,", "date", "desc3", "333", "contact1", 1, null, s));
         return events;
     }
 
@@ -98,8 +89,9 @@ public class EventsBundler {
             ArrayList<String> tagsArr = (ArrayList<String>) ev.get("tags");
             int capacity = ev.getInt("capacity");
             ParseUser pu = ev.getParseUser("user");
+            String hostname = ev.getString("hostname");
 
-            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tagsArr);
+            Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tagsArr, hostname);
             newEv.validateMe();
             events.add(newEv);
         }
@@ -190,8 +182,9 @@ public class EventsBundler {
         ArrayList<String> tags = (ArrayList<String>) parEvent.get("tags");
         ParseUser pu = parEvent.getParseUser("creator");
         ArrayList<ParseUser> attending = (ArrayList<ParseUser>) parEvent.get("attendees");
+        String hostname = parEvent.getString("hostname");
 
-        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags);
+        Event newEv = new Event(title, loc, date, desc, id, contact, capacity, pu, tags, hostname);
         newEv.setAttendees(attending);
         newEv.validateMe();
         return newEv;

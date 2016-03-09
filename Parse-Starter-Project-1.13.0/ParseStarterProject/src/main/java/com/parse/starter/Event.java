@@ -27,6 +27,7 @@ public class Event {
     ArrayList<ParseUser> attendees;
     private String contact;
     private ArrayList<String> tags;
+    private String hostname;
 
     /** Constructor to create a dummy event for when event attempted to be
      *  accessed is null. (testing)
@@ -41,6 +42,7 @@ public class Event {
         capacity = 3;
         attendees = new ArrayList<ParseUser>();
         contact = "831-408-3232";
+        hostname = "UCSD";
     }
 
     /** Constructor with bare minimum information required for an event
@@ -57,7 +59,7 @@ public class Event {
 
 
     public Event(String title, String loc, String date, String des, String id,
-String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
+String contact, int capacity, ParseUser creator, ArrayList<String> tags, String hostname) {
         this.creator = creator;
         this.title = title;
         this.description = des;
@@ -68,6 +70,7 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.attendees = new ArrayList<ParseUser>();
         this.contact = contact;
         this.tags = tags;
+        this.hostname = hostname;
     }
 
 /*    *//** Add or remove a user to the attendee list
@@ -185,6 +188,10 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
         this.attendees = attendees;
     }
 
+    public String getHostName() {
+        return hostname;
+    }
+
     /** Null checker */
     public boolean validateMe() {
         boolean changed = false;
@@ -226,7 +233,23 @@ String contact, int capacity, ParseUser creator, ArrayList<String> tags) {
             this.contact = "8675309";
             changed = true;
         }
+
+        if (hostname == null) {
+            hostname = "";
+            changed = true;
+        }
+        if (hostname.equals("")) {
+            try {
+                hostname = this.getCreator().getUsername();
+            }
+            catch (Exception e) {
+                hostname = "UCSD";
+            }
+            changed = true;
+        }
+
         return changed;
     }
+
 
 }

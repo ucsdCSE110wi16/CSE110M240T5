@@ -268,6 +268,7 @@ public class AddNewActivity extends AppCompatActivity implements
             userEvent.put("capacity", Integer.parseInt(capacity));
             userEvent.put("tags", tagsArr);
             userEvent.put("creator", currUser);
+            userEvent.put("hostname", currUser.getUsername());
 
             ArrayList<ParseUser> attendees =
                     new ArrayList<ParseUser>(Integer.parseInt(capacity));
@@ -278,7 +279,6 @@ public class AddNewActivity extends AppCompatActivity implements
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            //TODO Need a way to update the events
             finish();
         }
     }
