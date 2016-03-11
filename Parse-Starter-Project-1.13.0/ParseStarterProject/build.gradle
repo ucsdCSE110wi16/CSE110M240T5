@@ -35,4 +35,8 @@ dependencies {
 
     // Google play APIs
     compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'junit:junit:4.12'
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
 }
