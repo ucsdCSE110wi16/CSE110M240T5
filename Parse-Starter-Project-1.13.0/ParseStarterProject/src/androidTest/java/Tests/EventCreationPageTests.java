@@ -41,7 +41,7 @@ public class EventCreationPageTests {
         eventCapacity = "10";
         eventDescription = "This is a test to see that the event creation page is working";
 
-        Espresso.onView(ViewMatchers.withId(R.id.viewEventsButton)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withId(R.id.createNewEventButton)).perform(ViewActions.click());
         Espresso.onView(ViewMatchers.withId(R.id.ToCreationPage)).perform(ViewActions.click());
     }
 
