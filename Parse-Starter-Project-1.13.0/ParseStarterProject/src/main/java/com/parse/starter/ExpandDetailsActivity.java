@@ -1,6 +1,7 @@
 package com.parse.starter;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
@@ -30,19 +34,32 @@ public class ExpandDetailsActivity extends AppCompatActivity {
 
     Event finalEvent;
     /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
+
+    /**
      * onCreate -  load the activity
+     *
      * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
     protected void onStart() {
 
         super.onStart();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
         setContentView(R.layout.activity_expand_details);
 
         // Access Event object
@@ -86,7 +103,7 @@ public class ExpandDetailsActivity extends AppCompatActivity {
         TextView myTV7 = (TextView) findViewById(R.id.tvDetailsTags);
         myTV7.setText("Tags: " + (this.finalEvent.getTags()).toString());
 
-        Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
+        final Button rsvpButton = (Button) findViewById(R.id.buttonRSVP);
         rsvpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,16 +111,28 @@ public class ExpandDetailsActivity extends AppCompatActivity {
                 ParseUser pu = ParseUser.getCurrentUser();
                 ArrayList<ParseUser> guests = finalEvent.getAttendees();
 
-                if (guests.contains(pu)) {
+                if (guests.contains(pu))
+                {
                     // Remove user
                     guests.remove(pu);
                     finalEvent.setAttendees(guests);
-                } else {
+                    //Remove user and button change colour back to original and "Join"
+                    rsvpButton.setBackgroundColor(Color.parseColor("#65ee83"));
+                    rsvpButton.setText((CharSequence) "Join");
+                }
+                else
+                {
                     // Add user
-                    if (finalEvent.getSize() < finalEvent.getCapacity()) {
+                    if (finalEvent.getSize() < finalEvent.getCapacity())
+                    {
                         guests.add(pu);
                         finalEvent.setAttendees(guests);
-                    } else {
+                        //change button colour to RSVPed Colour and text to "Leave"
+                        rsvpButton.setBackgroundColor(Color.parseColor("#FF7878"));
+                        rsvpButton.setText((CharSequence) "Leave");
+                    }
+                    else
+                    {
                         // Event is maxed out
                         String st = "Sorry, event is at capacity.";
                         Toast.makeText(ExpandDetailsActivity.this, st, Toast.LENGTH_SHORT).show();
@@ -141,5 +170,38 @@ public class ExpandDetailsActivity extends AppCompatActivity {
                 ExpandDetailsActivity.this.startActivity(sendIntent);
             }
         });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "ExpandDetails Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.parse.starter/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "ExpandDetails Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.parse.starter/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
     }
 }
