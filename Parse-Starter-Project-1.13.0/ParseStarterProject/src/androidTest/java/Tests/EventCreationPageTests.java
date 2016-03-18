@@ -3,6 +3,7 @@ package Tests;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.ViewAssertion;
+import android.support.test.espresso.action.Swipe;
 import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.matcher.ViewMatchers;
@@ -10,15 +11,19 @@ import android.support.test.espresso.ViewAction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.rule.UiThreadTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import
+import android.support.test.espresso.*;
 import android.view.View;
-
+import android.widget.*;
 import com.parse.starter.AddNewActivity;
 import com.parse.starter.R;
-
+import android.content.Context;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.*;
+import android.support.test.espresso.*;
 
 
 /**
@@ -31,26 +36,55 @@ public class EventCreationPageTests {
     private String eventLocation;
     private String eventCapacity;
     private String eventDescription;
+    private String tags;
 
-    @Rule public final ActivityTestRule<AddNewActivity> mActivityRule = new ActivityTestRule<AddNewActivity>(AddNewActivity.class);
+    @Rule public ActivityTestRule<AddNewActivity> mActivityRule = new ActivityTestRule<AddNewActivity>(AddNewActivity.class);
 
     @Before
     public void initVariables() {
-        eventTitle = "Test";
-        eventLocation = "Test Location";
-        eventCapacity = "10";
-        eventDescription = "This is a test to see that the event creation page is working";
+        eventTitle = "Title Test YEEEEEEE";
+        eventLocation = "Location Test YEEEEEE";
+        eventCapacity = "" + 10;
+        eventDescription = " h ";
+        tags = "welcome,to,kesdensoffice";
 
-        Espresso.onView(ViewMatchers.withId(R.id.createNewEventButton)).perform(ViewActions.click());
-        Espresso.onView(ViewMatchers.withId(R.id.ToCreationPage)).perform(ViewActions.click());
+       // Espresso.onView(ViewMatchers.withId(R.id.createNewEventButton)).perform(ViewActions.click());
+     //   Espresso.onView(ViewMatchers.withId(R.id.ToCreationPage)).perform(ViewActions.click());
     }
+
 
     @Test
     public void eventTitleTest() {
+        //Espresso.onView(ViewMatchers.withId(R.id.here)).perform(ViewActions.swipeDown());
+
+
+
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyName)).perform(ViewActions.typeText(eventTitle), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyName)).check(ViewAssertions.matches(ViewMatchers.withText(eventTitle)));
-    }
 
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform((2016,1,1);
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform(ViewActions.typeText(eventLocation), ViewActions.closeSoftKeyboard());
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).check(ViewAssertions.matches(ViewMatchers.withText(eventLocation)));
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags)).perform(ViewActions.typeText(tags), ViewActions.closeSoftKeyboard());
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags)).check(ViewAssertions.matches(ViewMatchers.withText(tags)));
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc))
+                .perform(ViewActions.scrollTo(), ViewActions.click());
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_capacity)).perform(ViewActions.typeText("15"), ViewActions.closeSoftKeyboard());
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_capacity)).check(ViewAssertions.matches(ViewMatchers.withText("15")));
+
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc))
+                .perform(ViewActions.scrollTo(), ViewActions.click());
+
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).perform(ViewActions.typeTextIntoFocusedView(eventDescription), ViewActions.closeSoftKeyboard());
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).check(ViewAssertions.matches(ViewMatchers.withText(eventDescription)));
+    }
+/*
     @Test
     public void eventLocationTest() {
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform(ViewActions.typeText(eventLocation), ViewActions.closeSoftKeyboard());
@@ -59,13 +93,23 @@ public class EventCreationPageTests {
 
     @Test
     public void eventCapacityTest() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_capacity)).perform(ViewActions.typeText(eventCapacity), ViewActions.closeSoftKeyboard());
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_capacity)).check(ViewAssertions.matches(ViewMatchers.withText(eventCapacity)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).perform(ViewActions.typeText("What is happening"), ViewActions.closeSoftKeyboard());
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).check(ViewAssertions.matches(ViewMatchers.withText("What is happening")));
     }
 
     @Test
     public void eventDescriptionTest() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).perform(ViewActions.typeText(eventDescription), ViewActions.closeSoftKeyboard());
+        //Espresso.onView(ViewMatchers.withId(R.id.here)).perform(ViewActions.swipeDown());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).check(ViewAssertions.matches(ViewMatchers.withText(eventDescription)));
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).perform(ViewActions.typeTextIntoFocusedView(eventDescription), ViewActions.closeSoftKeyboard());
     }
+*/
+    /*@After
+    public void afterTest(){
+        Espresso.pressBack();
+    }*/
+
+    //@Test
+
+
 }
