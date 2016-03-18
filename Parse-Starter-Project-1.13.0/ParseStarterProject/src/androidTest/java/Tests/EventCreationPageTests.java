@@ -11,7 +11,7 @@ import android.support.test.espresso.ViewAction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.rule.UiThreadTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import
+//import android.support.test.espresso.action.contrib.*;
 import android.support.test.espresso.*;
 import android.view.View;
 import android.widget.*;
@@ -62,7 +62,13 @@ public class EventCreationPageTests {
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyName)).perform(ViewActions.typeText(eventTitle), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyName)).check(ViewAssertions.matches(ViewMatchers.withText(eventTitle)));
 
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform((2016,1,1);
+        //Click the datepicker
+        Espresso.onView(ViewMatchers.withId(R.id.button)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
+
+        Espresso.onView(ViewMatchers.withId(R.id.timePickah)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
+
 
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform(ViewActions.typeText(eventLocation), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).check(ViewAssertions.matches(ViewMatchers.withText(eventLocation)));
@@ -83,6 +89,8 @@ public class EventCreationPageTests {
 
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).perform(ViewActions.typeTextIntoFocusedView(eventDescription), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).check(ViewAssertions.matches(ViewMatchers.withText(eventDescription)));
+
+    
     }
 /*
     @Test

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
@@ -36,7 +37,7 @@ dependencies {
     //compile 'com.android.support:recyclerview-v7:23.1.1'
 
     compile 'com.android.support:appcompat-v7:23.1.0'
-    compile 'com.android.support:design:23.1.0'
+    compile 'com.android.support:design:23.1.1'
     androidTestCompile 'com.android.support:recyclerview-v7:23.1.0'
 
     // Google play APIs
@@ -44,6 +45,6 @@ dependencies {
     compile 'junit:junit:4.12'
 
     // Espresso tests
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.4.1'
 }
