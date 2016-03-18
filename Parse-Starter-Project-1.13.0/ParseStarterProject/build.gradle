@@ -36,15 +36,20 @@ dependencies {
     //compile 'com.android.support:design:22.2.1'
     //compile 'com.android.support:recyclerview-v7:23.1.1'
 
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    androidTestCompile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:support-v4:23.0.1'
 
     // Google play APIs
     compile 'com.google.android.gms:play-services:8.4.0'
     compile 'junit:junit:4.12'
 
     // Espresso tests
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile ('com.android.support.test.espresso:espresso-contrib:2.2'){
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
     androidTestCompile 'com.android.support.test:runner:0.4.1'
 }

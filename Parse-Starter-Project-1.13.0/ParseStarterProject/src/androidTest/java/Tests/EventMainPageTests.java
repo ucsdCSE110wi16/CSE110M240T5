@@ -1,33 +1,20 @@
 package Tests;
 
-import android.support.test.espresso.Espresso;
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.espresso.ViewAssertion;
-import android.support.test.espresso.action.Swipe;
-import android.support.test.espresso.action.ViewActions;
-import android.support.test.espresso.assertion.ViewAssertions;
-import android.support.test.espresso.matcher.ViewMatchers;
-import android.support.test.espresso.ViewAction;
 import android.support.test.rule.ActivityTestRule;
-import android.support.test.rule.UiThreadTestRule;
 import android.support.test.runner.AndroidJUnit4;
-//import android.support.test.espresso.action.contrib.*;
-import android.support.test.espresso.*;
-import android.view.View;
-import android.widget.*;
-import com.parse.starter.*;
-import com.parse.starter.R;
-import android.content.Context;
+
+import com.parse.starter.EventsActivity;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.*;
-import android.support.test.espresso.*;
-import java.util.concurrent.*;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Hans and Ryan Melissa Alex on 3/11/2016.
+ * Managed to get it working with correct build version the allnighter after.
  */
 @RunWith(AndroidJUnit4.class)
 public class EventMainPageTests {
@@ -56,12 +43,12 @@ public class EventMainPageTests {
     @Test
     public void eventSignoutTest() {
         try {
-            TimeUnit.SECONDS.sleep(5);
+            TimeUnit.SECONDS.sleep(1);
         } catch (Exception e){}
         //Espresso.onView(ViewMatchers.withId(R.id.here)).perform(ViewActions.swipeDown());
 
         //Sign out
-        //Espresso.onView(ViewMatchers.withId(R.id.viewEventsButton)).perform(ViewActions.click());
+        //Espresso.onView(ViewMatchers.withId(R.id.replyButton)).perform(ViewActions.click());
         //Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
         /*
         Espresso.onView(ViewMatchers.withId(R.id.signInOutButton)).perform(ViewActions.typeText(eventTitle), ViewActions.closeSoftKeyboard());

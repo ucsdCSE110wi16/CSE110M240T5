@@ -1,16 +1,14 @@
 package com.parse.starter;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.util.Log;
 import android.view.View;
-import android.widget.SearchView;
 
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -41,12 +39,14 @@ public class EventsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_events);
 
         // Set up and load the recycler view
-        rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
-        try {
-            vents = EventsBundler.recentEvents(100);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+            rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
+            try {
+                vents = EventsBundler.recentEvents(100);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
         adapter = new EventsAdapter(vents);
         rvEvents.setAdapter(adapter);
         rvEvents.setLayoutManager(new LinearLayoutManager(this));

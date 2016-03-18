@@ -1,29 +1,23 @@
 package Tests;
 
 import android.support.test.espresso.Espresso;
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.espresso.ViewAssertion;
-import android.support.test.espresso.action.Swipe;
 import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.matcher.ViewMatchers;
-import android.support.test.espresso.ViewAction;
 import android.support.test.rule.ActivityTestRule;
-import android.support.test.rule.UiThreadTestRule;
 import android.support.test.runner.AndroidJUnit4;
-//import android.support.test.espresso.action.contrib.*;
-import android.support.test.espresso.*;
-import android.view.View;
-import android.widget.*;
+
 import com.parse.starter.AddNewActivity;
 import com.parse.starter.R;
-import android.content.Context;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.*;
-import android.support.test.espresso.*;
+
+import java.util.concurrent.TimeUnit;
+
+//import android.support.test.espresso.action.contrib.*;
 
 
 /**
@@ -45,7 +39,7 @@ public class EventCreationPageTests {
         eventTitle = "Title Test YEEEEEEE";
         eventLocation = "Location Test YEEEEEE";
         eventCapacity = "" + 10;
-        eventDescription = " h ";
+        eventDescription = "I may or may not be thinking about all nighters right now particularly for this quarter.";
         tags = "welcome,to,kesdensoffice";
 
        // Espresso.onView(ViewMatchers.withId(R.id.createNewEventButton)).perform(ViewActions.click());
@@ -62,25 +56,63 @@ public class EventCreationPageTests {
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyName)).perform(ViewActions.typeText(eventTitle), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyName)).check(ViewAssertions.matches(ViewMatchers.withText(eventTitle)));
 
+
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
+
         //Click the datepicker
         Espresso.onView(ViewMatchers.withId(R.id.button)).perform(ViewActions.click());
         Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
 
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
+
         Espresso.onView(ViewMatchers.withId(R.id.timePickah)).perform(ViewActions.click());
         Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
 
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
 
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform(ViewActions.typeText(eventLocation), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).check(ViewAssertions.matches(ViewMatchers.withText(eventLocation)));
 
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
+
+
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags))
+                .perform(ViewActions.scrollTo(), ViewActions.click());
+
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags)).perform(ViewActions.typeText(tags), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags)).check(ViewAssertions.matches(ViewMatchers.withText(tags)));
+
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
+
 
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc))
                 .perform(ViewActions.scrollTo(), ViewActions.click());
 
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
+
+
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_capacity)).perform(ViewActions.typeText("15"), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_capacity)).check(ViewAssertions.matches(ViewMatchers.withText("15")));
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e){}
 
 
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc))
@@ -92,13 +124,16 @@ public class EventCreationPageTests {
 
 
     }
-/*
-    @Test
-    public void eventLocationTest() {
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).perform(ViewActions.typeText(eventLocation), ViewActions.closeSoftKeyboard());
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyLoc)).check(ViewAssertions.matches(ViewMatchers.withText(eventLocation)));
-    }
 
+    @Test
+    public void tagsTest() {
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags))
+                .perform(ViewActions.scrollTo(), ViewActions.click());
+
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags)).perform(ViewActions.typeText(tags), ViewActions.closeSoftKeyboard());
+        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_tags)).check(ViewAssertions.matches(ViewMatchers.withText(tags)));
+    }
+/*
     @Test
     public void eventCapacityTest() {
         Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_desc)).perform(ViewActions.typeText("What is happening"), ViewActions.closeSoftKeyboard());
