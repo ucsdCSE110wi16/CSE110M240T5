@@ -30,7 +30,7 @@ public class StarterApplication extends Application {
     Parse.initialize(this);
 
     //Nope don't want this!
-    ParseUser.enableAutomaticUser();
+    //ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
     // Optionally enable public read access.
     // defaultACL.setPublicReadAccess(true);
