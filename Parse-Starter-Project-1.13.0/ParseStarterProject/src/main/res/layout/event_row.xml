@@ -7,7 +7,7 @@
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
     android:background="#E0EEEE"
-    >
+    android:id="@+id/isItThis">
 
     <TextView
         android:id="@+id/event_date"

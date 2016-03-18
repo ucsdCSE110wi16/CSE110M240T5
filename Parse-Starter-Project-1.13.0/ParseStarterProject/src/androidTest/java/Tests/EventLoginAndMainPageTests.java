@@ -120,6 +120,13 @@ public class EventLoginAndMainPageTests {
         } catch (Exception e) {
         }
 
+        ParseUser.logOut();
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
         //Checkout events
         Espresso.onView(ViewMatchers.withId(R.id.viewEventsButton))
                 .perform(ViewActions.click());

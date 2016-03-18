@@ -62,11 +62,21 @@ public class EventCreationPageTests {
                 "a lack of desire to sleep or the habitual use of stimulant drugs. Sleep " +
                 "deprivation is also self-imposed to achieve personal fame in the context " +
                 "of record-breaking stunts. Sleep apnea[edit] Sleep apnea (obstructive " +
-                "sleep apnea, OSA) is a collapse of the upper airway during sleep, which";
+                "sleep apnea, OSA) is a collapse of the upper airway during sleep, which" +
+                " reduces airflow to the lungs. It has many serious health outcomes if" +
+                " untreated, but can very often be effectively treated with positive air " +
+                "pressure therapy. Nasal problems such as a deviated septum will shut down " +
+                "the airway and increase swelling in the mucus lining and nasal turbinates." +
+                " Corrective surgery (septoplasty) will maximise the airflow and correct the" +
+                " feedback loop to the brain which keeps awakening the sufferer so as not to" +
+                " asphyxiate. Central sleep apnea is repeated stops in breathing during sleep" +
+                "when the brain temporarily stops sending signals to the muscles that control" +
+                " breathing.";
 
         try {
             ParseUser.logIn("hanzzeh", "kjidfe");
-        } catch (ParseException e) {}
+        } catch (ParseException e) {
+        }
 
 
         // Espresso.onView(ViewMatchers.withId(R.id.createNewEventButton)).perform(ViewActions.click());
@@ -89,16 +99,16 @@ public class EventCreationPageTests {
         }
 
         //Click the datepicker
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_activityDate)).perform(ViewActions.typeText("05/28/16"), ViewActions.closeSoftKeyboard());
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_activityDate)).check(ViewAssertions.matches(ViewMatchers.withText("05/28/16")));
+        Espresso.onView(ViewMatchers.withId(R.id.button)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
 
         try {
             TimeUnit.SECONDS.sleep(1);
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
 
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyTime)).perform(ViewActions.typeText("12:00 am"), ViewActions.closeSoftKeyboard());
-
-        Espresso.onView(ViewMatchers.withId(R.id.et_NEWACTIVITY_actvitiyTime)).check(ViewAssertions.matches(ViewMatchers.withText("12:00 am")));
+        Espresso.onView(ViewMatchers.withId(R.id.timePickah)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withText("OK")).perform(ViewActions.click());
 
         try {
             TimeUnit.SECONDS.sleep(1);
