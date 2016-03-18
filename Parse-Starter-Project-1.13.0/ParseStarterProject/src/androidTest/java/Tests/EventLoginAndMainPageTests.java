@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
  * Managed to get it working with correct build version the allnighter after.
  */
 @RunWith(AndroidJUnit4.class)
-public class EventMainPageTests {
+public class EventLoginAndMainPageTests {
 
     private String username;
     private String password;
@@ -59,6 +59,8 @@ public class EventMainPageTests {
 
     @Test
     public void eventLoginTest() {
+
+        //LOGIN
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (Exception e) {
@@ -72,6 +74,87 @@ public class EventMainPageTests {
         }
 
         Espresso.onView(ViewMatchers.withId(R.id.login_password_input)).perform(ViewActions.typeText("kjidfe"), ViewActions.closeSoftKeyboard());
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withText("Log in")).perform(ViewActions.click());
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        //press Log out
+
+        Espresso.onView(ViewMatchers.withId(R.id.signInOutButton))
+                .perform(ViewActions.click());
+
+        //Log in again
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withId(R.id.login_username_input)).perform(ViewActions.typeText("hanzzeh"), ViewActions.closeSoftKeyboard());
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withId(R.id.login_password_input)).perform(ViewActions.typeText("kjidfe"), ViewActions.closeSoftKeyboard());
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withText("Log in")).perform(ViewActions.click());
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        //Checkout events
+        Espresso.onView(ViewMatchers.withId(R.id.viewEventsButton))
+                .perform(ViewActions.click());
+
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (Exception e) {
+        }
+
+        ViewActions.pressBack();
+
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (Exception e) {
+        }
+
+
+    }
+
+    @Test
+    public void eventLoginFailTest() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withId(R.id.login_username_input)).perform(ViewActions.typeText("hanzzeh"), ViewActions.closeSoftKeyboard());
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withId(R.id.login_password_input)).perform(ViewActions.typeText(
+                "hanzzehhkdsfjklsdghioeshgoierhsigrheird"), ViewActions.closeSoftKeyboard());
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -163,6 +246,17 @@ public class EventMainPageTests {
         } catch (Exception e){}
 
         Espresso.onView(ViewMatchers.withText("Create account")).perform(ViewActions.click());
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (Exception e) {
+        }
+
+        Espresso.onView(ViewMatchers.withId(R.id.createNewEventButton))
+                .perform( ViewActions.click());
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (Exception e) {
+        }
 
     }
 
